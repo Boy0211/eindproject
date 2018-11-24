@@ -1,6 +1,10 @@
 Naam: Sam Kuilboer  
 Studentnummer: 12442690
 
+**Git doesn't want to show the sketches, the images can be found in the image directory!
+Sorry fot the inconvenience.**
+
+
 # Financiële welzijn studenten in Nederland
 
 
@@ -29,10 +33,10 @@ Optional:
 
 
 Sketch:
-![afbeelding van de homepage](/Presentatie1/Dia1.jpg "Homepage")
-![afbeelding van de studentpage](/Presentatie1/Dia2.jpg "studentpage")
-![afbeelding van de government page](/Presentatie1/Dia3.jpg "governmentpage")
-![afbeelding van de interactievemap](/Presentatie1/Dia1.jpg "interactieve map")
+![afbeelding van de homepage](/Images/Dia1.JPG "Homepage")
+![afbeelding van de studentpage](/Images/Dia2.JPG "studentpage")
+![afbeelding van de government page](/Images/Dia3.JPG "governmentpage")
+![afbeelding van de interactievemap](/Images/Dia1.JPG "interactieve map")
 
 ### Prerequisites
 
