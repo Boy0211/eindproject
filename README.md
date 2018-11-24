@@ -1,27 +1,60 @@
 Naam: Sam Kuilboer  
 Studentnummer: 12442690
 
-# Kop 1
-Financiële welzijn studenten in Nederland
-
-### Kop 3
-Heeft het veranderen van de studiefinanciering naar een studielening een direct effect op het aantal uitwonenden studenten?  
-*Did the change of the studentgrant into a studentloan any direct effect on the number of students living with their parents?*
+# Financiële welzijn studenten in Nederland
 
 
-Dit project is voornamelijk bedoeld om studenten in te lichten. Over de jaren zijn de studenten bijna geluidloos akkoord gegaan met
-de plannen van het kabinet om de studentenbeurs te veranderen in een lening. Tegelijkertijd met deze verandering kwam de belofte alle bespaarde gelden met deze verandering te herinvesteren in het onderwijs. Een subvraag is dan ook of dit gebeurd is. Nu, een aantal jaar later, kunnen de gevolgen zichtbaar worden gemaakt. De hoofdvraag is voornamelijk gericht op het aantal uitwonenden studenten, omdat dit direct valt te linken aan de financiële situatie van een student.
+### Did the change of the studentgrant into a studentloan any direct effect on the number of students living with their parents?
+*This project is meant for the students. Almost 4 years ago the government
+decided to change the studentgrant into a studentloan. The money saved with this
+change would be invested in education. Some years later we can finally check if
+the government made up to their promise and if the change had any effects on the
+students. But not olny the grant is gone. In the last decades the pressure on
+students heavily changed. Are the financial uncertainties an extra factor that
+causes burn outs among students?*
 
-*This project is meant for the students. Almost 4 years ago the government decided to change the studentgrant into a studentloan. The
-money saved with this change would be invested in education. Some years later we can finally check if the government made up to their promise and if the change had any effects on the students.*
+
+### How will it look:
+
+The mimimum viable project will contain the following:
+* A interactive bar chart with the expenses of the government spending on education
+* A interactive map of the Netherlands with a information about how many students
+live at home vs living away from their parents
+* Line graph per city with the prices of a student house
+* A home page with information on the project
+
+Optional:
+* visuzalization about the expenses of a student
+* Extra information about countrys around the Netherlands
 
 
-# Kop 3
-Oplossing:
+Sketch:
+![afbeelding van de homepage](/Presentatie1/Dia1.jpg "Homepage")
+![afbeelding van de studentpage](/Presentatie1/Dia2.jpg "studentpage")
+![afbeelding van de government page](/Presentatie1/Dia3.jpg "governmentpage")
+![afbeelding van de interactievemap](/Presentatie1/Dia1.jpg "interactieve map")
 
-Het eindproduct zal de volgende zaken bevatten:
-* een lijngrafiek met meerdere lijnen over de uitgaven van de regering aan het onderwijs
-* een lijngrafiek met bestedingen van een student
-* een leuke grafiek voor de prijs van een woning in een studentenstad over de jaren
-* een interactieve landkaart van nederland met daarin het aantal thuis/uitwonenden studenten per provinvie (over de jaren)
-maar ook bijvoorbeeld of zij uit welvarende gezinnen komen
+### Prerequisites
+
+*Data Sources*
+Expenses Government:
+[link](https://data.overheid.nl/data/dataset?tags=wetenschappelijk+onderwijs)
+[link](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/80509ned/table?ts=1543070318754)
+
+Students:
+[CBS, financial](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/03753/table?dl=1063F)
+[CBS, financial](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/80393NED/table?dl=8BFF)
+[worldwide](http://data.uis.unesco.org/)
+[DUO, studenten per stad](https://duo.nl/open_onderwijsdata/databestanden/ho/ingeschreven/wo-ingeschr/ingeschrevenen-wo1.jsp)
+
+*External components:*
+Linbaries: D3, statline
+
+*Similar:*
+I have not found any similar visualization other than the Student Projects given from the last year
+
+*Hardest Parts:*
+The hardest part will be ordening the data. Even though there is a lot of data
+about Students in the Netherlands, I am afraid that certain data I want to use
+will be protected from the public. After that ordening the data will be a lot of
+work. In the end I need to find particular data from somtimes huge datasets.
