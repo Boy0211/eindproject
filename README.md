@@ -1,64 +1,60 @@
-Naam: Sam Kuilboer  
+Naam: Sam Kuilboer
 Studentnummer: 12442690
 
-**Git doesn't want to show the sketches, the images can be found in the image directory!
-Sorry fot the inconvenience.**
+**Because of the subject being dutch, the project will be done in dutch**
 
+# Een inkijkje in de top2000
 
-# Financiële welzijn studenten in Nederland
+### Zijn er grote verschillen te vinden in de top2000 over de jaren en wat voor muziek is elk jaar weer terug te vinden? ###
+*Over de jaren is de top2000 een periode van het jaar geworden waarin een groot gedeelte van Nederland geniet van de beste hits ooit gemaakt. Toch krijgt de top2000 over de jaren aardig wat kritiek te verduren over dat de lijst elk jaar hetzelfde is. Met dit project ga ik onderzoeken of deze kritiek terecht is en hoop ik een inkijkje te geven in de statistische data verborgen in de lijst der lijsten.*
 
+### Hoe gaat het eruit zien:
+Het minimale waar het project uit gaat bestaan is het volgende:
 
-### Did the change of the studentgrant into a studentloan any direct effect on the number of students living with their parents?
-*This project is meant for the students. Almost 4 years ago the government
-decided to change the studentgrant into a studentloan. The money saved with this
-change would be invested in education. Some years later we can finally check if
-the government made up to their promise and if the change had any effects on the
-students. But not olny the grant is gone. In the last decades the pressure on
-students heavily changed. Are the financial uncertainties an extra factor that
-causes burn outs among students?*
+* Home page met informatie over het project
 
+Overzicht over de jaren:
+* Een interactieve line chart met daarin over de jaren per decade aangegeven of er meer of minder liedjes in de lijst staan.
 
-### How will it look:
+Overzicht van de lijst per jaar:
+[interactive door het aanvinken van een lijst (bijv 2003)]
+* Een pie chart met top10 artiesten met aantal liedjes
+* Barchart met aantal liedjes per decade
+* Stuk tekst met een gebeurtenis dat jaar dat van invloed kan zijn op de lijst
 
-The mimimum viable project will contain the following:
-* A interactive bar chart with the expenses of the government spending on education
-* A interactive map of the Netherlands with a information about how many students
-live at home vs living away from their parents
-* Line graph per city with the prices of a student house
-* A home page with information on the project
+Overzicht van artiest over de jaren:
+* Linegraph met bestplace per jaar
+* Linegraph met worstplace per jaar
+* Linegraph met score
+* Barchart met liedjes per jaar in de lijst
 
 Optional:
-* visuzalization about the expenses of a student
-* Extra information about countrys around the Netherlands
-
+* Landkaart met daarin de herkomst van de liedjes
+* Artiestenpagina beschikbaar maken voor alle artiesten en niet alleen top10
+* Overzicht van song over de jaren
 
 Sketch:
-![afbeelding van de homepage](/Images/Dia1.JPG "Homepage")
-![afbeelding van de studentpage](/Images/Dia2.JPG "studentpage")
-![afbeelding van de government page](/Images/Dia3.JPG "governmentpage")
-![afbeelding van de interactievemap](/Images/Dia1.JPG "interactieve map")
+![afbeelding van pagina lijst per jaar](/Images/sketch1.jpeg)
+![afbeelding van artiest over de jaren](/Images/sketch2.jpeg)
 
-### Prerequisites
+
+### Prerequisities
 
 *Data Sources*
-Expenses Government:
-[link](https://data.overheid.nl/data/dataset?tags=wetenschappelijk+onderwijs)
-[link](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/80509ned/table?ts=1543070318754)
-
-Students:
-[CBS, financial](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/03753/table?dl=1063F)
-[CBS, financial](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/80393NED/table?dl=8BFF)
-[worldwide](http://data.uis.unesco.org/)
-[DUO, studenten per stad](https://duo.nl/open_onderwijsdata/databestanden/ho/ingeschreven/wo-ingeschr/ingeschrevenen-wo1.jsp)
+[link](https://www.nporadio2.nl/top2000/home)
 
 *External components:*
-Linbaries: D3, statline
+Libraries: D3
 
-*Similar:*
-I have not found any similar visualization other than the Student Projects given from the last year
+*Similar*
+https://msit.powerbi.com/view?r=eyJrIjoiMmM1OGUxZWItNzU0OS00ZDljLWEzMzQtMGM2NTM2MGQzYzEyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9
 
-*Hardest Parts:*
-The hardest part will be ordening the data. Even though there is a lot of data
-about Students in the Netherlands, I am afraid that certain data I want to use
-will be protected from the public. After that ordening the data will be a lot of
-work. In the end I need to find particular data from somtimes huge datasets.
+Review:
+
+De visualisatie van de link hierboven is vergelijkbaar met mijn idee over een visualisatie. Echter vind ik de website niet mooi. Er is alleen werk verricht voor de visualisatie van de data maar niet om de site er gelikt uit te laten zien. Dat is zonde.
+
+Daarnaast heb ik erg mijn best gedaan om de data te vinden die deze persoon gebruik heeft om de landen van herkomst in een kaart aan te geven. Vooralsnog is dat niet gelukt.
+
+*Hardest part:*
+
+Het moeilijkste zal zijn om de data interactief te maken. Vooralsnog is alle data verspreid over verschillende datasets welke interactie bemoeilijkt.
