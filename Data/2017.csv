@@ -1,0 +1,2001 @@
+Notering;Titel;Artiest;Jaar
+1;Bohemian Rhapsody;Queen;1975
+2;Hotel California;Eagles;1977
+3;Stairway to heaven;Led Zeppelin;1971
+4;Piano man;Billy Joel;1974
+5;Child in time;Deep Purple;1972
+6;Black;Pearl Jam;1993
+7;Wish you were here;Pink Floyd;1975
+8;Fix you;Coldplay;2005
+9;Avond;Boudewijn de Groot;1997
+10;November rain;Guns N' Roses;1992
+11;Heroes;David Bowie;1977
+12;Comfortably numb;Pink Floyd;1979
+13;Thunderstruck;AC/DC;1990
+14;Mag ik dan bij jou;Claudia de Breij;2011
+15;Nothing else matters;Metallica;1992
+16;Imagine;John Lennon;1971
+17;Brothers in arms;Dire Straits;1985
+18;Purple rain;Prince & The Revolution;1984
+19;The river;Bruce Springsteen;1981
+20;Hurt;Johnny Cash;2002
+21;Radar love;Golden Earring;1973
+22;Shine on you crazy diamond;Pink Floyd;1975
+23;One;Metallica;1994
+24;Oceaan;Racoon;2013
+25;Africa;Toto;1982
+26;Sultans of swing;Dire Straits;1978
+27;Paradise by the dashboard light;Meat Loaf;1978
+28;The sound of silence;Simon & Garfunkel;1966
+29;God only knows;The Beach Boys;1966
+30;Just breathe;Pearl Jam;2009
+31;Viva la vida;Coldplay;2008
+32;One;U2;1992
+33;Go your own way;Fleetwood Mac;1977
+34;Smells like teen spirit;Nirvana;1991
+35;Old and wise;The Alan Parsons Project;1982
+36;Sweet child o' mine;Guns N' Roses;1988
+37;Alive;Pearl Jam;1992
+38;Innuendo;Queen;1991
+39;The scientist;Coldplay;2002
+40;In the end;Linkin Park;2001
+41;With or without you;U2;1987
+42;A forest;The Cure;1980
+43;Highway to hell;AC/DC;1979
+44;School;Supertramp;1974
+45;Over de muur;Klein Orkest;1984
+46;Clocks;Coldplay;2003
+47;Sunday bloody sunday;U2;1985
+48;In the air tonight;Phil Collins;1981
+49;Riders on the storm;The Doors;1971
+50;Brabant;Guus Meeuwis;2004
+51;Sympathy for the devil;The Rolling Stones;1973
+52;Iron sky;Paolo Nutini;2014
+53;Telegraph Road;Dire Straits;1982
+54;The sound of silence;Disturbed;2016
+55;Mr. Blue Sky;Electric Light Orchestra;1978
+56;Under the bridge;Red Hot Chili Peppers;1992
+57;Back to black;Amy Winehouse;2006
+58;Bridge over troubled water;Simon & Garfunkel;1970
+59;Whole lotta Rosie;AC/DC;1978
+60;Sorry;Kensington;2016
+61;Hey Jude;The Beatles;1968
+62;Het dorp;Wim Sonneveld;1974
+63;Enter sandman;Metallica;1991
+64;Killing in the name;Rage Against the Machine;1992
+65;Creep;Radiohead;1993
+66;Somebody to love;Queen;1976
+67;Paint it black;The Rolling Stones;1966
+68;Angels;Robbie Williams;1998
+69;Private investigations;Dire Straits;1982
+70;Angie;The Rolling Stones;1973
+71;Where the Streets Have No Name;U2;1987
+72;Love of my life;Queen;1975
+73;Losing my religion;R.E.M.;1991
+74;(Sittin' on) the dock of the bay;Otis Redding;1968
+75;Tears in heaven;Eric Clapton;1992
+76;Space oddity;David Bowie;1969
+77;The house of the rising sun;The Animals;1964
+78;Chasing cars;Snow Patrol;2006
+79;Let it be;The Beatles;1970
+80;Gimme shelter;The Rolling Stones;1969
+81;Goodnight Saigon;Billy Joel;1983
+82;Het regent zonnestralen;Acda en De Munnik;1998
+83;Bitter sweet symphony;The Verve;1997
+84;Fool's Overture;Supertramp;1977
+85;Suspicious minds;Elvis Presley;1969
+86;Pastorale;Ramses Shaffy & Liesbeth List;1969
+87;Yesterday;The Beatles;1965
+88;The pretender;Foo Fighters;2007
+89;Someone like you;Adele;2011
+90;Another Brick in the Wall (part two);Pink Floyd;1979
+91;Papa;Stef Bos;1991
+92;Dancing queen;ABBA;1976
+93;Master of puppets;Metallica;1986
+94;Don't stop me now;Queen;1979
+95;Stil in mij;Van Dik Hout;1994
+96;Uprising;Muse;2009
+97;The rose;Bette Midler;1980
+98;Hallelujah;Leonard Cohen;1984
+99;Belfast child;Simple Minds;1989
+100;Wonderwall;Oasis;1995
+101;Under pressure;David Bowie & Queen;1981
+102;Jeanny;Falco;1985
+103;Shape of you;Ed Sheeran;2017
+104;The last resort;Eagles;1976
+105;Here comes the sun;The Beatles;1969
+106;Desperado;Eagles;1973
+107;Who wants to live forever;Queen;1986
+108;Laat me;Ramses Shaffy;1978
+109;Dochters;Marco Borsato;2008
+110;Fragile;Sting;1988
+111;Paranoid;Black Sabbath;1970
+112;Old man;Neil Young;1972
+113;Billie Jean;Michael Jackson;1983
+114;Hallelujah;Jeff Buckley;1994
+115;Don't look back in anger;Oasis;1996
+116;Enjoy the silence;Depeche Mode;1990
+117;A whiter shade of pale;Procol Harum;1967
+118;Perfect day;Lou Reed;1972
+119;When the lady smiles;Golden Earring;1984
+120;Wuthering heights;Kate Bush;1978
+121;Blackbird;The Beatles;1968
+122;Hello;Adele;2015
+123;I still haven't found what I'm looking for;U2;1987
+124;Nights in white satin;Moody Blues;1968
+125;Knights of Cydonia;Muse;2006
+126;Yellow;Coldplay;2000
+127;Californication;Red Hot Chili Peppers;2000
+128;Jolene;Dolly Parton;1974
+129;The unforgettable fire;U2;1985
+130;Whole lotta love;Led Zeppelin;1969
+131;Smoke on the water;Deep Purple;1973
+132;Voor haar;Frans Halsema;1977
+133;Hurricane;Bob Dylan;1975
+134;Sorry;Kyteman;2009
+135;Somebody to Love;George Michael & Queen;1993
+136;Jeremy;Pearl Jam;1991
+137;Thinking out loud;Ed Sheeran;2014
+138;Make you feel my love;Adele;2008
+139;One day like this;Elbow;2008
+140;The boxer;Simon & Garfunkel;1969
+141;Saturday night;Herman Brood & His Wild Romance;1978
+142;Iedereen is van de wereld;The Scene;1991
+143;Love you more;Racoon;2005
+144;Everybody hurts;R.E.M.;1993
+145;Summer of '69;Bryan Adams;1990
+146;Lose yourself;Eminem;2002
+147;Thriller;Michael Jackson;1983
+148;Still got the blues;Gary Moore;1990
+149;September;Earth, Wind & Fire;1979
+150;The load-out/stay;Jackson Browne;1977
+151;Everlong;Foo Fighters;1997
+152;Street spirit (fade out);Radiohead;1995
+153;Oude Maasweg;The Amazing Stroopwafels;1982
+154;Dream on;Aerosmith;1973
+155;Come as you are;Nirvana;1991
+156;Take on me;a-ha;1985
+157;I put a spell on you;Creedence Clearwater Revival;1972
+158;Bad;U2;1984
+159;Kleine jongen;André Hazes;1990
+160;Paradise City;Guns N' Roses;1989
+161;Man in the mirror;Michael Jackson;1988
+162;Du hast;Rammstein;1997
+163;Rolling in the deep;Adele;2010
+164;Skyfall;Adele;2012
+165;A day in the life;The Beatles;1967
+166;Earth song;Michael Jackson;1995
+167;What's going on;Marvin Gaye;1971
+168;Fear of the dark;Iron Maiden;1993
+169;Nobody's wife;Anouk;1997
+170;Karma Police;Radiohead;1997
+171;I see fire;Ed Sheeran;2014
+172;Bloed, zweet en tranen;André Hazes;2002
+173;Kayleigh;Marillion;1985
+174;Chop Suey!;System of a Down;2001
+175;Mama;Genesis;1983
+176;Don't you (forget about me);Simple Minds;1985
+177;Perfect;Ed Sheeran;2017
+178;Mr. Brightside;The Killers;2005
+179;All along the watchtower;Jimi Hendrix Experience;1968
+180;Born to run;Bruce Springsteen;1975
+181;Insomnia;Faithless;1995
+182;Sonne;Rammstein;2001
+183;Fields of gold;Sting;1993
+184;Seven nation army;The White Stripes;2003
+185;Castle on the hill;Ed Sheeran;2017
+186;Money for nothing;Dire Straits;1985
+187;Music;John Miles;1976
+188;Society;Eddie Vedder;2001
+189;Streets of Philadelphia;Bruce Springsteen;1994
+190;Ace of spades;Motörhead;1980
+191;Lightning crashes;Live;1995
+192;The winner takes it all;ABBA;1980
+193;Black Hole Sun;Soundgarden;1994
+194;Papillon;Editors;2009
+195;Dat ik je mis;Maaike Ouboter;2013
+196;She;Charles Aznavour;1974
+197;The show must go on;Queen;1991
+198;Don't stop believin';Journey;1981
+199;Zing, vecht, huil, bid, lach, werk en bewonder;Ramses Shaffy;1971
+200;Formidable;Stromae;2013
+201;Kryptonite;3 Doors Down;2000
+202;Zombie;The Cranberries;1994
+203;In the ghetto;Elvis Presley;1969
+204;Human;Rag'n'Bone Man;2016
+205;Home;Dotan;2014
+206;In your arms;Chef'Special;2014
+207;Heart of gold;Neil Young;1972
+208;Beautiful day;U2;2000
+209;Bed of roses;Bon Jovi;1993
+210;No one knows;Queens of the Stone Age;2003
+211;Barcelona;Freddie Mercury & Montserrat Caballé;1987
+212;Echoes;Pink Floyd;1971
+213;Graceland;Paul Simon;1987
+214;Dust in the wind;Kansas;1978
+215;You can't always get what you want;The Rolling Stones;1969
+216;Have You Ever Seen the Rain?;Creedence Clearwater Revival;1971
+217;Ne me quitte pas;Jacques Brel;1965
+218;Sex on fire;Kings of Leon;2008
+219;When we were young;Adele;2015
+220;Zeg me dat het niet zo is;Frank Boeijen Groep;1990
+221;Good vibrations;The Beach Boys;1966
+222;Psycho;Muse;2015
+223;Dreadlock holiday;10cc;1978
+224;Paranoid Android;Radiohead;1997
+225;While my guitar gently weeps;The Beatles;1968
+226;Happy;Pharrell Williams;2013
+227;More than a feeling;Boston;1977
+228;Roxanne;The Police;1979
+229;Angel of death;Slayer;1986
+230;War;Kensington;2014
+231;She sells sanctuary;The Cult;1986
+232;Careless Whisper;George Michael;1984
+233;One;Mary J. Blige & U2;2005
+234;Another 45 miles;Golden Earring;1969
+235;Forever young;Alphaville;1984
+236;Samba pa ti;Santana;1973
+237;Kronenburg park (Ga die wereld uit);Frank Boeijen Groep;1985
+238;Fast car;Tracy Chapman;1988
+239;Ruthless queen;Kayak;1979
+240;Englishman in New York;Sting;1988
+241;All of me;John Legend;2013
+242;Blauw;The Scene;1991
+243;Wind of change;Scorpions;1991
+244;The end;The Doors;1967
+245;Ice queen;Within Temptation;2002
+246;Lithium;Nirvana;1991
+247;I'm not in love;10cc;1975
+248;Window of my eyes;Cuby + Blizzards;1968
+249;Dreams;Fleetwood Mac;1977
+250;Proud Mary;Ike & Tina Turner;1971
+251;Kashmir;Led Zeppelin;1975
+252;The Chain;Fleetwood Mac;1977
+253;Set fire to the rain;Adele;2011
+254;Zij gelooft in mij;André Hazes;1981
+255;Back in black;AC/DC;1980
+256;Baba O'Riley;The Who;1971
+257;No woman, no cry;Bob Marley & The Wailers;1975
+258;Sterrenstof;De Jeugd van Tegenwoordig;2010
+259;Ain't no sunshine;Bill Withers;1971
+260;Troy;Sinéad O'Connor;1987
+261;Sara;Fleetwood Mac;1980
+262;California dreamin';The Mamas and the Papas;1966
+263;A sky full of stars;Coldplay;2014
+264;Fortunate son;Creedence Clearwater Revival;1969
+265;I want to break free;Queen;1984
+266;Du;Peter Maffay;1971
+267;Life on Mars?;David Bowie;1971
+268;Halo of flies;Alice Cooper;1973
+269;Take me to church;Hozier;2013
+270;Boulevard of broken dreams;Green Day;2004
+271;Redemption Song;Bob Marley;1980
+272;Me and Bobby McGee;Janis Joplin;1971
+273;The day before you came;ABBA;1982
+274;Let her go;Passenger;2012
+275;Worn down piano;Mark & Clark Band;1977
+276;Brown eyed girl;Van Morrison;1967
+277;Testament;Boudewijn de Groot;1967
+278;Knockin' on heaven's door;Guns N' Roses;1992
+279;Somewhere only we know;Keane;2004
+280;Lola Montez;Volbeat;2013
+281;White Rabbit;Jefferson Airplane;1970
+282;Against all odds (take a look at me now);Phil Collins;1984
+283;My immortal;Evanescence;2003
+284;Gotta catch 'em all;Jason Paige;1998
+285;Bad moon rising;Creedence Clearwater Revival;1969
+286;With a little help from my friends;Joe Cocker;1968
+287;Haus am See;Peter Fox;2009
+288;God is a DJ;Faithless;1998
+289;Layla;Eric Clapton;1992
+290;Every breath you take;The Police;1983
+291;Solsbury Hill;Peter Gabriel;1977
+292;The man with the child in his eyes;Kate Bush;1978
+293;Fade to black;Metallica;1984
+294;Streets;Kensington;2014
+295;Morning has broken;Cat Stevens;1972
+296;The unforgiven;Metallica;1991
+297;Als ze er niet is;De Dijk;1994
+298;Suzanne;Leonard Cohen;1968
+299;Eagle;ABBA;1978
+300;I want to know what love is;Foreigner;1984
+301;Zo stil;BLØF;2011
+302;Don't give up;Kate Bush & Peter Gabriel;1986
+303;Silent Lucidity;Queensryche;1991
+304;One step beyond;Madness;1979
+305;(I can't get no) satisfaction;The Rolling Stones;1965
+306;Twilight zone;Golden Earring;1982
+307;Dancing in the dark;Bruce Springsteen;1984
+308;Deurdonderen;Normaal;1982
+309;One of these nights;Eagles;1975
+310;Killer Queen;Queen;1974
+311;Radioactive;Imagine Dragons;2012
+312;Run;Snow Patrol;2004
+313;Une belle histoire;Michel Fugain;1972
+314;Aan de kust;BLØF;1998
+315;Free bird;Lynyrd Skynyrd;1974
+316;The cave;Mumford & Sons;2009
+317;Jesus to a Child;George Michael;1996
+318;She's always a woman;Billy Joel;1978
+319;Ring of fire;Johnny Cash;1963
+320;Kiss from a Rose;Seal;1994
+321;Onderweg;Abel;2000
+322;Vienna;Ultravox;1981
+323;Nothing compares 2 U;Sinéad O'Connor;1990
+324;She's not there;Santana;1978
+325;Smokers outside the hospital doors;Editors;2007
+326;Three little birds;Bob Marley & The Wailers;1977
+327;I'm on fire;Bruce Springsteen;1985
+328;Walk of life;Dire Straits;1985
+329;9 Crimes;Damien Rice;2006
+330;Sweet Caroline;Neil Diamond;1969
+331;Poison;Alice Cooper;1989
+332;Bat out of hell;Meat Loaf;1977
+333;Mother Earth;Within Temptation;2002
+334;Beat it;Michael Jackson;1983
+335;Welcome to the Jungle;Guns N' Roses;1987
+336;Lopen tot de zon komt;Acda en De Munnik;1997
+337;Do I wanna know?;Arctic Monkeys;2013
+338;Can't stop the feeling;Justin Timberlake;2016
+339;Niemand in de stad;De Dijk;1990
+340;My way;Frank Sinatra;1969
+341;When doves cry;Prince;1984
+342;Rockin' in the free world;Neil Young;1989
+343;Oerend hard;Normaal;1977
+344;Omarm;BLØF;2003
+345;The whole of the moon;The Waterboys;1986
+346;Iris;Goo Goo Dolls;1999
+347;A horse with no name;America;1972
+348;Like a hurricane;Neil Young;1977
+349;Laat me / Vivre;Alderliefste & Ramses Shaffy & Liesbeth List;2005
+350;I'm gonna be (500 miles);The Proclaimers;1988
+351;Liefs uit Londen;BLØF;1998
+352;Take it easy;Eagles;1972
+353;Sad Man's Tongue;Volbeat;2007
+354;The logical song;Supertramp;1979
+355;Another love;Tom Odell;2012
+356;The weight;The Band;1968
+357;Thunder Road;Bruce Springsteen;1975
+358;Plug in baby;Muse;2001
+359;Basket case;Green Day;1994
+360;Verdronken vlinder;Boudewijn de Groot;1970
+361;Geef mij je angst;André Hazes;1984
+362;She;Elvis Costello;1999
+363;Time in a bottle;Jim Croce;1973
+364;Halt mich;Herbert Grönemeyer;1988
+365;Ren Lenny ren;Acda en De Munnik;2002
+366;Last Christmas;Wham!;1984
+367;November;Rowwen Hèze;2000
+368;Unfinished sympathy;Massive Attack;1991
+369;Time;Pink Floyd;1973
+370;Fantasy;Earth, Wind & Fire;1978
+371;De vondeling van Ameland;Boudewijn de Groot;2004
+372;Calm after the storm;The Common Linnets;2014
+373;Harder dan ik hebben kan;BLØF;1999
+374;Livin' on a prayer;Bon Jovi;1986
+375;You shook me all night long;AC/DC;1980
+376;99 Luftballons;Nena;1983
+377;Learn to fly;Foo Fighters;1999
+378;Starman;David Bowie;1972
+379;De vlieger;André Hazes;1977
+380;Feel;Robbie Williams;2002
+381;Sweet home Alabama;Lynyrd Skynyrd;1974
+382;Empire State of Mind;Alicia Keys;2009
+383;Wonderful tonight;Eric Clapton;1988
+384;Eye in the sky;The Alan Parsons Project;1982
+385;Like a Rolling Stone;Bob Dylan;1965
+386;Ik heb je lief;Paul de Leeuw;1997
+387;The power of love;Frankie Goes to Hollywood;1984
+388;Stayin' alive;Bee Gees;1978
+389;Your song;Elton John;1971
+390;Another day in paradise;Phil Collins;1989
+391;Estranged;Guns N' Roses;1994
+392;Let's dance;David Bowie;1983
+393;Romeo and Juliet;Dire Straits;1980
+394;Can I play with madness;Iron Maiden;1988
+395;Chandelier;Sia;2014
+396;Paradise;Coldplay;2011
+397;Don't give up the fight;Racoon;2011
+398;Breaking the Habit;Linkin Park;2004
+399;These are the days of our lives;Queen;1991
+400;I was made for lovin' you;Kiss;1979
+401;Op fietse;Skik;1997
+402;Money;Pink Floyd;1973
+403;The man who sold the world;Nirvana;1994
+404;Light my fire;The Doors;1967
+405;Numb/Encore;Jay Z vs. Linkin Park;2003
+406;Bliss;Muse;2001
+407;New Year's Day;U2;1983
+408;The great gig in the sky;Pink Floyd;1973
+409;We will rock you;Queen;1977
+410;The A Team;Ed Sheeran;2011
+411;Eleanor Rigby;The Beatles;1966
+412;Cowboys and Angels;George Michael;1991
+413;Born slippy;Underworld;1996
+414;Riddles;Kensington;2014
+415;Year of the cat;Al Stewart;1977
+416;Dirty Diana;Michael Jackson;1988
+417;Wicked Game;Chris Isaak;1991
+418;Sometimes it snows in April;Prince & The Revolution;1986
+419;Pride (in the name of love);U2;1984
+420;I don’t want to miss a thing;Aerosmith;1998
+421;L.A. woman;The Doors;1971
+422;Message in a bottle;The Police;1979
+423;The thrill is gone;B.B. King;1969
+424;Blue monday;New Order;1983
+425;Psycho killer;Talking Heads;1978
+426;I walk the line;Johnny Cash;1956
+427;Love will tear us apart;Joy Division;1980
+428;Rebel Rebel;David Bowie;1974
+429;Snow;Red Hot Chili Peppers;2006
+430;Photograph;Ed Sheeran;2014
+431;Have I told you lately;Van Morrison;1989
+432;Thank you for the music;ABBA;1978
+433;Little lion man;Mumford & Sons;2009
+434;Lost;Anouk;2005
+435;Still loving you;Scorpions;1987
+436;Johnny B. Goode;Chuck Berry;1958
+437;Hey Joe;Jimi Hendrix Experience;1967
+438;Mag het licht uit;De Dijk;1987
+439;Smooth Criminal;Michael Jackson;1988
+440;Hold the line;Toto;1979
+441;Tribute;Tenacious D;2001
+442;Little black submarines;The Black Keys;2012
+443;Holiday in Spain;BLØF & Counting Crows;2004
+444;Starlight;Muse;2006
+445;Demons;Imagine Dragons;2012
+446;Dansen aan zee;BLØF;2000
+447;Hocus pocus;Focus;1971
+448;Such a Shame;Talk Talk;1984
+449;Baker street;Gerry Rafferty;1978
+450;I Will Follow;U2;1982
+451;Try;P!nk;2012
+452;Strong;London Grammar;2014
+453;Black magic woman;Santana;1970
+454;This is what it feels like;Armin van Buuren;2013
+455;Do I ever;Kensington;2016
+456;Wild horses;The Rolling Stones;1971
+457;Badlands;Bruce Springsteen;1978
+458;Owner of a lonely heart;Yes;1983
+459;Birds;Anouk;2013
+460;Dansen op de vulkaan;De Dijk;1987
+461;Geef mij je angst;Guus Meeuwis;2004
+462;Treur niet (Ode aan het leven);Diggy Dex feat. JW Roy;2015
+463;Radio Ga Ga;Queen;1984
+464;Not an addict;K's Choice;1996
+465;I want you;Elvis Costello;1986
+466;Born in the USA;Bruce Springsteen;1985
+467;Tusk;Fleetwood Mac;1979
+468;Somebody that I used to know;Gotye;2011
+469;La grange;ZZ Top;1973
+470;Nightswimming;R.E.M.;1992
+471;Margherita;Marco Borsato;1996
+472;De Peel in brand;Rowwen Hèze;2005
+473;I would stay;Krezip;2000
+474;Welterusten, meneer de president;Boudewijn de Groot;1966
+475;Groot hart;De Dijk;1985
+476;Firth of Fifth;Genesis;1973
+477;Uptown Funk;Mark Ronson & Bruno Mars;2014
+478;Max;Paolo Conte;1988
+479;Ironic;Alanis Morissette;1995
+480;Get lucky;Daft Punk;2013
+481;Rehab;Amy Winehouse;2007
+482;What about us;P!nk;2017
+483;Chan Chan;Buena Vista Social Club;1997
+484;I will always love you;Whitney Houston;1992
+485;Immigrant Song;Led Zeppelin;1971
+486;Diamonds;The Boxer Rebellion;2013
+487;Can't Help Falling in Love with You;Elvis Presley;1961
+488;Maid of Orleans;O.M.D.;1982
+489;Stan;Eminem feat. Dido;2000
+490;Lippy Kids;Elbow;2011
+491;Patience;Guns N' Roses;1988
+492;Leningrad;Billy Joel;1989
+493;Amígo;Chef'Special;2016
+494;Wake me up when September ends;Green Day;2005
+495;Everything now;Arcade Fire;2017
+496;Halo;Beyoncé;2009
+497;Conquest of paradise;Vangelis;1995
+498;Alone;Heart;1987
+499;Lazarus;David Bowie;2016
+500;Take Me Home, Country Roads;John Denver;1971
+501;Always on my mind;Elvis Presley;1972
+502;I Am... I Said;Neil Diamond;1971
+503;Holding back the years;Simply Red;1985
+504;Papa Was a Rollin' Stone;The Temptations;1972
+505;Strawberry fields forever;The Beatles;1967
+506;Penny Lane;The Beatles;1967
+507;Supermassive black hole;Muse;2006
+508;Superstition;Stevie Wonder;1973
+509;Valerie;Amy Winehouse & Mark Ronson;2007
+510;The man who can't be moved;The Script;2008
+511;So Long;Fischer-Z;1980
+512;Leave the light on;Beth Hart;2003
+513;Stop loving you;Toto;1988
+514;Golden Brown;The Stranglers;1982
+515;Songbird;Fleetwood Mac;1977
+516;How Deep Is Your Love;Bee Gees;1977
+517;Papaoutai;Stromae;2013
+518;Down Under;Men at Work;1982
+519;Father and Son;Cat Stevens;1971
+520;Everytime I think of you;The Babys;1979
+521;Scar Tissue;Red Hot Chili Peppers;1999
+522;Annie's Song;John Denver;1976
+523;The final countdown;Europe;1986
+524;Our house;Crosby, Stills, Nash & Young;1970
+525;A boy named Sue;Johnny Cash;1969
+526;Zelfs je naam is mooi;Henk Westbroek;1998
+527;What a Wonderful World;Louis Armstrong;1968
+528;Here I go again;Whitesnake;1987
+529;Going to the Run;Golden Earring;1991
+530;Rhiannon (Will You Ever Win);Fleetwood Mac;1976
+531;Easy Livin';Uriah Heep;1973
+532;Rainbow in the Sky;DJ Paul Elstak;1995
+533;Witch Doctor;De Staat;2014
+534;Teardrop;Massive Attack;1998
+535;Fields of gold;Eva Cassidy;1998
+536;Father Figure;George Michael;1988
+537;You're the first, the last, my everything;Barry White;1974
+538;Landslide;Fleetwood Mac;1975
+539;Der Weg;Herbert Grönemeyer;2002
+540;Overcome;Live;2001
+541;Lust for life;Iggy Pop;1977
+542;Woman in love;Barbra Streisand;1980
+543;Boogie Wonderland;Earth, Wind & Fire feat. The Emotions;1979
+544;You Are So Beautiful;Joe Cocker;1975
+545;Zij maakt het verschil;De Poema's;2001
+546;All I need;Air;1999
+547;High hopes;Pink Floyd;1994
+548;Tougher Than the Rest;Bruce Springsteen;1988
+549;Blowin' in the wind;Bob Dylan;1963
+550;Niet of nooit geweest;Acda en De Munnik;1998
+551;Albatross;Fleetwood Mac;1969
+552;So long Marianne;Leonard Cohen;1968
+553;Gimme all your lovin';ZZ Top;1984
+554;Lyin' Eyes;Eagles;1975
+555;Dark Necessities;Red Hot Chili Peppers;2016
+556;Man on the moon;R.E.M.;1992
+557;The Boys of Summer;Don Henley;1985
+558;Leaving on a Jet Plane;John Denver;1969
+559;Land of Confusion;Genesis;1986
+560;Sabotage;Beastie Boys;1994
+561;Almost cut my hair;Crosby, Stills, Nash & Young;1971
+562;Love Hurts;Nazareth;1974
+563;Hard Sun;Eddie Vedder;2007
+564;A Different Corner;George Michael;1986
+565;Jump;Van Halen;1984
+566;Sebastian;Steve Harley & Cockney Rebel;1973
+567;Sweet dreams;Eurythmics;1983
+568;Alles geprobeerd;Het Goede Doel;1986
+569;Whiskey in the Jar;Metallica;1999
+570;Pompeii;Bastille;2013
+571;Hier kom ik weg;Daniël Lohues;2008
+572;Sign “☮” the Times;Prince;1987
+573;Million years ago;Adele;2015
+574;Black Betty;Ram Jam;1978
+575;Tubular Bells;Mike Oldfield;1974
+576;Runnin' with the Devil;Van Halen;1980
+577;Feel Good Inc.;Gorillaz;2005
+578;Sad but True;Metallica;1993
+579;Under The Pressure;The War on Drugs;2014
+580;Take this waltz;Leonard Cohen;1986
+581;Roll over lay down;Status Quo;1975
+582;Non, je ne regrette rien;Edith Piaf;1961
+583;We Are the Champions;Queen;1977
+584;New Kid in Town;Eagles;1977
+585;Vincent;Don McLean;1972
+586;Motorcycle Emptiness;Manic Street Preachers;1992
+587;It's my life;Bon Jovi;2000
+588;Is She Really Going Out with Him?;Joe Jackson;1979
+589;Song 2;Blur;1997
+590;Through the barricades;Spandau Ballet;1986
+591;Otherside;Red Hot Chili Peppers;2000
+592;All I want is you;U2;1989
+593;Gravity;John Mayer;2006
+594;Slowdancing in a burning room;John Mayer;2006
+595;Tinseltown in the rain;The Blue Nile;1984
+596;Champagne supernova;Oasis;1995
+597;If You Leave Me Now;Chicago;1976
+598;Cloudbusting;Kate Bush;1985
+599;No mercy;Racoon;2011
+600;Clint Eastwood;Gorillaz;2001
+601;I follow rivers;Triggerfinger;2012
+602;Be My Number Two;Joe Jackson;1984
+603;Daughters;John Mayer;2005
+604;Ashes to ashes;David Bowie;1980
+605;Go like Elijah;Chi Coltrane;1973
+606;Walk;Foo Fighters;2011
+607;De verzoening;Frank Boeijen Groep;1987
+608;24K Magic;Bruno Mars;2016
+609;Michel;Anouk;2000
+610;Mutter;Rammstein;2002
+611;Narcotic;Liquido;1998
+612;Bright eyes;Art Garfunkel;1979
+613;Mamma mia;ABBA;1975
+614;China girl;David Bowie;1983
+615;Driving Home for Christmas;Chris Rea;1986
+616;Us and Them;Pink Floyd;1974
+617;Ben;Michael Jackson;1972
+618;The turn of a friendly card;The Alan Parsons Project;1980
+619;Total Eclipse of the Heart;Bonnie Tyler;1983
+620;Never Tear Us Apart;INXS;1988
+621;Little Green Bag;George Baker Selection;1969
+622;Running up that hill;Kate Bush;1985
+623;White Room;Cream;1968
+624;Who'll Stop the Rain;Creedence Clearwater Revival;1970
+625;They Don't Care About Us;Michael Jackson;1996
+626;32 jaar (Sinds 1 dag of 2);Doe Maar;1981
+627;Dat komt door jou;Guus Meeuwis;2009
+628;Need Your Love So Bad;Fleetwood Mac;1968
+629;Wild is the wind;David Bowie;1976
+630;Into My Arms;Nick Cave & The Bad Seeds;1997
+631;My boy;Elvis Presley;1975
+632;My hometown;Bruce Springsteen;1986
+633;Wake me up;Avicii;2013
+634;Sharp dressed man;ZZ Top;1985
+635;Ik kan het niet alleen;De Dijk;1989
+636;Prachtig mooie dag;Daniël Lohues;2011
+637;Lola;The Kinks;1970
+638;Come Together;The Beatles;1969
+639;Zonder jou;Paul de Leeuw & Simone Kleinsma;1995
+640;Teach your children;Crosby, Stills, Nash & Young;1970
+641;Alive and Kicking;Simple Minds;1985
+642;I Will Wait;Mumford & Sons;2012
+643;Blueberry Hill;Fats Domino;1957
+644;Dreamer;Supertramp;1974
+645;Follow You Follow Me;Genesis;1978
+646;Don't Fear the Reaper;Blue Öyster Cult;1976
+647;Pinball Wizard;The Who;1969
+648;Faith;George Michael;1987
+649;Jailhouse rock;Elvis Presley;1957
+650;Would?;Alice in Chains;1992
+651;1999;Prince;1982
+652;Norwegian wood;The Beatles;1965
+653;Rood;Marco Borsato;2006
+654;How you gonna see me now;Alice Cooper;1979
+655;A Night Like This;Caro Emerald;2009
+656;The passenger;Iggy Pop;1977
+657;You'll Be in My Heart;Phil Collins;1999
+658;Folsom prison blues (live in Folsom prison);Johnny Cash;1957
+659;Mrs. Robinson;Simon & Garfunkel;1968
+660;Waterloo;ABBA;1974
+661;Denis;Blondie;1978
+662;Zandloper;Typhoon;2014
+663;Kristallnaach;BAP;1983
+664;Red red wine;UB40;1983
+665;Venus;Shocking Blue;1969
+666;Wrong;Novastar;1999
+667;Liverpool rain;Racoon;2012
+668;Something just like this;The Chainsmokers & Coldplay;2017
+669;Take me out;Franz Ferdinand;2004
+670;Mijn houten hart;De Poema's;1999
+671;Blaosmuziek;Gé Reinders;1999
+672;Let It Happen;Tame Impala;2015
+673;Liefde van later;Herman van Veen;1969
+674;Everywhere;Fleetwood Mac;1988
+675;In the Dutch Mountains;Nits;1987
+676;Freedom;George Michael;1990
+677;Use somebody;Kings of Leon;2008
+678;Walk on the wild side;Lou Reed;1973
+679;There is a light that never goes out;The Smiths;1986
+680;Waterfront;Simple Minds;1983
+681;Don't Dream It's Over;Crowded House;1987
+682;I bet you look good on the dancefloor;Arctic Monkeys;2005
+683;American idiot;Green Day;2004
+684;One way wind;The Cats;1971
+685;Just a little bit of peace in my heart;Golden Earring;1968
+686;Crazy Little Thing Called Love;Queen;1979
+687;I Alone;Live;1994
+688;Sailing;Rod Stewart;1975
+689;Never be clever;Herman Brood & His Wild Romance;1979
+690;Lullaby;The Cure;1989
+691;Changes;2Pac;1998
+692;Another One Bites the Dust;Queen;1980
+693;Jungleland;Bruce Springsteen;1975
+694;Little Wing;Jimi Hendrix;1969
+695;You're so vain;Carly Simon;1973
+696;Like the Way I Do;Melissa Etheridge;1989
+697;Mooie dag;BLØF;2002
+698;You want it darker;Leonard Cohen;2016
+699;Slippery people (live);Talking Heads;1985
+700;Video Games;Lana Del Rey;2011
+701;Chiquitita;ABBA;1979
+702;You do something to me;Paul Weller;1995
+703;Real Men;Joe Jackson;1982
+704;Tunnel of Love;Dire Straits;1980
+705;You know I'm no good;Amy Winehouse;2007
+706;Unchain My Heart;Joe Cocker;1987
+707;Toen ik je zag;Hero;1997
+708;Mr. Jones;Counting Crows;1994
+709;Tonight;David Bowie & Tina Turner;1988
+710;What It Is;Mark Knopfler;2000
+711;Whatever you want;Status Quo;1979
+712;The Times They Are a-Changin';Bob Dylan;1965
+713;You Can Call Me Al;Paul Simon;1986
+714;Don't Let the Sun Go Down on Me;George Michael & Elton John;1991
+715;The Fool on the Hill;The Beatles;1967
+716;Human;The Killers;2008
+717;Gaia;Valensia;1993
+718;American pie;Don McLean;1972
+719;Heaven Must Be Missing an Angel;Tavares;1976
+720;Suzie Q;Creedence Clearwater Revival;1968
+721;Jimmy;Boudewijn de Groot;1973
+722;Nothing Rhymed;Gilbert O'Sullivan;1971
+723;Best of You;Foo Fighters;2005
+724;You;Ten Sharp;1991
+725;No Surprises;Radiohead;1998
+726;So Lonely;The Police;1979
+727;The Long and Winding Road;The Beatles;1970
+728;Als het vuur gedoofd is;Acda en De Munnik;1997
+729;Born to be wild;Steppenwolf;1968
+730;Sound and Vision;David Bowie;1977
+731;Always;Bon Jovi;1994
+732;Bring me to life;Evanescence;2003
+733;My silver lining;First Aid Kit;2014
+734;Our house;Madness;1982
+735;Rain Down on Me;Kane;2002
+736;River Deep - Mountain High;Ike & Tina Turner;1966
+737;Does youw mother know;ABBA;1979
+738;Blauwe ruis;BLØF;2002
+739;I Still Cry;Ilse DeLange;2000
+740;Locomotive Breath;Jethro Tull;1972
+741;Once upon a time in the west;Ennio Morricone;1968
+742;Bloedend hart;De Dijk;1982
+743;Ziggy Stardust;David Bowie;1972
+744;The Family Tree;Venice;1999
+745;Fly me to the moon;Frank Sinatra;1964
+746;Beautiful Noise;Neil Diamond;1976
+747;Musica è;Eros Ramazzotti;1989
+748;Limburg (kwestie van geduld);Rowwen Hèze;1996
+749;Heading Up High;Kensington & Armin van Buuren;2015
+750;Cold Little Heart;Michael Kiwanuka;2016
+751;Zeg maar niets meer;André Hazes;1982
+752;Father and friend;Alain Clark;2008
+753;Smooth Operator;Sade;1984
+754;Hunger Strike;Temple of the Dog;1991
+755;Daar gaat ze;Clouseau;1990
+756;Why tell me why;Anita Meyer;1981
+757;School's out;Alice Cooper;1972
+758;Bedshaped;Keane;2004
+759;Trouble;Coldplay;2000
+760;Band on the run;Paul McCartney & Wings;1974
+761;Top of the World;The Carpenters;1973
+762;Words;Bee Gees;1968
+763;Free fallin';Tom Petty;1989
+764;You're my best friend;Queen;1976
+765;Winter;Tori Amos;1992
+766;Everybody Wants to Rule the World;Tears for Fears;1985
+767;I Feel Love;Donna Summer;1977
+768;The eyes of Jenny;Sandy Coast;1981
+769;Rocket man;Elton John;1972
+770;Kan ik iets voor je doen?;De Dijk;2011
+771;Jesus He Knows Me;Genesis;1992
+772;In-a-gadda-da-vida;Iron Butterfly;1970
+773;Every Little Thing She Does Is Magic;The Police;1981
+774;Sweet Goodbyes;Krezip;2009
+775;Eternal Flame;The Bangles;1989
+776;Eye of the Tiger;Survivor;1982
+777;Carry on wayward son;Kansas;1977
+778;Waves;Mr. Probz;2013
+779;Con te partirò;Andrea Bocelli;1996
+780;Fake Plastic Trees;Radiohead;1995
+781;People Are Strange;The Doors;1967
+782;Everglow;Coldplay;2015
+783;One of these days;Pink Floyd;1971
+784;Like a prayer;Madonna;1989
+785;Suzanne;Herman van Veen;1969
+786;Nikita;Elton John;1985
+787;(Everything I do) I do it for you;Bryan Adams;1991
+788;Something;The Beatles;1969
+789;This is the life;Amy Macdonald;2008
+790;Rosanna;Toto;1982
+791;Mooi;Marco Borsato;2015
+792;Hymn for the Weekend;Coldplay & Beyoncé;2016
+793;Message to my girl;Split Enz;1984
+794;If you tolerate this your children will be next;Manic Street Preachers;1998
+795;You've got a friend;Carole King;1971
+796;In the blood;John Mayer;2017
+797;Once in a Lifetime;Talking Heads;1981
+798;Circle of Life;Elton John;1994
+799;On every street;Dire Straits;1992
+800;Binnen zonder kloppen;De Dijk;1985
+801;Son of a Preacher Man;Dusty Springfield;1968
+802;Let me entertain you;Robbie Williams;1998
+803;Here Without You;3 Doors Down;2003
+804;Het werd zomer;Rob de Nijs;1977
+805;Don't Cry;Guns N' Roses;1991
+806;Good Riddance (Time of Your Life);Green Day;1997
+807;All for nothing;Kensington;2014
+808;Can't Hold Us;Macklemore & Ryan Lewis;2011
+809;Trapped;Bruce Springsteen;1985
+810;I'd Do Anything for Love (But I Won't Do That);Meat Loaf;1993
+811;Belle Hélène;Doe Maar;1982
+812;Anne;Herman van Veen;1986
+813;New York State of Mind;Billy Joel;1976
+814;Chasing pavements;Adele;2008
+815;Ain't Got No, I Got Life;Nina Simone;1968
+816;Stand by me;Ben E. King;1987
+817;Voodoo child;Jimi Hendrix Experience;1968
+818;The Wind Cries Mary;Jimi Hendrix Experience;1967
+819;Flappie;Youp van 't Hek;1981
+820;Down down;Status Quo;1975
+821;Heal the World;Michael Jackson;1992
+822;Russians;Sting;1985
+823;What's Up?;4 Non Blondes;1993
+824;Brown Sugar;The Rolling Stones;1971
+825;The One I Love;R.E.M.;1987
+826;I Heard It Through the Grapevine;Marvin Gaye;1969
+827;Home again;Kensington;2013
+828;(You Make Me Feel Like) A Natural Woman;Aretha Franklin;1967
+829;Hald mich 's vas;Neet oét Lottum;2005
+830;Dancing in the Street;David Bowie & Mick Jagger;1985
+831;Ordinary Love;U2;2013
+832;Ordinary World;Duran Duran;1993
+833;Layla;Derek and the Dominos;1971
+834;Blackstar;David Bowie;2016
+835;Foto van vroeger;Rob de Nijs;1980
+836;Sexual healing;Marvin Gaye;1982
+837;Weak;Skunk Anansie;1995
+838;Epic;Faith No More;1989
+839;Whiskey in the Jar;Thin Lizzy;1973
+840;Listen to the Music;The Doobie Brothers;1972
+841;Hey Brother;Avicii;2013
+842;Respect;Aretha Franklin;1967
+843;I Gotta Feeling;The Black Eyed Peas;2009
+844;Lucy in the Sky with Diamonds;The Beatles;1967
+845;Nine Million Bicycles;Katie Melua;2005
+846;A Gentleman's Excuse Me;Fish;1990
+847;Never Gonna Give You Up;Rick Astley;1987
+848;See Me, Feel Me;The Who;1970
+849;The lady in red;Chris de Burgh;1986
+850;Raspberry Beret;Prince & The Revolution;1985
+851;Eloise;Barry Ryan;1968
+852;Afscheid nemen bestaat niet;Marco Borsato;2003
+853;Don't stop;Fleetwood Mac;1977
+854;London calling;The Clash;1979
+855;Since I've been loving you;Led Zeppelin;1970
+856;Geen kind meer;Karin Bloemen;1996
+857;Tequila Sunrise;Eagles;1973
+858;Autobahn;Kraftwerk;1975
+859;Absolute beginners;David Bowie;1986
+860;Have a Little Faith in Me;John Hiatt;1989
+861;Little Lies;Fleetwood Mac;1987
+862;Linger;The Cranberries;1993
+863;Four Seasons in One Day;Crowded House;1992
+864;Where the Wild Roses Grow;Kylie Minogue & Nick Cave;1995
+865;Tie Your Mother Down;Queen;1977
+866;Disarm;The Smashing Pumpkins;2003
+867;The Worker;Fischer-Z;1979
+868;Let Love Rule;Lenny Kravitz;1989
+869;Magic;Coldplay;2014
+870;Hunting high and low;a-ha;1986
+871;Unchained Melody;The Righteous Brothers;1965
+872;Keep your head up;Ben Howard;2011
+873;Ruby Tuesday;The Rolling Stones;1967
+874;For bitter or worse;Anouk;2009
+875;Flink zijn;Robert Long;1977
+876;Life's What You Make It;Talk Talk;1985
+877;Peter Gunn Theme;Emerson, Lake & Palmer;1980
+878;The Best;Tina Turner;1989
+879;Frozen;Madonna;1998
+880;You're the Voice;John Farnham;1987
+881;Memory;Barbra Streisand;1982
+882;Knockin' on heaven's door;Bob Dylan;1973
+883;Mercedes Benz;Janis Joplin;1970
+884;Where Is the Love?;The Black Eyed Peas;2003
+885;Adventure of a lifetime;Coldplay;2015
+886;Wonderfull Days;Charly Lownoise & Mental Theo;1995
+887;I Heard It Through the Grapevine;Creedence Clearwater Revival;1973
+888;Vivo per lei;Andrea Bocelli & Giorgia;1996
+889;Zoutelande;BLØF & Geike Arnaert;2017
+890;Michelle;The Beatles;1966
+891;Glory Days;Bruce Springsteen;1984
+892;Candle in the wind '97;Elton John;1997
+893;Hometown glory;Adele;2007
+894;Happy New Year;ABBA;1980
+895;'39;Queen;1975
+896;Hallelujah;Lisa;2009
+897;Shout;Tears for Fears;1985
+898;Hurt;Christina Aguilera;2006
+899;How you remind me;Nickelback;2001
+900;Just can't get enough;Depeche Mode;1985
+901;Don't Speak;No Doubt;1996
+902;Porcelain;Moby;1999
+903;Give Me Love;Ed Sheeran;2012
+904;Ben ik te min;Armand;1967
+905;Suicide is Painless;M*A*S*H;1970
+906;Lemon tree;Fool's Garden;1996
+907;In nije dei;De Kast;1997
+908;België (is er leven op Pluto...);Het Goede Doel;1982
+909;I'm Going Home;Ten Years After;1971
+910;Everybody Needs Somebody to Love;The Blues Brothers;1989
+911;Lay all your love on me;ABBA;1981
+912;Lonely boy;The Black Keys;2011
+913;Stay with me;Sam Smith;2014
+914;Avalon;Roxy Music;1982
+915;In a Lifetime;Clannad & Bono;1986
+916;Sovereign Light Café;Keane;2012
+917;Crazy on You;Heart;1977
+918;A kind of magic;Queen;1986
+919;This is not America;David Bowie & Pat Metheny Group;1985
+920;Dani California;Red Hot Chili Peppers;2006
+921;Black or White;Michael Jackson;1991
+922;One word;Anouk;2005
+923;Moondance;Van Morrison;1970
+924;Madness;Muse;2012
+925;Sign of the times;Harry Styles;2017
+926;She Flies on Strange Wings;Golden Earring;1971
+927;Waiting on a Friend;The Rolling Stones;1981
+928;Just give me a reason;Pink & Nate Ruess;2012
+929;Baggy Trousers;Madness;1980
+930;You've got a friend;James Taylor;1971
+931;Love Like Blood;Killing Joke;1985
+932;Private dancer;Tina Turner;1984
+933;Kingston Town;UB40;1990
+934;Shoes Of Lightning;Racoon;2013
+935;Thunder;Imagine Dragons;2017
+936;I won't give up;Jason Mraz;2012
+937;Cold as Ice;Foreigner;1977
+938;Crazy;Seal;1991
+939;Islands in the stream;Dolly Parton & Kenny Rogers;1983
+940;Tears dry on their own;Amy Winehouse;2006
+941;Hemel valt;Typhoon;2014
+942;Is dit nou later?;Stef Bos;1990
+943;The Unforgiven II;Metallica;1998
+944;Come on Eileen;Dexys Midnight Runners;1982
+945;Waitin' on a Sunny Day;Bruce Springsteen;2003
+946;Fool to Cry;The Rolling Stones;1976
+947;Plush;Stone Temple Pilots;1992
+948;About a Girl;Nirvana;1989
+949;I have a dream;ABBA;1979
+950;Start Me Up;The Rolling Stones;1981
+951;I say a little prayer;Aretha Franklin;1968
+952;Think;Aretha Franklin;1968
+953;Question;Moody Blues;1970
+954;State of Independence;Donna Summer;1982
+955;I Want It All;Queen;1989
+956;No more tears;Ozzy Osbourne;1991
+957;One more time;Daft Punk;2000
+958;Could You Be Loved;Bob Marley & The Wailers;1980
+959;Zij;Marco Borsato;2002
+960;Give It Away;Red Hot Chili Peppers;1991
+961;21 Guns;Green Day;2009
+962;Breakfast in America;Supertramp;1979
+963;Jumpin' Jack Flash;The Rolling Stones;1968
+964;Breakthru;Queen;1989
+965;The man who sold the world;David Bowie;1972
+966;Self Esteem;The Offspring;1995
+967;You'll never walk alone;Gerry & the Pacemakers;1963
+968;De bom;Doe Maar;1982
+969;Anyplace Anywhere Anytime;Nena & Kim Wilde;2003
+970;Friday I'm in love;The Cure;1992
+971;25 or 6 to 4;Chicago;1970
+972;The Racing Rats;Editors;2007
+973;She's a Rainbow;The Rolling Stones;1967
+974;Uncertain Smile;The The;1984
+975;It's my life;Talk Talk;1984
+976;Take Five;Dave Brubeck Quartet;1962
+977;Massachusetts;Bee Gees;1967
+978;No limit;2 Unlimited;1993
+979;Jacob's Song;Douwe Bob;2016
+980;Nightporter;Japan;1980
+981;How to save a life;The Fray;2005
+982;Gimme! Gimme! Gimme! (a man after midnight);ABBA;1979
+983;Heart-Shaped Box;Nirvana;1993
+984;MacArthur Park;Donna Summer;1978
+985;The air that I breathe;The Hollies;1974
+986;My Sweet Lord;George Harrison;1970
+987;Droomland;Paul de Leeuw & André Hazes;1993
+988;Wanted Dead or Alive;Bon Jovi;1987
+989;Auto, vliegtuug;Rowwen Hèze;1999
+990;The Reflex;Duran Duran;1984
+991;Empire State of Mind;Jay Z feat. Alicia Keys;2009
+992;Scarborough Fair;Simon & Garfunkel;1966
+993;I Am the Walrus;The Beatles;1967
+994;Help!;The Beatles;1965
+995;Yesterday When I Was Young;Charles Aznavour;1970
+996;Het is een nacht... (Levensecht);Guus Meeuwis & Vagant;1995
+997;Remedy;The Black Crowes;1992
+998;Nightboat to Cairo;Madness;1980
+999;I would die 4 U;Prince & The Revolution;1984
+1000;My generation;The Who;1965
+1001;I Want You to Want Me;Cheap Trick;1979
+1002;Drops of Jupiter (Tell Me);Train;2001
+1003;I Just Can't Help Believin';Elvis Presley;1972
+1004;Can't stop loving you;Phil Collins;2002
+1005;Barracuda;Heart;1977
+1006;Is dit alles;Doe Maar;1982
+1007;Human nature;Michael Jackson;1983
+1008;Smalltown Boy;Bronski Beat;1984
+1009;True Colors;Cyndi Lauper;1986
+1010;The dolphin's cry;Live;1999
+1011;I will survive;Gloria Gaynor;1979
+1012;El cóndor pasa;Simon & Garfunkel;1970
+1013;De kapitein deel II;Acda en De Munnik;2000
+1014;House for sale;Lucifer;1975
+1015;Alles is liefde;BLØF;2007
+1016;Road Trippin';Red Hot Chili Peppers;1999
+1017;Beds Are Burning;Midnight Oil;1988
+1018;Mijn vlakke land;Jacques Brel;1965
+1019;All I Want for Christmas Is You;Mariah Carey;1994
+1020;Personal Jesus;Depeche Mode;1989
+1021;Orinoco Flow (Sail Away);Enya;1988
+1022;1979;The Smashing Pumpkins;1996
+1023;Hello;Lionel Richie;1984
+1024;Golden years;David Bowie;1976
+1025;Roundabout;Yes;1972
+1026;Get Back;The Beatles;1969
+1027;Take the long way home;Supertramp;1979
+1028;Family Portrait;Pink;2003
+1029;Heaven;Bryan Adams;1985
+1030;Undisclosed Desires;Muse;2009
+1031;Bigmouth strikes again;The Smiths;1986
+1032;Miracle;Ilse DeLange;2008
+1033;Isn't It Time;The Babys;1977
+1034;Sorry;Nothing but Thieves;2017
+1035;Go with the flow;Queens of the Stone Age;2003
+1036;Il volo;Zucchero Fornaciari;1996
+1037;The Way You Make Me Feel;Michael Jackson;1987
+1038;Oh well (part 1);Fleetwood Mac;1969
+1039;Only Time;Enya;2000
+1040;In my life;The Beatles;1965
+1041;Miss you;The Rolling Stones;1978
+1042;Girl;Anouk;2004
+1043;Two out of Three Ain't Bad;Meat Loaf;1977
+1044;Lea;The Cats;1968
+1045;You give love a bad name;Bon Jovi;1986
+1046;Save a Prayer;Duran Duran;1985
+1047;Shape of my heart;Sting;1993
+1048;Red Eyes;The War on Drugs;2013
+1049;50 ways to leave your lover;Paul Simon;1976
+1050;Tranen gelachen;Guus Meeuwis;2007
+1051;If you could see me now;The Script;2013
+1052;Give a little bit;Supertramp;1977
+1053;Drive;R.E.M.;1992
+1054;Smack My Bitch Up;The Prodigy;1997
+1055;Purple Haze;Jimi Hendrix Experience;1967
+1056;Let's go crazy;Prince & The Revolution;1985
+1057;If you don't know me by now;Simply Red;1989
+1058;Road to Nowhere;Talking Heads;1985
+1059;Won't Get Fooled Again;The Who;1971
+1060;Driver's Seat;Sniff 'n' the Tears;1980
+1061;Pak maar m'n hand;Nick & Simon;2007
+1062;Let's get it on;Marvin Gaye;1973
+1063;Wannabe;Spice Girls;1996
+1064;Why Does My Heart Feel So Bad?;Moby;1999
+1065;L'amour toujours;Gigi D'Agostino;2001
+1066;Time Is Running Out;Muse;2003
+1067;Love is a battlefield;Pat Benatar;1984
+1068;Ik wou dat ik jou was;Veldhuis & Kemper;2003
+1069;Zwart wit;Frank Boeijen Groep;1984
+1070;Don't Bring Me Down;Electric Light Orchestra;1979
+1071;I wish;Stevie Wonder;1977
+1072;Sowing the Seeds of Love;Tears for Fears;1989
+1073;Bicycle Race;Queen;1978
+1074;I Want It That Way;Backstreet Boys;1999
+1075;Proud Mary;Creedence Clearwater Revival;1969
+1076;Sledgehammer;Peter Gabriel;1986
+1077;Kiss;Prince & The Revolution;1986
+1078;You ain't seen nothin' yet;Bachman-Turner Overdrive;1974
+1079;Unintended;Muse;1999
+1080;Stressed out;Twenty One Pilots;2015
+1081;Time to say goodbye;Andrea Bocelli & Sarah Brightman;1997
+1082;Walking on the Moon;The Police;1979
+1083;Harvest;Neil Young;1972
+1084;Shut Your Eyes;Snow Patrol;2007
+1085;Someone somewhere (in summertime);Simple Minds;1982
+1086;Wonderful World;Sam Cooke;1960
+1087;Wake Me Up Before You Go-Go;Wham!;1984
+1088;Take a chance on me;ABBA;1977
+1089;Run to You;Bryan Adams;1985
+1090;Summertime;Brainbox;1969
+1091;Don't stop 'til you get enough;Michael Jackson;1979
+1092;Smoorverliefd;Doe Maar;1981
+1093;Boys don't cry;The Cure;1986
+1094;Knowing me, knowing you;ABBA;1977
+1095;Storm and Thunder;Earth & Fire;1971
+1096;Firestarter;The Prodigy;1996
+1097;Spirit of Radio;Rush;1980
+1098;I Will Always Love You;Dolly Parton;1983
+1099;When Love Comes to Town;U2 & B.B. King;1988
+1100;Honky Tonk Women;The Rolling Stones;1969
+1101;Tears in the Morning;The Beach Boys;1970
+1102;Dazed and Confused;Led Zeppelin;1969
+1103;Waiting on the world to change;John Mayer;2006
+1104;Are You Gonna Go My Way;Lenny Kravitz;1993
+1105;Praying for time;George Michael;1990
+1106;I've got dreams to remember;Otis Redding;1968
+1107;Everybody's Changing;Keane;2004
+1108;By the Way;Red Hot Chili Peppers;2002
+1109;Behind blue eyes;Limp Bizkit;2003
+1110;Blitzkrieg Bop;Ramones;1976
+1111;Voltooid Verleden Tijd;Is Ook Schitterend;1997
+1112;Watskeburt?!;De Jeugd van Tegenwoordig;2005
+1113;Hey Ya!;OutKast;2004
+1114;Disco inferno;The Trammps;1977
+1115;The Wall Street Shuffle;10cc;1974
+1116;More Than Words;Extreme;1991
+1117;Dodenrit;Drs. P;1974
+1118;Close to the edge;Yes;1972
+1119;Red mij niet;Maarten van Roozendaal;2001
+1120;N'oubliez jamais;Joe Cocker;1997
+1121;You oughta know;Alanis Morissette;1995
+1122;Moonlight Shadow;Mike Oldfield & Maggie Reilly;1983
+1123;A Change Is Gonna Come;Sam Cooke;1964
+1124;What a Fool Believes;The Doobie Brothers;1978
+1125;Keep on Loving You;REO Speedwagon;1981
+1126;Cambodia;Kim Wilde;1981
+1127;Apache;The Shadows;1960
+1128;Should I Stay or Should I Go;The Clash;1982
+1129;I Wish It Would Rain Down;Phil Collins;1990
+1130;All I want;Kodaline;2012
+1131;Follow the sun;Xavier Rudd;2012
+1132;Close to Me;The Cure;1985
+1133;Mannish Boy;Muddy Waters;1988
+1134;Faded;Alan Walker;2016
+1135;Dancing on my own;Calum Scott & Tiësto;2016
+1136;She's Leaving Home;The Beatles;1967
+1137;Alors on danse;Stromae;2010
+1138;Love me tender;Elvis Presley;1956
+1139;Glycerine;Bush;1995
+1140;The promise you made;Cock Robin;1986
+1141;Just say yes;Snow Patrol;2009
+1142;Appleknockers Flophouse;Cuby + Blizzards;1969
+1143;Water under the bridge;Adele;2016
+1144;Tainted love;Soft Cell;1981
+1145;We All Stand Together;Paul McCartney & Frog Chorus;1985
+1146;Mr. Blue;René Klijn;1993
+1147;Josephine;Chris Rea;1985
+1148;Vertigo;U2;2004
+1149;Streets of London;Ralph McTell;1972
+1150;Nergens goed voor;De Dijk;1989
+1151;Nescio;Nits;1983
+1152;When a man loves a woman;Percy Sledge;1966
+1153;Kom terug;Spinvis;2011
+1154;Nights on Broadway;Bee Gees;1975
+1155;Glory Box;Portishead;1994
+1156;Harder, better, faster, stronger;Daft Punk;2001
+1157;Biko;Peter Gabriel;1980
+1158;Mary Jane’s last dance;Tom Petty;1993
+1159;Turning tables;Adele;2011
+1160;Lucky Man;Emerson, Lake & Palmer;1971
+1161;Me gustas tú;Manu Chao;2000
+1162;Hilversum 3;Herman van Veen;1984
+1163;Why Worry;Dire Straits;1985
+1164;Hedonism (Just Because You Feel Good);Skunk Anansie;1997
+1165;Lover of the Light;Mumford & Sons;2012
+1166;Mad world;Michael Andrews feat. Gary Jules;2002
+1167;Zing voor me;Lange Frans & Thé Lau;2010
+1168;Touch Me;The Doors;1969
+1169;The rising;Bruce Springsteen;2003
+1170;Changes;David Bowie;1971
+1171;Animals;Martin Garrix;2013
+1172;The Life I Live;Q65;1966
+1173;Mooi liedje;Acda en De Munnik;1997
+1174;Lego House;Ed Sheeran;2012
+1175;Midnight Rambler;The Rolling Stones;1969
+1176;Non, non, rien n'a changé;Les Poppys;1971
+1177;When I Was Your Man;Bruno Mars;2013
+1178;Believer;Imagine Dragons;2017
+1179;We Come 1;Faithless;2001
+1180;When the sun goes down;Arctic Monkeys;2006
+1181;San Francisco (Be Sure to Wear Flowers in Your Hair);Scott McKenzie;1967
+1182;Gold;Spandau Ballet;1983
+1183;One Vision;Queen;1985
+1184;Een mooi verhaal;Alderliefste & Paul de Leeuw;2006
+1185;Wouldn't It Be Nice;The Beach Boys;1966
+1186;Back down south;Kings of Leon;2010
+1187;Papa, can you hear me?;Barbra Streisand;1983
+1188;All my life;Foo Fighters;2002
+1189;Titanium;David Guetta & Sia;2011
+1190;Candy;Iggy Pop & Kate Pierson;1990
+1191;The first time ever I saw your face;Roberta Flack;1972
+1192;Do They Know It's Christmas?;Band Aid;1984
+1193;Give up your guns;The Buoys;1972
+1194;Fernando;ABBA;1976
+1195;Talk;Coldplay;2005
+1196;Dear mama;2Pac;1995
+1197;Speed of sound;Coldplay;2005
+1198;Born on the Bayou;Creedence Clearwater Revival;1972
+1199;Tragedy;Bee Gees;1979
+1200;The Living Years;Mike and the Mechanics;1989
+1201;He Ain't Heavy, He's My Brother;The Hollies;1969
+1202;De waarheid;Marco Borsato;1996
+1203;L.A. song (Out of this town);Beth Hart;1999
+1204;I Started a Joke;Bee Gees;1969
+1205;All you need is love;The Beatles;1967
+1206;You'll never walk alone;Lee Towers;1976
+1207;Fire and Rain;James Taylor;1970
+1208;Theme from 'Harry's Game';Clannad;1983
+1209;On top of the world;Imagine Dragons;2013
+1210;Walking in Memphis;Marc Cohn;1991
+1211;Faster;Within Temptation;2011
+1212;Vluchten kan niet meer;Frans Halsema & Jenny Arean;1977
+1213;Around the world;Daft Punk;1997
+1214;Traffic;Tiësto;2003
+1215;Both Sides Now;Joni Mitchell;1967
+1216;Love yourself;Justin Bieber;2015
+1217;The Book of Love;Gavin James;2014
+1218;Scarlet ribbons;The Cats;1969
+1219;Somebody Will Know Someday;Cuby + Blizzards;1967
+1220;Livin' Thing;Electric Light Orchestra;1976
+1221;Wit licht;Jeroen van Koningsbrugge;2015
+1222;Live to Tell;Madonna;1986
+1223;Going to a Town;Rufus Wainwright;2007
+1224;Stuck in the middle with you;Stealers Wheel;1973
+1225;Handle with Care;Traveling Wilburys;1988
+1226;It's a Man's, Man's, Man's World;James Brown;1966
+1227;Mia;Gorki;1992
+1228;Alie;Normaal;1977
+1229;Black velvet;Alannah Myles;1990
+1230;Big log;Robert Plant;1983
+1231;Night Fever;Bee Gees;1978
+1232;De weg;Guus Meeuwis;2005
+1233;Burning Love;Elvis Presley;1972
+1234;Listen to your heart;Roxette;1988
+1235;Maggie May;Rod Stewart;1971
+1236;Listen;Beyoncé;2006
+1237;The Jean Genie;David Bowie;1973
+1238;Daughter;Pearl Jam;1993
+1239;Dust bowl;Joe Bonamassa;2011
+1240;Shiny Happy People;R.E.M.;1991
+1241;Sgt. Pepper's Lonely Hearts Club Band;The Beatles;1967
+1242;Promises of no man's land;Blaudzun;2014
+1243;My Heart Will Go On;Céline Dion;1998
+1244;Het land van...;Lange Frans & Baas B;2005
+1245;Fireflies;Owl City;2009
+1246;Roof garden;Al Jarreau;1982
+1247;One more light;Linkin Park;2017
+1248;Lessons in Love;Level 42;1986
+1249;Move on up;Curtis Mayfield;1971
+1250;Ich bin wie du;Marianne Rosenberg;1976
+1251;Clown;Emeli Sandé;2012
+1252;Let's stay together;Al Green;1971
+1253;Mercy;Muse;2015
+1254;I Can't Make You Love Me;Bonnie Raitt;1991
+1255;Every teardrop is a waterfall;Coldplay;2011
+1256;Long As I Can See the Light;Creedence Clearwater Revival;1970
+1257;This town;Niall Horan;2016
+1258;Broken Wings;Mr. Mister;1986
+1259;Ik leef niet meer voor jou;Marco Borsato;1996
+1260;Off the wall;Michael Jackson;1980
+1261;Feeling Good;Michael Bublé;2004
+1262;Somebody Told Me;The Killers;2004
+1263;Calypso;John Denver;1975
+1264;Cry Baby;Janis Joplin;1971
+1265;Happiness;Jonathan Jeremiah;2011
+1266;You took the words right out of my mouth (hot summer night);Meat Loaf;1979
+1267;Bagagedrager;Spinvis;2002
+1268;The Less I Know the Better;Tame Impala;2015
+1269;Hold me;Anouk & Douwe Bob;2015
+1270;Midnight Train to Georgia;Gladys Knight & the Pips;1973
+1271;Als het golft;De Dijk;2000
+1272;It's a Long Way There;Little River Band;1976
+1273;Refugee;Tom Petty & The Heartbreakers;1980
+1274;After midnight;J.J. Cale;1972
+1275;Maybe tomorrow;Stereophonics;2003
+1276;Down Man;Brainbox;1969
+1277;Het Land van Maas en Waal;Boudewijn de Groot;1967
+1278;Learning to fly;Tom Petty & The Heartbreakers;1991
+1279;Jerusalem;Anouk;2005
+1280;The way we were;Barbra Streisand;1973
+1281;Gangsta's paradise;Coolio feat. L.V.;1995
+1282;Magnificent (she says);Elbow;2016
+1283;Wat zou je doen;BLØF;1998
+1284;Mr. Bojangles;Sammy Davis jr.;1972
+1285;De neus omhoeg;Rowwen Hèze;1995
+1286;Raise Your Glass;Pink;2010
+1287;It Was a Very Good Year;Frank Sinatra;1965
+1288;Sammy;Ramses Shaffy;1966
+1289;Fluorescent Adolescent;Arctic Monkeys;2007
+1290;I want you;Bob Dylan;1966
+1291;Back Home;Golden Earring;1970
+1292;Food for thought;UB40;1980
+1293;Lovely Day;Bill Withers;1978
+1294;Vriendschap;Het Goede Doel;1983
+1295;Mull of Kintyre;Paul McCartney & Wings;1977
+1296;Don't Answer Me;The Alan Parsons Project;1984
+1297;Lola (live);The Kinks;1980
+1298;Mirrors;Justin Timberlake;2013
+1299;Sex Machine;James Brown;1970
+1300;Isn't she lovely?;Stevie Wonder;1976
+1301;Times like these;Foo Fighters;2003
+1302;Because the Night;Patti Smith;1978
+1303;Can't get it out of my head;Electric Light Orchestra;1975
+1304;Let the river in;Dotan;2014
+1305;Casser la voix;Patrick Bruel;1992
+1306;Pure morning;Placebo;1998
+1307;Aanzoek zonder ringen;BLØF;2006
+1308;Damn Those Eyes;Kane;1999
+1309;Goodbye My Lover;James Blunt;2005
+1310;Things we lost in the fire;Bastille;2013
+1311;You can leave your hat on;Joe Cocker;1986
+1312;Looking too closely;Fink;2014
+1313;All star;Smash Mouth;1999
+1314;Wild Rover;The Dubliners;1964
+1315;As tears go by;The Rolling Stones;1966
+1316;The day after tomorrow;Saybia;2002
+1317;Sailing to Philadelphia;Mark Knopfler & James Taylor;2000
+1318;Le Freak;Chic;1978
+1319;Times are changing;Di-rect;2009
+1320;You're beautiful;James Blunt;2005
+1321;Mandy;Barry Manilow;1974
+1322;Watermensen;3JS;2008
+1323;Fame;David Bowie;1975
+1324;Rockin' all over the world;Status Quo;1977
+1325;Live forever;Oasis;1994
+1326;Sloop John B;The Beach Boys;1966
+1327;Spicks and Specks;Bee Gees;1967
+1328;Hide in your shell;Supertramp;1974
+1329;7 Seconds;Youssou N'Dour & Neneh Cherry;1994
+1330;We Belong to the Night;Ellen Foley;1979
+1331;Run to the Water;Live;2000
+1332;Feeling Good;Nina Simone;1965
+1333;Live and let die;Paul McCartney & Wings;1973
+1334;Moon over Bourbon Street;Sting;1985
+1335;The greatest;Sia;2016
+1336;Pa;Doe Maar;1983
+1337;Song of the marching children;Earth & Fire;1971
+1338;On the road again;Canned Heat;1968
+1339;San Quentin (live at San Quentin);Johnny Cash;1969
+1340;Don't leave me this way;The Communards & Sarah Jane Morris;1986
+1341;Terug naar de kust;Maggie MacNeal;1976
+1342;Heartbreak Warfare;John Mayer;2009
+1343;Up&Up;Coldplay;2016
+1344;Just the way you are;Bruno Mars;2010
+1345;Mensch;Herbert Grönemeyer;2004
+1346;Despacito;Luis Fonsi & Daddy Yankee;2017
+1347;Liquid Spirit;Gregory Porter;2015
+1348;Guitar man;Elvis Presley;1967
+1349;Little Red Rooster;The Rolling Stones;1965
+1350;The Blower's Daughter;Damien Rice;2004
+1351;Working Class Hero;John Lennon;1970
+1352;Call me the breeze;J.J. Cale;1972
+1353;One Moment in Time;Whitney Houston;1988
+1354;Tell Him;Céline Dion & Barbra Streisand;1997
+1355;Stir it up;Bob Marley & The Wailers;1979
+1356;Voor ik vergeet;Spinvis;2002
+1357;Blue Hotel;Chris Isaak;1987
+1358;Always on my mind;Willie Nelson;1984
+1359;A ton of love;Editors;2013
+1360;The Boys Are Back in Town;Thin Lizzy;1976
+1361;Stranger in Moscow;Michael Jackson;1996
+1362;In Dreams;Roy Orbison;1963
+1363;She Will Be Loved;Maroon 5;2004
+1364;Royals;Lorde;2013
+1365;Jump around;House of Pain;1992
+1366;Speeltuin;Marco Borsato;1998
+1367;Twist in My Sobriety;Tanita Tikaram;1988
+1368;Fly like an eagle;Steve Miller Band;1976
+1369;Europa (Earth's cry Heaven's smile);Santana;1978
+1370;Yours Is No Disgrace;Yes;1971
+1371;Tiny Dancer;Elton John;1971
+1372;Same Love;Macklemore & Ryan Lewis;2013
+1373;Black Night;Deep Purple;1970
+1374;A Long December;Counting Crows;1996
+1375;Anarchy in the U.K.;Sex Pistols;1976
+1376;Relax;Frankie Goes to Hollywood;1984
+1377;It’s the end of the world as we know it (and I feel fine);R.E.M.;1987
+1378;On the border;Al Stewart;1977
+1379;The Eve of the War;Jeff Wayne & Justin Hayward;1978
+1380;I'm Yours;Jason Mraz;2008
+1381;The Unforgiven III;Metallica;2008
+1382;Under My Thumb;The Rolling Stones;1966
+1383;All the small things;blink-182;1999
+1384;Don't Let Me Be Misunderstood;Santa Esmeralda;1977
+1385;Guilty;Barbra Streisand & Barry Gibb;1980
+1386;Hungry heart;Bruce Springsteen;1980
+1387;Forbidden colours;David Sylvian & Ryuichi Sakamoto;1983
+1388;Sky and Sand;Paul Kalkbrenner;2009
+1389;Songbird;Eva Cassidy;1998
+1390;Where Do You Go To (My Lovely)?;Peter Sarstedt;1969
+1391;God put a smile upon your face;Coldplay;2003
+1392;Vogue;Madonna;1990
+1393;Sir Duke;Stevie Wonder;1977
+1394;Sylvia;Focus;1972
+1395;Diane;Therapy?;1995
+1396;In my place;Coldplay;2002
+1397;Holiday;Green Day;2005
+1398;Good Grief;Bastille;2016
+1399;Cocaine;J.J. Cale;1976
+1400;Show me the way;Peter Frampton;1976
+1401;Mushanga;Toto;1988
+1402;Numb;Linkin Park;2003
+1403;In the year 2525 (exordium and terminus);Zager & Evans;1969
+1404;Big love;Fleetwood Mac;1987
+1405;My Baby Just Cares for Me;Nina Simone;1987
+1406;Love in an elevator;Aerosmith;1989
+1407;September Morn';Neil Diamond;1979
+1408;Send Me an Angel;Scorpions;1991
+1409;Angel of Harlem;U2;1988
+1410;Beast of Burden;Bette Midler;1984
+1411;Big in Japan;Alphaville;1984
+1412;Love Her Madly;The Doors;1971
+1413;Binnen;Marco Borsato;1999
+1414;Are You Lonesome Tonight;Elvis Presley;1960
+1415;If I Were a Boy;Beyoncé;2008
+1416;Beautiful people;Melanie;1969
+1417;Burning heart;Vandenberg;1982
+1418;Love Shack;The B-52's;1989
+1419;Human touch;Bruce Springsteen;1992
+1420;Wicked Way;Waylon;2009
+1421;Perhaps Love;John Denver;1981
+1422;Relight My Fire;Dan Hartman;1980
+1423;Ordinary people;John Legend;2005
+1424;(Something Inside) So Strong;Labi Siffre;1987
+1425;Verdammt Ich Lieb' Dich;Matthias Reim;1990
+1426;Get ready;Rare Earth;1970
+1427;Heathens;Twenty One Pilots;2016
+1428;Lady D'Arbanville;Cat Stevens;1970
+1429;Bird of paradise;Snowy White;1984
+1430;Memories;Earth & Fire;1972
+1431;Feeling good;Muse;2001
+1432;So incredible;Ilse DeLange;2008
+1433;Everybody (Backstreet's Back);Backstreet Boys;1997
+1434;No Rain;Blind Melon;1993
+1435;An American trilogy;Elvis Presley;1972
+1436;Need you now;Lady Antebellum;2010
+1437;New York Minute;Don Henley;1989
+1438;The Way It Is;Bruce Hornsby & The Range;1986
+1439;Nathalie;Gilbert Bécaud;1964
+1440;Always Look on the Bright Side of Life;Monty Python;1981
+1441;Sure Know Something;Kiss;1979
+1442;Pumped up kicks;Foster the People;2011
+1443;Les lacs du Connemara;Michel Sardou;1982
+1444;Beautiful goodbye;Amanda Marshall;1995
+1445;Without Me;Eminem;2002
+1446;You Win Again;Bee Gees;1987
+1447;Let it go;James Bay;2014
+1448;Novocaine for the soul;Eels;1996
+1449;Ruby;Kaiser Chiefs;2007
+1450;Hall of fame;The Script & will.i.am;2012
+1451;Rosie;Claw Boys Claw;1992
+1452;Tous les mêmes;Stromae;2013
+1453;Mijn van straat geredde roos;De Dijk;2008
+1454;Try again;Chef'Special;2017
+1455;Roadhouse blues;The Doors;1970
+1456;I Won't Let You Down;Ph.D.;1981
+1457;Shut up & dance;Walk The Moon;2014
+1458;The joker;Steve Miller Band;1973
+1459;It's a Sin;Pet Shop Boys;1987
+1460;Oxygène IV;Jean-Michel Jarre;1977
+1461;The Devil Went Down to Georgia;Charlie Daniels Band;1979
+1462;Why;Annie Lennox;1992
+1463;You Have Been Loved;George Michael;1997
+1464;Intergalactic;Beastie Boys;1998
+1465;Praise you;Fatboy Slim;1998
+1466;One of us;ABBA;1981
+1467;At seventeen;Janis Ian;1975
+1468;No Son of Mine;Genesis;1991
+1469;Waterloo Sunset;The Kinks;1967
+1470;Cecilia;Simon & Garfunkel;1970
+1471;Sylvia's Mother;Dr. Hook;1972
+1472;Freestyler;Bomfunk MC's;1999
+1473;Smooth;Santana & Rob Thomas;1999
+1474;Forever Autumn;Jeff Wayne & Justin Hayward;1978
+1475;Weekend;Earth & Fire;1979
+1476;Into Temptation;Crowded House;1989
+1477;The Drugs Don't Work;The Verve;1997
+1478;Wheels;Foo Fighters;2009
+1479;De bestemming;Marco Borsato;1998
+1480;Round Here;Counting Crows;1994
+1481;Blinded by the light;Manfred Mann's Earth Band;1976
+1482;Hold back the river;James Bay;2014
+1483;Sing;Ed Sheeran;2014
+1484;How Can We Hang On to a Dream?;Tim Hardin;1967
+1485;Let the music play;Barry White;1976
+1486;Stuck in a Moment You Can't Get Out Of;U2;2000
+1487;Dyna-mite;Mud;1974
+1488;Like the Way I Do (live);Melissa Etheridge;1993
+1489;Weather with You;Crowded House;1992
+1490;Love Rears Its Ugly Head;Living Colour;1990
+1491;Mmm Mmm Mmm Mmm;Crash Test Dummies;1994
+1492;Breakeven;The Script;2008
+1493;For No One;The Beatles;1966
+1494;Try a Little Tenderness;Otis Redding;1966
+1495;Time after time;Cyndi Lauper;1984
+1496;Long Train Running;The Doobie Brothers;1973
+1497;Hart van mijn gevoel;De Kast;1999
+1498;Kids;MGMT;2007
+1499;Love is all;Roger Glover & Guests;1975
+1500;New York New York;Frank Sinatra;1980
+1501;Break on through (to the other side);The Doors;1967
+1502;Sometimes You Can't Make It on Your Own;U2;2004
+1503;Rock with You;Michael Jackson;1979
+1504;Be the one;Dua Lipa;2015
+1505;Spanish stroll;Mink DeVille;1977
+1506;Banger hart;Rob de Nijs;1996
+1507;I'll have to say I love you in a song;Jim Croce;1974
+1508;Pamela;Toto;1988
+1509;Rosalyn;Vitesse;1982
+1510;7 Years;Lukas Graham;2016
+1511;Rumour has it;Adele;2011
+1512;Sing for Absolution;Muse;2004
+1513;Drive;The Cars;1984
+1514;No Sleep till Brooklyn;Beastie Boys;1987
+1515;Bad Romance;Lady Gaga;2009
+1516;City of blinding lights;U2;2005
+1517;Wanna Be Startin' Somethin';Michael Jackson;1983
+1518;God Save the Queen;Sex Pistols;1977
+1519;Vlieg met me mee;Paul de Leeuw;1992
+1520;Wonderful Life;Black;1987
+1521;Voulez-vous;ABBA;1979
+1522;Thank U;Alanis Morissette;1998
+1523;Fairground;Simply Red;1995
+1524;Sweet Disposition;The Temper Trap;2008
+1525;West End Girls;Pet Shop Boys;1986
+1526;The second you sleep;Saybia;2002
+1527;Little Talks;Of Monsters and Men;2012
+1528;Stiekem gedanst;Toontje Lager;1983
+1529;True Love That's a Wonder;Sandy Coast;1971
+1530;You Don't Bring Me Flowers;Neil Diamond & Barbra Streisand;1978
+1531;The name of the game;ABBA;1977
+1532;Three days in a row;Anouk;2009
+1533;One Day I'll Fly Away;Randy Crawford;1980
+1534;In between days;The Cure;1985
+1535;Life in technicolor;Coldplay;2009
+1536;Jessica;The Allman Brothers Band;1976
+1537;Love on Top;Beyoncé;2011
+1538;Mercy;Shawn Mendes;2016
+1539;Dancing with Tears in My Eyes;Ultravox;1984
+1540;I surrender;Saybia;2004
+1541;Counting stars;OneRepublic;2013
+1542;Down on the Corner;Creedence Clearwater Revival;1969
+1543;Scenes from an Italian restaurant;Billy Joel;1977
+1544;A thing called love;Johnny Cash;1972
+1545;Will you be there;Michael Jackson;1993
+1546;Heavy Cross;Gossip;2009
+1547;Politik;Coldplay;2002
+1548;Winter in Hamburg;Frank Boeijen Groep;1987
+1549;Sorry Seems to Be the Hardest Word;Elton John;1976
+1550;Rooster;Alice in Chains;1993
+1551;I'm not so tough;Ilse DeLange;1998
+1552;It's All Over Now;The Rolling Stones;1964
+1553;Still Crazy after All These Years;Paul Simon;1975
+1554;Gold on the ceiling;The Black Keys;2012
+1555;I Wanna Dance with Somebody (Who Loves Me);Whitney Houston;1987
+1556;Why can't this be love;Van Halen;1986
+1557;Do it again;Steely Dan;1972
+1558;Senza una donna;Zucchero Fornaciari;1988
+1559;(They Long to Be) Close to You;The Carpenters;1970
+1560;R U kiddin' me;Anouk;1999
+1561;A Face in the Crowd;Tom Petty;1990
+1562;Into the great wide open;Tom Petty & The Heartbreakers;1991
+1563;No Ordinary Love;Sade;1992
+1564;Fox on the Run;The Sweet;1975
+1565;New shoes;Paolo Nutini;2006
+1566;White Flag;Dido;2003
+1567;Make me smile (come up and see me);Steve Harley & Cockney Rebel;1975
+1568;Summertime;Ella Fitzgerald & Louis Armstrong;1957
+1569;Bend and Break;Keane;2005
+1570;MacArthur Park;Richard Harris;1968
+1571;Malle Babbe;Rob de Nijs;1975
+1572;Mijn gebed;D.C. Lewis;1970
+1573;Love on the Rocks;Neil Diamond;1980
+1574;California Love;2Pac feat. Dr. Dre;1995
+1575;Carry on;Crosby, Stills, Nash & Young;1970
+1576;Time is on my side;The Rolling Stones;1965
+1577;Cry me a river;Justin Timberlake;2002
+1578;Monkey gone to heaven;Pixies;1989
+1579;Goodbye stranger;Supertramp;1979
+1580;Don't Go;Yazoo;1982
+1581;Reflektor;Arcade Fire;2013
+1582;There Must Be an Angel (Playing with My Heart);Eurythmics;1985
+1583;Brilliant disguise;Bruce Springsteen;1987
+1584;Late in the Evening;Paul Simon;1980
+1585;Farewell to the Fairground;White Lies;2009
+1586;Mr. Tambourine Man;The Byrds;1965
+1587;The Saints Are Coming;U2 & Green Day;2006
+1588;That was yesterday;Foreigner;1985
+1589;Marian;The Cats;1969
+1590;Bad;Michael Jackson;1987
+1591;Still believe;Herman Brood & His Wild Romance;1978
+1592;Kijk omhoog;Nick & Simon;2007
+1593;A hard day's night;The Beatles;1964
+1594;Duel;Propaganda;1985
+1595;No surrender;Kane;2009
+1596;Too Much Love Will Kill You;Brian May;1992
+1597;Catch & Release;Matt Simons;2014
+1598;Children;Robert Miles;1995
+1599;La vie en rose;Grace Jones;1977
+1600;Two tribes;Frankie Goes to Hollywood;1984
+1601;Diggin';Kovacs;2015
+1602;This is my life;Shirley Bassey;1979
+1603;Dakota;Stereophonics;2005
+1604;Violet Hill;Coldplay;2008
+1605;Dromen zijn bedrog;Marco Borsato;1994
+1606;Single Ladies (Put a Ring on It);Beyoncé;2008
+1607;I'm a Believer;The Monkees;1966
+1608;Sexy als ik dans;Nielson;2014
+1609;Bullet with butterfly wings;The Smashing Pumpkins;1995
+1610;Crazy;Aerosmith;1993
+1611;Bestel mar;Rowwen Hèze;1992
+1612;You Can't Hurry Love;Phil Collins;1982
+1613;Overture;The Who;1969
+1614;Georgia on My Mind;Ray Charles;1960
+1615;Ventura Highway;America;1972
+1616;So Far Away;Dire Straits;1985
+1617;SOS;ABBA;1975
+1618;Virtual insanity;Jamiroquai;1996
+1619;Gute Nacht, Freunde;Reinhard Mey;1974
+1620;Babel;Mumford & Sons;2013
+1621;Reeling in the years;Steely Dan;1973
+1622;Greatest Love of All;Whitney Houston;1986
+1623;Don't Stand So Close to Me;The Police;1980
+1624;Rapper's Delight;The Sugarhill Gang;1979
+1625;Diamonds and pearls;Prince;1991
+1626;Born to be alive;Patrick Hernandez;1979
+1627;Parijs;Kenny B;2015
+1628;One love - people get ready;Bob Marley & The Wailers;1984
+1629;Swim with Sam;a balladeer;2002
+1630;Prikkebeen;Boudewijn de Groot en Elly Nieman;1968
+1631;Killing me softly;Fugees;1996
+1632;Sunshine of Your Love;Cream;1968
+1633;Skinny love;Birdy;2011
+1634;Hard to handle;The Black Crowes;1990
+1635;Ode to My Family;The Cranberries;1995
+1636;Done with it;Kensington;2014
+1637;Honesty;Billy Joel;1979
+1638;Forever Man;Eric Clapton;1985
+1639;Foolish Games;Jewel;1997
+1640;Into the mystic;Van Morrison;1970
+1641;Walk This Way;Run-D.M.C.;1986
+1642;Don't You Want Me;The Human League;1982
+1643;Grace;Jeff Buckley;1994
+1644;World of hurt;Ilse DeLange;1998
+1645;Poker face;Lady Gaga;2009
+1646;Love Is All Around;Wet Wet Wet;1994
+1647;Rock and roll;Led Zeppelin;1971
+1648;Hero;Family of the Year;2012
+1649;(You're the) Devil in disguise;Elvis Presley;1963
+1650;When I Come Around;Green Day;1995
+1651;Roar;Katy Perry;2013
+1652;Eyes without a face;Billy Idol;1984
+1653;Sunrise;Norah Jones;2004
+1654;I sat by the ocean;Queens of the Stone Age;2013
+1655;Original sin;INXS;1984
+1656;Unbeschreiblich Weiblich;Nina Hagen;1979
+1657;In These Arms;Bon Jovi;1993
+1658;Shake It Off;Taylor Swift;2014
+1659;La Isla Bonita;Madonna;1987
+1660;You Don't Fool Me;Queen;1996
+1661;Living doll;Cliff Richard & The Young Ones;1986
+1662;I'll Be Over You;Toto;1986
+1663;Easy Lover;Phil Collins & Philip Bailey;1985
+1664;Galvanize;The Chemical Brothers;2005
+1665;Twist and shout;The Beatles;1963
+1666;Annabel;Hans de Booij;1983
+1667;Love Games;Level 42;1981
+1668;The Real Slim Shady;Eminem;2000
+1669;Monday, Monday;The Mamas and the Papas;1966
+1670;Love Never Felt So Good;Michael Jackson & Justin Timberlake;2014
+1671;Slow song;Joe Jackson;1982
+1672;Intro/Sweet Jane;Lou Reed;1974
+1673;It's over;Level 42;1987
+1674;Iederene hef een reden;Bökkers;2017
+1675;Cleanin' Out My Closet;Eminem;2002
+1676;The road to Mandalay;Robbie Williams;2001
+1677;Yesterday Once More;The Carpenters;1973
+1678;Girl You'll Be a Woman Soon;Neil Diamond;1971
+1679;Maybe I'm Amazed;Wings;1977
+1680;Don't look back;Boston;1978
+1681;No Good (Start the Dance);The Prodigy;1994
+1682;Still in love with you;Thin Lizzy;1974
+1683;Rendez-vous 6.02;U.K.;1979
+1684;Leef;André Hazes jr.;2016
+1685;Sunny Afternoon;The Kinks;1966
+1686;Budapest;George Ezra;2014
+1687;Loser;Beck;1994
+1688;Invisible touch;Genesis;1986
+1689;Galway girl;Ed Sheeran;2017
+1690;As;Mary J. Blige & George Michael;1999
+1691;Tom Traubert's blues (Four sheets to the wind in Copenhagen);Tom Waits;1976
+1692;How soon is now?;The Smiths;1984
+1693;Right next door (because of me);Robert Cray Band;1987
+1694;Wild Places;Duncan Browne;1979
+1695;For what it's worth;Buffalo Springfield;1967
+1696;Long way back;Young Gun Silver Fox;2015
+1697;I feel it coming;The Weeknd & Daft Punk;2016
+1698;Just Like a Woman;Bob Dylan;1966
+1699;The Beautiful People;Marilyn Manson;1996
+1700;Don't Forget to Remember;Bee Gees;1969
+1701;Charlie Brown;Coldplay;2011
+1702;Heart of glass;Blondie;1979
+1703;I Want to Hold Your Hand;The Beatles;1964
+1704;Hijo de la luna;Mecano;1990
+1705;Ocean of night;Editors;2015
+1706;Als de dag van toen;Reinhard Mey;1975
+1707;Love and hate;Michael Kiwanuka;2016
+1708;Young Americans;David Bowie;1975
+1709;All of my heart;ABC;1982
+1710;Love is the drug;Roxy Music;1976
+1711;Domino;Clouseau;1990
+1712;Somebody to love;Jefferson Airplane;1970
+1713;The magnificent seven;The Clash;1980
+1714;Skandal im Sperrbezirk;Spider Murphy Gang;1982
+1715;Amsterdam;Nothing but Thieves;2017
+1716;Elevation;U2;2000
+1717;Magnificent;U2;2009
+1718;If there is something;Roxy Music;1972
+1719;Dancin' Fool;Frank Zappa;1979
+1720;Famous blue raincoat;Leonard Cohen;1971
+1721;The Highways of my Life;The Isley Brothers;1973
+1722;Feel like makin' love;Bad Company;1975
+1723;A Town Called Malice;The Jam;1980
+1724;Eve of destruction;Barry McGuire;1965
+1725;Kalverliefde;Robert Long;1974
+1726;I've got you under my skin;Frank Sinatra;1956
+1727;Grounds for divorce;Elbow;2008
+1728;Voir un ami pleurer;Jacques Brel;1961
+1729;It's Raining Men;The Weather Girls;1983
+1730;Can You Feel the Love Tonight;Elton John;1994
+1731;Stars;Simply Red;1991
+1732;Sorry;Justin Bieber;2015
+1733;It must have been love;Roxette;1990
+1734;Superheroes;The Script;2014
+1735;The needle and the damage done;Neil Young;1972
+1736;White wedding;Billy Idol;1982
+1737;I Can't Dance;Genesis;1992
+1738;With you;Matt Simons;2013
+1739;Let's Stick Together;Bryan Ferry;1976
+1740;We Can Work It Out;The Beatles;1965
+1741;This Is the Last Time;Keane;2005
+1742;Diamonds;Rihanna;2012
+1743;The Hardest Part;Coldplay;2006
+1744;Louise;Jett Rebel;2014
+1745;Hey boy hey girl;The Chemical Brothers;1999
+1746;Gloria;Them;1967
+1747;Accidentally in love;Counting Crows;2004
+1748;I've Been Loving You too Long;Otis Redding;1965
+1749;Lost!;Coldplay;2008
+1750;Take your time girl;Niels Geusebroek;2013
+1751;Can't Stand Losing You;The Police;1979
+1752;Grenade;Bruno Mars;2010
+1753;Home again;Michael Kiwanuka;2012
+1754;Woman from Tokyo;Deep Purple;1972
+1755;Need You Tonight;INXS;1987
+1756;Across the universe;The Beatles;1970
+1757;Ik heb je lief;Stef Bos;1992
+1758;Een beetje verliefd;André Hazes;1981
+1759;Old town;Phil Lynott;1982
+1760;Love of the common people;Paul Young;1984
+1761;Working on a dream;Bruce Springsteen;2008
+1762;We didn't start the fire;Billy Joel;1989
+1763;I predict a riot;Kaiser Chiefs;2004
+1764;Finding out more;Haevn;2015
+1765;Wishful Thinking;China Crisis;1984
+1766;Crazy;Gnarls Barkley;2006
+1767;Beast of Burden;The Rolling Stones;1978
+1768;Stitches;Shawn Mendes;2015
+1769;Peaceful Easy Feeling;Eagles;1972
+1770;Tonight, Tonight;The Smashing Pumpkins;1995
+1771;When I'm Sixty-Four;The Beatles;1967
+1772;Uptown Girl;Billy Joel;1983
+1773;She's the one;Robbie Williams;1999
+1774;Nur geträumt;Nena;1982
+1775;The sun always shines on t.v.;a-ha;1986
+1776;Rivers of Babylon;Boney M.;1978
+1777;Seven days in sunny june;Jamiroquai;2005
+1778;Stay;Rihanna feat. Mikky Ekko;2013
+1779;Hemingway;BLØF;2006
+1780;Every kinda people;Robert Palmer;1978
+1781;Always on the Run;Lenny Kravitz;1991
+1782;Oh, pretty woman;Roy Orbison;1964
+1783;Nothing really matters;Mr. Probz;2014
+1784;Run the World (Girls);Beyoncé;2011
+1785;I Saw Her Standing There;The Beatles;1963
+1786;Starlight dancer;Kayak;1977
+1787;Met hart en ziel;Tröckener Kecks;1990
+1788;Writing's On The Wall;Sam Smith;2015
+1789;Een meisje van 16;Boudewijn de Groot;1965
+1790;Hotellounge (Be the Death of Me);dEUS;1994
+1791;Strangers in the night;Frank Sinatra;1966
+1792;Rikki don’t lose that number;Steely Dan;1974
+1793;Song Sung Blue;Neil Diamond;1972
+1794;Wêr bisto;Twarres;2000
+1795;Go West;Pet Shop Boys;1993
+1796;What Is Love;Haddaway;1992
+1797;Black Dog;Led Zeppelin;1971
+1798;Sadeness;Enigma;1990
+1799;In the name of love;Martin Garrix & Bebe Rexha;2016
+1800;The Sweetest Taboo;Sade;1985
+1801;Home;Michael Bublé;2004
+1802;Daniel;Elton John;1973
+1803;La Solitudine;Laura Pausini;1993
+1804;'n Vriend;André Hazes;1980
+1805;Super trouper;ABBA;1980
+1806;Hey There Delilah;Plain White T's;2007
+1807;Here, there and everywhere;The Beatles;1966
+1808;Times were when;The Cats;1968
+1809;Oye Como Va;Santana;1971
+1810;Magic man;Heart;1976
+1811;I'll Find My Way Home;Jon & Vangelis;1982
+1812;I've Just Lost Somebody;Golden Earring;1968
+1813;I won’t back down;Tom Petty & The Heartbreakers;1989
+1814;Open je ogen;BLØF feat. Ilse DeLange;2014
+1815;Three Times a Lady;Commodores;1978
+1816;Green Green Grass of Home;Tom Jones;1966
+1817;Jealous Guy;Roxy Music;1981
+1818;Cryin';Aerosmith;1993
+1819;We used to wait;Arcade Fire;2010
+1820;Tuesday afternoon;Moody Blues;1968
+1821;Everything for free;K's Choice;1998
+1822;Tin Soldier;Small Faces;1968
+1823;Witchy Woman;Eagles;1972
+1824;J'veux de l'amour;Raymond van het Groenewoud;1980
+1825;Waarom nou jij;Marco Borsato;1994
+1826;Tumble and Fall;Johan;2001
+1827;Take My Breath Away;Berlin;1986
+1828;Don't Know Why;Norah Jones;2002
+1829;High and dry;Radiohead;1995
+1830;I want you back;The Jacksons;1970
+1831;Ain't no mountain high enough;Marvin Gaye & Tammi Terrell;1967
+1832;Suicide Blonde;INXS;1990
+1833;Up Where We Belong;Joe Cocker & Jennifer Warnes;1982
+1834;Weekend Love;Golden Earring;1979
+1835;A Little Less Conversation;Elvis & Junkie XL;2002
+1836;Mad world;Tears for Fears;1982
+1837;Slow down;Douwe Bob;2016
+1838;Never alone;2 Brothers on the 4th Floor;1994
+1839;To love somebody;Bee Gees;1967
+1840;Say you won't let go;James Arthur;2015
+1841;Wind beneath My Wings;Bette Midler;1980
+1842;You Really Got Me;The Kinks;1964
+1843;Time stood still;Bad English;1991
+1844;Seasons;Earth & Fire;1970
+1845;Make it wit chu;Queens of the Stone Age;2007
+1846;The 5th;Ekseption;1969
+1847;Southern man;Neil Young;1970
+1848;Killer;Adamski & Seal;1990
+1849;You’re the inspiration;Chicago;1985
+1850;Peggy Sue;Buddy Holly;1957
+1851;All Summer Long;Kid Rock;2008
+1852;True;Spandau Ballet;1983
+1853;Cajun Moon;J.J. Cale;1974
+1854;Hier;BLØF;2000
+1855;Sunny days;Armin van Buuren ft. Josh Cumbee;2017
+1856;Het is koud zonder jou;André Hazes;1980
+1857;Als de rook om je hoofd is verdwenen;Boudewijn de Groot;1972
+1858;P.Y.T. (Pretty Young Thing);Michael Jackson;1982
+1859;See Emily Play;Pink Floyd;1967
+1860;In the army now;Status Quo;1986
+1861;Meer dan een ander;Van Dik Hout;1994
+1862;Homburg;Procol Harum;1967
+1863;Sunrise;Simply Red;2003
+1864;I don't wanna talk about it;Rod Stewart;1977
+1865;Set the fire to the third bar;Snow Patrol feat. Martha Wainwright;2006
+1866;Thrift Shop;Macklemore & Ryan Lewis;2012
+1867;Treasure;Bruno Mars;2013
+1868;Just the way you are;Billy Joel;1978
+1869;Heaven for Everyone;Queen;1995
+1870;Atmosphere;Joy Division;1979
+1871;Enola Gay;O.M.D.;1980
+1872;Toveren;Herman van Veen;1987
+1873;De wedstrijd;Bram Vermeulen;1991
+1874;Grow old with me;Tom Odell;2013
+1875;Teach me how to dance with you;Causes;2014
+1876;Lord of the Ages;Magna Carta;1973
+1877;Way down we go;Kaleo;2016
+1878;Wat zou je doen;Marco Borsato & Ali B;2004
+1879;Thank God I'm a Country Boy;John Denver;1975
+1880;Holes;Passenger;2013
+1881;(I've Had) The Time of My Life;Bill Medley & Jennifer Warnes;1987
+1882;Lady Madonna;The Beatles;1968
+1883;Bright side of the road;Van Morrison;1979
+1884;Lady Jane;The Rolling Stones;1966
+1885;Crazy;Icehouse;1987
+1886;Play That Funky Music;Wild Cherry;1976
+1887;Hou vol hou vast;BLØF;2011
+1888;Teardrops;Womack & Womack;1988
+1889;Nutbush city limits;Ike & Tina Turner;1974
+1890;Davy's on the Road Again;Manfred Mann's Earth Band;1978
+1891;Club Tropicana;Wham!;1983
+1892;No Good in Goodbye;The Script;2014
+1893;As;Stevie Wonder;1976
+1894;I Got You Babe;UB40 & Chrissie Hynde;1985
+1895;Eight Days a Week;The Beatles;1965
+1896;We zullen doorgaan;Ramses Shaffy;1975
+1897;Yellow submarine;The Beatles;1966
+1898;Merry Xmas everybody;Slade;1973
+1899;Locked Out of Heaven;Bruno Mars;2012
+1900;Mysterious ways;U2;1991
+1901;Steppin' out;Joe Jackson;1982
+1902;I can’t tell you why;Eagles;1980
+1903;Torn;Natalie Imbruglia;1997
+1904;You Make Loving Fun;Fleetwood Mac;1978
+1905;Dog days are over;Florence and the Machine;2008
+1906;Sacrifice;Anouk;1998
+1907;Time waits for no one;The Rolling Stones;1974
+1908;Niggas in Paris;Kanye West;2011
+1909;All apologies;Nirvana;1994
+1910;I’m not the only one;Sam Smith;2014
+1911;Something Happened on the Way to Heaven;Phil Collins;1990
+1912;All I wanna do is make love to you;Heart;1990
+1913;Lost on you;LP;2016
+1914;Water of Love;Dire Straits;1978
+1915;Papa Don't Preach;Madonna;1986
+1916;Lovesong;The Cure;1989
+1917;Close to you;Michael Prins;2013
+1918;The Ballroom Blitz;The Sweet;1973
+1919;A piece of the action;The Babys;1978
+1920;Girls just want to have fun;Cyndi Lauper;1984
+1921;Secret garden;Bruce Springsteen;1995
+1922;Late again;Stealers Wheel;1973
+1923;Dead Flowers;The Rolling Stones;1971
+1924;Homeward Bound;Simon & Garfunkel;1966
+1925;De blues verlaat je nooit;De Dijk;2012
+1926;I Don't Like Mondays;The Boomtown Rats;1979
+1927;I Got a Name;Jim Croce;1975
+1928;People Help the People;Birdy;2011
+1929;I Just Can't Stop Loving You;Michael Jackson & Siedah Garrett;1987
+1930;Everybody's free (to wear sunscreen);Baz Luhrmann;1999
+1931;Hero;Enrique Iglesias;2001
+1932;Euphoria;Loreen;2012
+1933;Rock 'n' roll high school;Ramones;1980
+1934;Good year for the roses;Elvis Costello;1981
+1935;Brother;Racoon;2006
+1936;Woman;John Lennon;1981
+1937;The road ahead (Miles of the unknown);City to City;1999
+1938;Dichterbij dan ooit;BLØF;2001
+1939;Black magic woman;Fleetwood Mac;1975
+1940;Babooshka;Kate Bush;1980
+1941;(You gotta) fight for your right (to party!);Beastie Boys;1987
+1942;Everything;Michael Bublé;2007
+1943;Air;Ekseption;1969
+1944;I Knew You Were Waiting (for Me);George Michael & Aretha Franklin;1987
+1945;Arnold Layne;Pink Floyd;1973
+1946;Bombay;Golden Earring;1976
+1947;Crazy in Love;Beyoncé feat. Jay Z;2002
+1948;No Regrets;The Walker Brothers;1976
+1949;Atlantis;Donovan;1969
+1950;Behind blue eyes;The Who;1971
+1951;Rape me;Nirvana;1994
+1952;Heartbreak Hotel;Elvis Presley;1956
+1953;Meeting across the river;Bruce Springsteen;1975
+1954;Me and Mrs. Jones;Billy Paul;1973
+1955;Sausolito Summernight;Diesel;1980
+1956;China in your hand;T'Pau;1987
+1957;The memory remains;Metallica en Marianne Faithfull;1997
+1958;Last Goodbye;Jeff Buckley;1993
+1959;Waarom fluister ik je naam nog;Benny Neyman;1985
+1960;Proosten;Guus Meeuwis;2007
+1961;Luka;Suzanne Vega;1987
+1962;Feel It Still;Portugal. The Man;2017
+1963;Paloma Blanca;George Baker Selection;1975
+1964;Sound of the Screaming Day;Golden Earring;1967
+1965;Addicted to you;Avicii;2013
+1966;Common people;Pulp;1995
+1967;Chained to the rhythm;Kate Perry & Skip Marley;2017
+1968;Ship to Wreck;Florence and the Machine;2015
+1969;Emma;Hot Chocolate;1974
+1970;Human behaviour;Björk;1993
+1971;Against the Wind;Bob Seger & The Silver Bullet Band;1980
+1972;Suite: Judy blue eyes;Crosby, Stills & Nash;1969
+1973;I love you like I love myself;Herman Brood;1980
+1974;The cross;Prince;1987
+1975;Diamante;Zucchero Fornaciari;1986
+1976;Lay Lady Lay;Bob Dylan;1969
+1977;Baby, can I hold you;Tracy Chapman;1988
+1978;No diggity;Blackstreet feat. Dr. Dre;1996
+1979;Whatever it takes;Imagine Dragons;2017
+1980;Op 't platteland;Daniël Lohues;2014
+1981;Sun is shining;Axwell Λ Ingrosso;2015
+1982;The model;Kraftwerk;1978
+1983;Daydream Believer;The Monkees;1967
+1984;Story of my life;One Direction;2013
+1985;Sugar;Maroon 5;2015
+1986;We are the world;USA for Africa;1985
+1987;Don't let me down;The Beatles;1969
+1988;After the love has gone;Earth, Wind & Fire;1979
+1989;Waiting for the sun;The Doors;1971
+1990;The last time;The Rolling Stones;1965
+1991;Hou van mij;Het Goede Doel;1983
+1992;Save Tonight;Eagle-Eye Cherry;1997
+1993;Get up, stand up;Bob Marley & The Wailers;1973
+1994;Memory Motel;The Rolling Stones;1976
+1995;Little red Corvette;Prince;1983
+1996;Soul Man;Sam & Dave;1967
+1997;Fools gold;The Stone Roses;1990
+1998;When you say nothing at all;Ronan Keating;1999
+1999;Mr. Rock & Roll;Amy Macdonald;2008
+2000;I'm Every Woman;Chaka Khan;1979
