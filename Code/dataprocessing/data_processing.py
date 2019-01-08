@@ -39,7 +39,7 @@ def create_different_years(df):
         dataframe["Notering"] = dataframe2
         # print(dataframe)
 
-        dataframe.to_csv(f"../Data/{year}.csv", index=False, sep="\t")
+        dataframe.to_tsv(f"../Data/{year}.tsv", index=False)
 
 
 
