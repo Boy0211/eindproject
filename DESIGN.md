@@ -28,8 +28,6 @@ Hier zijn de lijnen veel duidelijker. Ik hoop te kunnen maken dat de gebruiker k
 * Hoe doen de songs het over de jaren (Optional)
 <!-- ![afbeelding van pagina lijst per jaar](/Images/sketch1.jpeg) -->
 
-### As well as descriptions of each of the components and what you need to implement these
-
 ### A list of APIs or D3 plugins that you will be using to provide functionality in your app
 
 Voor nu maak ik alleen gebruik van de d3 library. Als optional zou ik graag een wereldkaart willen toevoegen met de herkomst van de liedjes, echter ben ik nog opzoek naar een dataset met deze informatie over de artiesten. Als dat niet lukt zou het nog handmatig kunnen, maar dat is wel heel veel werk.
