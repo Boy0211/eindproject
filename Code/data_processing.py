@@ -15,11 +15,12 @@ def process_data(df):
         x = str(year)
         df[x].mask((df[x] > 2000), inplace=True)
 
-    print(df)
+    # print(df)
     return df
 
 def create_different_years(df):
 
+    list = []
     for year in range(1999, 2019):
         titel = df["Titel"].tolist()
         artiest = df["Artiest"].tolist()
@@ -27,7 +28,8 @@ def create_different_years(df):
         notering = df[str(year)].tolist()
 
         dataframe = pd.DataFrame(
-            {'Notering': notering,
+            {'Lijst': year,
+             'Notering': notering,
              'Titel': titel,
              'Artiest': artiest,
              'Jaar': jaar,
@@ -39,7 +41,12 @@ def create_different_years(df):
         dataframe["Notering"] = dataframe2
         # print(dataframe)
 
-        dataframe.to_csv(f"../Data/{year}.csv", index=False, sep="\t")
+        # dataframe.to_csv(f"../Data/{year}.tsv", index=False, sep="\t")
+        list.append(dataframe)
+    print(list)
+    result = pd.concat(list)
+    print(result)
+    result.to_csv(f"../Data/merged_list.tsv", index=False, sep="\t")
 
 
 
