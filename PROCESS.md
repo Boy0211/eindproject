@@ -16,6 +16,14 @@ Voor nu heb ik nog geen keuze kunnen maken. Is ook nog niet van belang omdat ik 
 
 # Day 3, 10 januari 2018
 
-* Maken tabel voor pagina per lijsten
-* Maken tektst voor deze pagina in container
-* Plaatsing van grafieken op de pagina
+* ~~ Maken tabel voor pagina per lijsten ~~
+* ~~ Maken tektst voor deze pagina in container ~~
+* ~~ Plaatsing van grafieken op de pagina ~~
+
+Alle zaken voor vandaag waren gelukt. Bovendien ben ik in staat geweest om een bubblechart te maken.
+
+# Day 4, 11 januari 2018
+
+* Het laten werken van een mouseover voor alle grafieken
+* Het laten werken van een update-able bubble chart
+* Het toevoegen van labels aan de piechart

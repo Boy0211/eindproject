@@ -65,6 +65,7 @@ window.onload = function() {
       updateTable(songsbyList[selectValue-cc].values)
       updatePieChart(songsbyList[selectValue-cc])
       updateBarChart(process_Data_BarChart(songsbyList[(selectValue-cc)].values))
+      updateBubbleChart(songsbyList[selectValue-cc].values)
     };
   };
 
@@ -295,6 +296,49 @@ window.onload = function() {
         .attr('fill', 'grey')
   }; //sluiten draw bar chart
 
+  function updateBubbleChart(lijst) {
+
+    temp_data = listByArtist(lijst)
+    data = createDataforBubblechart(temp_data)
+
+    var diameter = 450
+    var color = d3.scaleOrdinal(d3.schemeAccent);
+
+    var bubble = d3.pack(lijst)
+        .size([diameter, diameter])
+        .padding(1.5)
+
+    var svg = d3.select("#bubblechart").select(".bubble")
+
+    var nodes = d3.hierarchy(data).sum(function(d) { return d.AantalTitels})
+
+    var node = svg.selectAll(".node")
+        .data(bubble(nodes).descendants())
+
+    console.log(node);
+
+    node.exit().remove()
+        .transition()
+        .duration(1000)
+
+    node.enter().append("g")
+        .transition()
+        .duration(1000)
+        .attr("class", "node")
+        .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        })
+        .attr("r", function(d) {
+            return d.r;})
+        .style("fill", function(d,i) { return color(i);})
+
+    node
+    .attr("r", function(d) {
+        return d.r;})
+    .style("fill", function(d,i) { return color(i);})
+
+  };
+
   function drawBubbleChart(lijst) {
 
     temp_data = listByArtist(lijst)
@@ -315,11 +359,8 @@ window.onload = function() {
 
     var nodes = d3.hierarchy(data).sum(function(d) { return d.AantalTitels})
 
-    console.log(nodes);
-
     var node = svg.selectAll(".node")
-          .data(bubble(nodes)
-          .descendants())
+          .data(bubble(nodes).descendants())
           .enter()
           .filter(function(d){
               return  !d.children
@@ -332,34 +373,32 @@ window.onload = function() {
 
     node.append("circle")
         .attr("r", function(d) {
-          console.log(d.r);
-          return d.r;})
+            return d.r;})
         .style("fill", function(d,i) { return color(i);})
 
-    node.append("text")
-            .attr("dy", ".2em")
-            .style("text-anchor", "middle")
-            .text(function(d) {
-                return d.data["Artiest"].substring(0, d.r / 1.5);
-            })
-            .attr("font-family", "sans-serif")
-            .attr("font-size", function(d){
-                return d.r/10;
-            })
-            .attr("fill", "white");
-
-    node.append("text")
-        .attr("dy", "1.3em")
-        .style("text-anchor", "middle")
-        .text(function(d) {
-            console.log(d.data["AantalTitels"]);
-            return d.data["AantalTitels"];
-        })
-        .attr("font-family",  "Gill Sans", "Gill Sans MT")
-        .attr("font-size", function(d){
-            return d.r/5;
-        })
-        .attr("fill", "white");
+    // node.append("text")
+    //         .attr("dy", ".2em")
+    //         .style("text-anchor", "middle")
+    //         .text(function(d) {
+    //             return d.data["Artiest"].substring(0, d.r / 1.5);
+    //         })
+    //         .attr("font-family", "sans-serif")
+    //         .attr("font-size", function(d){
+    //             return d.r/10;
+    //         })
+    //         .attr("fill", "white");
+    //
+    // node.append("text")
+    //     .attr("dy", "1.3em")
+    //     .style("text-anchor", "middle")
+    //     .text(function(d) {
+    //         return d.data["AantalTitels"];
+    //     })
+    //     .attr("font-family",  "Gill Sans", "Gill Sans MT")
+    //     .attr("font-size", function(d){
+    //         return d.r/5;
+    //     })
+    //     .attr("fill", "white");
 
     d3.select(self.frameElement)
         .style("height", diameter + "px");
@@ -463,7 +502,6 @@ window.onload = function() {
     .append('td')
       .text(function (d) { return d.value; });
 
-    console.log(table);
     return table;
   }
 
