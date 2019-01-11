@@ -13,3 +13,9 @@ De afgelopen dagen heb ik de eerste stappen gezet in de ontwikkeling van mijn we
 Bijv deze [link](https://getbootstrap.com/docs/4.0/examples/album/)
 
 Voor nu heb ik nog geen keuze kunnen maken. Is ook nog niet van belang omdat ik eerst verder moet aan de ontwikkeling van de grafieken.
+
+# Day 3, 10 januari 2018
+
+* Maken tabel voor pagina per lijsten
+* Maken tektst voor deze pagina in container
+* Plaatsing van grafieken op de pagina

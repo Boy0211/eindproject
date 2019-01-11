@@ -13,8 +13,10 @@ window.onload = function() {
     barchartData = process_Data_BarChart(songsbyList[(year-cc)].values)
 
     createDropdown(songsbyList)
-    drawBarChart(barchartData)
     drawPieChart(songsbyList[(year-cc)].values)
+    createTable(songsbyList[year-cc].values)
+    drawBarChart(barchartData)
+    drawBubbleChart(songsbyList[year-cc].values)
   }); // sluting d3.tsv
 
   function createDropdown(songsbyList) {
@@ -24,8 +26,31 @@ window.onload = function() {
       lists.push(key['key'])
     });
 
-    var select = d3.select('body')
-      .append('select')
+    // var dropdown = d3.select("body").append("div")
+    //     .attr("class", "dropdown")
+    //   .append("button")
+    //     .attr("class", "btn btn-secondary dropdown-toggle")
+    //     .attr("type", "button")
+    //     .attr("id", "dropdownMenuButton")
+    //     .attr("data-toggle", "dropdown")
+    //     .attr("aria-haspopup", "true")
+    //     .attr("aria-expanded", "false")
+    //     .text("1999")
+    //
+    // var options = d3.select(".dropdown")
+    //   .append("div")
+    //     .on("change", onchange)
+    //     .attr("class", "dropdown-menu")
+    //     .attr("aria-labelledby", "dropdownMenuButton")
+    //     .selectAll("a")
+    //     .data(lists).enter()
+    //   	.append('a')
+    //       .attr("class", "dropdown-menu")
+    //   		.text(function (d) { return d; });
+
+
+    var select = d3.select('.uitleg')
+        .append('select')
       	.attr('class','select')
         .on('change',onchange)
 
@@ -37,21 +62,53 @@ window.onload = function() {
 
     function onchange() {
     	selectValue = d3.select('select').property('value')
-      updateBarChart(process_Data_BarChart(songsbyList[(selectValue-cc)].values))
+      updateTable(songsbyList[selectValue-cc].values)
       updatePieChart(songsbyList[selectValue-cc])
+      updateBarChart(process_Data_BarChart(songsbyList[(selectValue-cc)].values))
     };
   };
 
+  function updateTable(lijst) {
+
+    d3.select(".divtable").select(".table")
+      .remove()
+
+    var width = 500
+    var height = 500
+
+    columns = ["Notering", "Titel", "Artiest", "Jaar"]
+    data = lijst.slice(0, 10)
+    tabulate(data, columns)
+  };
+
+  function createTable(lijst) {
+
+    var width = 500
+    var height = 500
+
+    var div = d3.select("#tabel")
+        .append("div")
+        .attr("class", "divtable")
+        .attr("width", width)
+        .attr("height", height)
+
+    columns = ["Notering", "Titel", "Artiest", "Jaar"]
+    data = lijst.slice(0, 10)
+    tabulate(data, columns)
+
+  };
+
   function updatePieChart(lijst) {
-    var width = 1000
-    var height = 1000
+
+    var width = 400
+    var height = 400
     var radius = Math.min(width, height) / 2;
-    var color = d3.scaleOrdinal(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f"])
-    console.log(lijst);
+    var color = d3.scaleOrdinal(d3.schemeAccent);
+
     data = getBiggestArtists(lijst["values"])
     var arc = d3.arc()
         .outerRadius(radius * 0.8)
-        .innerRadius(radius * 0.4)
+        .innerRadius(radius * 0.55)
     var pie = d3.pie()
         .sort(null)
         .value(function(d) { return d["values"].length;})
@@ -67,16 +124,16 @@ window.onload = function() {
           .attr("d", arc)
           .attr("stroke", "white")
           .attr("stroke-width", "6px")
-    console.log("ik ben gek");
+
   }
 
   function drawPieChart(lijst) {
 
-    var width = 1000
-    var height = 1000
+    var width = 400
+    var height = 400
     var radius = Math.min(width, height) / 2;
 
-    var svg = d3.select("body")
+    var svg = d3.select("#piechart")
         .append("svg")
         .attr("class", "piechart")
         .attr("width", width)
@@ -91,7 +148,8 @@ window.onload = function() {
 
     data = getBiggestArtists(lijst)
 
-    var color = d3.scaleOrdinal(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f"])
+    var color = d3.scaleOrdinal(d3.schemeAccent);
+    // var color = d3.scaleOrdinal(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f"])
 
     var pie = d3.pie()
         .sort(null)
@@ -99,7 +157,7 @@ window.onload = function() {
 
     var arc = d3.arc()
         .outerRadius(radius * 0.8)
-        .innerRadius(radius * 0.4)
+        .innerRadius(radius * 0.55)
 
     var outerArc = d3.arc()
         .innerRadius(radius * 0.9)
@@ -119,8 +177,8 @@ window.onload = function() {
   function updateBarChart(data) {
 
     var margin = {top: 50, right:50, bottom:50, left:50};
-    var width = 1000
-    var height = 600
+    var width = 800
+    var height = 400
     var barPadding = 1.2
 
     var xScale = d3.scaleBand()
@@ -136,7 +194,7 @@ window.onload = function() {
             return d.y;
         })]);
 
-    d3.select("svg").select("g").select(".x-axis")
+    d3.select(".barchart").select("g").select(".x-axis")
         .transition()
         .duration(1000)
         .call(d3.axisBottom(xScale))
@@ -146,12 +204,12 @@ window.onload = function() {
         .attr("transform", "rotate(-40)")
         .style("text-anchor", "end");
 
-    d3.select("svg").select("g").select(".y-axis")
+    d3.select(".barchart").select("g").select(".y-axis")
         .transition()
         .duration(1000)
         .call(d3.axisLeft(yScale))
 
-    var bars = d3.select("svg").select("g").selectAll(".rect")
+    var bars = d3.select(".barchart").select("g").selectAll(".rect")
         .data(data)
 
     bars.exit()
@@ -177,11 +235,11 @@ window.onload = function() {
   function drawBarChart(data) {
 
     var margin = {top: 50, right:50, bottom:50, left:50};
-    var width = 1000
-    var height = 600
+    var width = 800
+    var height = 400
     var barPadding = 1.2
 
-    var svg = d3.select("body")
+    var svg = d3.select("#barchart")
         .append("svg")
         .attr("class", "barchart")
         .attr("width", (width + margin.left + margin.right))
@@ -235,8 +293,91 @@ window.onload = function() {
             return height - yScale(d.y);
         })
         .attr('fill', 'grey')
-
   }; //sluiten draw bar chart
+
+  function drawBubbleChart(lijst) {
+
+    temp_data = listByArtist(lijst)
+    data = createDataforBubblechart(temp_data)
+
+    var diameter = 450
+    var color = d3.scaleOrdinal(d3.schemeAccent);
+
+    var bubble = d3.pack(lijst)
+        .size([diameter, diameter])
+        .padding(1.5)
+
+    var svg = d3.select("#bubblechart")
+        .append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter)
+        .attr("class", "bubble");
+
+    var nodes = d3.hierarchy(data).sum(function(d) { return d.AantalTitels})
+
+    console.log(nodes);
+
+    var node = svg.selectAll(".node")
+          .data(bubble(nodes)
+          .descendants())
+          .enter()
+          .filter(function(d){
+              return  !d.children
+          })
+          .append("g")
+          .attr("class", "node")
+          .attr("transform", function(d) {
+              return "translate(" + d.x + "," + d.y + ")";
+          });
+
+    node.append("circle")
+        .attr("r", function(d) {
+          console.log(d.r);
+          return d.r;})
+        .style("fill", function(d,i) { return color(i);})
+
+    node.append("text")
+            .attr("dy", ".2em")
+            .style("text-anchor", "middle")
+            .text(function(d) {
+                return d.data["Artiest"].substring(0, d.r / 1.5);
+            })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", function(d){
+                return d.r/10;
+            })
+            .attr("fill", "white");
+
+    node.append("text")
+        .attr("dy", "1.3em")
+        .style("text-anchor", "middle")
+        .text(function(d) {
+            console.log(d.data["AantalTitels"]);
+            return d.data["AantalTitels"];
+        })
+        .attr("font-family",  "Gill Sans", "Gill Sans MT")
+        .attr("font-size", function(d){
+            return d.r/5;
+        })
+        .attr("fill", "white");
+
+    d3.select(self.frameElement)
+        .style("height", diameter + "px");
+
+  }
+
+  // process data for bubble chart
+  function createDataforBubblechart(data) {
+    var dataforBubbleChart = []
+    data.forEach(function(key, values) {
+      dataforBubbleChart.push({
+        Artiest : key['key'],
+        AantalTitels : key['values'].length
+      })
+    })
+    data = {"children" : dataforBubbleChart}
+    return data
+  }
 
   // functie voor het processen van de data voor een barchart
   function process_Data_BarChart(lijst) {
@@ -278,8 +419,52 @@ window.onload = function() {
 
     data = songsbyArtist.slice(0, 10);
 
-    console.log(data);
     return data
   };
+
+  function listByArtist(lijst) {
+
+    var songsbyArtist = d3.nest()
+        .key(function(d) {return d.Artiest; })
+        .entries(lijst)
+
+    songsbyArtist.sort(function(a, b) {
+      var x = a['values'].length; var y = b['values'].length;
+      return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    })
+
+    return songsbyArtist
+  }
+
+  function tabulate(data, columns) {
+    var table = d3.select(".divtable").append("table").attr("class", "table");
+    var header = table.append("thead")
+    var tbody = table.append("tbody")
+
+    d3.select("thead").append('tr')
+    .selectAll('th')
+    .data(columns)
+    .enter()
+    .append('th')
+      .text(function (column) { return column; });
+
+    var rows = tbody.selectAll('tr')
+    .data(data)
+    .enter()
+    .append('tr');
+
+    var cells = rows.selectAll('td')
+    .data(function (row) {
+      return columns.map(function (column) {
+        return {column: column, value: row[column]};
+      });
+    })
+    .enter()
+    .append('td')
+      .text(function (d) { return d.value; });
+
+    console.log(table);
+    return table;
+  }
 
 }; // sluting window onload function

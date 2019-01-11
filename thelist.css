@@ -1,7 +1,39 @@
+body {
+  padding-top: 65px;
+  background-color: #DDDDDD;
+}
+
+.uitleg {
+  padding-left: 15px;
+}
+
+#bubblechart {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+#tabel {
+  padding-top: 15px;
+}
+
+text {
+  font-size: 12px;
+  font-family: "avenir next", Arial, sans-serif;
+}
+
 .navbar-fixed-top {
-  background-color: grey
+  background-color: grey;
 }
 
 .nav.navbar-nav li a {
     color: white;
+}
+
+table, th, td {
+  font-size: 10px;
+  font-family: "avenir next", Arial, sans-serif;
+}
+
+.barchart, text {
+  font-size: 10px;
 }
