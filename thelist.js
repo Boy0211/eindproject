@@ -10,12 +10,10 @@ window.onload = function() {
         .key(function(d) {return d.Lijst; })
         .entries(data)
 
-    barchartData = process_Data_BarChart(songsbyList[(year-cc)].values)
-
     createDropdown(songsbyList)
     drawPieChart(songsbyList[(year-cc)].values)
     createTable(songsbyList[year-cc].values)
-    drawBarChart(barchartData)
+    drawBarChart(songsbyList[(year-cc)].values)
     drawBubbleChart(songsbyList[year-cc].values)
   }); // sluting d3.tsv
 
@@ -148,9 +146,19 @@ window.onload = function() {
     	.attr("class", "lines");
 
     data = getBiggestArtists(lijst)
+    console.log(data);
 
     var color = d3.scaleOrdinal(d3.schemeAccent);
     // var color = d3.scaleOrdinal(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f"])
+
+    var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<span><strong>Artiest: </strong>" +d.data.key + "<br><strong>Aantal titels: </strong>" + d.data.values.length + "</span>"
+            })
+
+    svg.call(tip);
 
     var pie = d3.pie()
         .sort(null)
@@ -173,7 +181,28 @@ window.onload = function() {
         .attr("d", arc)
         .attr("stroke", "white")
         .attr("stroke-width", "6px")
-  }
+        .on("mouseover", function(d) {
+            tip.show(d)
+
+            d3.select(this)
+              .style("opacity", 1)
+              .style("stroke","white")
+              .style("stroke-width",3)
+        })
+        .on('mouseout', function(d){
+            tip.hide(d);
+
+            d3.select(this)
+              .style("opacity", 0.8)
+              .style("stroke","white")
+              .style("stroke-width", "6px")
+        });
+
+    svg.append("text")
+       .attr("class", "piechart-text")
+       .text("TOP10 Artiesten");
+
+    }
 
   function updateBarChart(data) {
 
@@ -233,7 +262,9 @@ window.onload = function() {
         .attr('y', function(d) {return yScale(d.y);})
   };
 
-  function drawBarChart(data) {
+  function drawBarChart(temp_data) {
+
+    data = process_Data_BarChart(temp_data)
 
     var margin = {top: 50, right:50, bottom:50, left:50};
     var width = 800
@@ -294,17 +325,51 @@ window.onload = function() {
             return height - yScale(d.y);
         })
         .attr('fill', 'grey')
+        .on("click", function(d) {
+          console.log(d)
+          selectedYear = d.x
+          dataYearBubbleChart(temp_data, selectedYear)
+        })
+
   }; //sluiten draw bar chart
+
+  function dataYearBubbleChart(listByYears, year) {
+
+    // nest de data per jaar dat het is uitgebracht
+    var songsbyYear = d3.nest()
+        .key(function(d) {return d.Jaar; })
+        .entries(listByYears)
+
+    // sorteer deze weer op chronologische volgorde
+    songsbyYear.sort(function(a, b) {
+      var x = a['key']; var y = b['key'];
+      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    })
+
+    console.log(songsbyYear);
+    console.log(year);
+
+    var right_list = []
+    songsbyYear.forEach(function(key) {
+      console.log(key);
+      if (key["key"] == year) {
+        right_list = key["values"]
+      }
+    })
+
+    updateBubbleChart(right_list)
+  }
 
   function updateBubbleChart(lijst) {
 
     temp_data = listByArtist(lijst)
     data = createDataforBubblechart(temp_data)
 
+
     var diameter = 450
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
-    var bubble = d3.pack(lijst)
+    var bubble = d3.pack(data)
         .size([diameter, diameter])
         .padding(1.5)
 
@@ -315,13 +380,34 @@ window.onload = function() {
     var node = svg.selectAll(".node")
         .data(bubble(nodes).descendants())
 
-    console.log(node);
+    var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
+            })
+
+    svg.call(tip);
 
     node.exit().remove()
         .transition()
         .duration(1000)
 
-    node.enter().append("g")
+    node
+        .transition()
+        .duration(1000)
+        .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        })
+        .attr("r", function(d) {
+            return d.r;})
+        .style("fill", function(d,i) {
+          if( i == 0) {
+            return "#fff"
+          }
+          return color(i);})
+
+    node.enter().append("circle")
         .transition()
         .duration(1000)
         .attr("class", "node")
@@ -332,11 +418,25 @@ window.onload = function() {
             return d.r;})
         .style("fill", function(d,i) { return color(i);})
 
-    node
-    .attr("r", function(d) {
-        return d.r;})
-    .style("fill", function(d,i) { return color(i);})
+    d3.selectAll(".node")
+        .on("mouseover", function(d, i) {
+            if( i != 0) {
+              tip.show(d)
+              console.log(d);
+              d3.select(this)
+                .style("opacity", 1)
+                .style("stroke","white")
+                .style("stroke-width", 3)
+            }
+        })
+        .on('mouseout', function(d){
+            tip.hide(d);
 
+            d3.select(this)
+              .style("opacity", 0.8)
+              .style("stroke","white")
+              .style("stroke-width", 1.5)
+        });
   };
 
   function drawBubbleChart(lijst) {
@@ -347,7 +447,7 @@ window.onload = function() {
     var diameter = 450
     var color = d3.scaleOrdinal(d3.schemeAccent);
 
-    var bubble = d3.pack(lijst)
+    var bubble = d3.pack(data)
         .size([diameter, diameter])
         .padding(1.5)
 
@@ -357,30 +457,60 @@ window.onload = function() {
         .attr("height", diameter)
         .attr("class", "bubble");
 
+    var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
+            })
+
+    svg.call(tip);
+
     var nodes = d3.hierarchy(data).sum(function(d) { return d.AantalTitels})
 
     var node = svg.selectAll(".node")
           .data(bubble(nodes).descendants())
           .enter()
-          .filter(function(d){
-              return  !d.children
-          })
-          .append("g")
+          // .filter(function(d){
+          //     return  !d.children
+          // })
+          .append("circle")
           .attr("class", "node")
           .attr("transform", function(d) {
               return "translate(" + d.x + "," + d.y + ")";
+          })
+          .attr("r", function(d) {
+              return d.r;})
+          .style("fill", function(d,i) {
+            if( i == 0) {
+              return "#fff"
+            }
+            return color(i);})
+          .on("mouseover", function(d,i) {
+              if( i != 0) {
+                tip.show(d)
+                console.log(d);
+                d3.select(this)
+                  .style("opacity", 1)
+                  .style("stroke","white")
+                  .style("stroke-width", 3)
+              }
+          })
+          .on('mouseout', function(d){
+              tip.hide(d);
+
+              d3.select(this)
+                .style("opacity", 0.8)
+                .style("stroke","white")
+                .style("stroke-width", 1.5)
           });
 
-    node.append("circle")
-        .attr("r", function(d) {
-            return d.r;})
-        .style("fill", function(d,i) { return color(i);})
 
     // node.append("text")
     //         .attr("dy", ".2em")
     //         .style("text-anchor", "middle")
     //         .text(function(d) {
-    //             return d.data["Artiest"].substring(0, d.r / 1.5);
+    //             return d.data["Artiest"].substring(0, d.r / 5);
     //         })
     //         .attr("font-family", "sans-serif")
     //         .attr("font-size", function(d){
@@ -396,12 +526,12 @@ window.onload = function() {
     //     })
     //     .attr("font-family",  "Gill Sans", "Gill Sans MT")
     //     .attr("font-size", function(d){
-    //         return d.r/5;
+    //         return d.r/2;
     //     })
     //     .attr("fill", "white");
 
-    d3.select(self.frameElement)
-        .style("height", diameter + "px");
+    // d3.select(self.frameElement)
+    //     .style("height", diameter + "px");
 
   }
 
@@ -476,8 +606,8 @@ window.onload = function() {
   }
 
   function tabulate(data, columns) {
-    var table = d3.select(".divtable").append("table").attr("class", "table");
-    var header = table.append("thead")
+    var table = d3.select(".divtable").append("table").attr("class", "table table-striped table-bordered");
+    var header = table.append("thead").attr("class", "dark")
     var tbody = table.append("tbody")
 
     d3.select("thead").append('tr')

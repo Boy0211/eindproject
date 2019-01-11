@@ -1,10 +1,20 @@
 body {
-  padding-top: 65px;
-  background-color: #DDDDDD;
+  padding-top: 75px;
 }
+
+rect:hover {
+  fill: black;
+  }
 
 .uitleg {
   padding-left: 15px;
+}
+
+.piechart-text {
+  position: absolute;
+  text-anchor: middle;
+  font-size: 28px;
+  font-family: "avenir next", Arial, sans-serif;
 }
 
 #bubblechart {
@@ -17,7 +27,7 @@ body {
 }
 
 text {
-  font-size: 12px;
+  font-size: 10px;
   font-family: "avenir next", Arial, sans-serif;
 }
 
@@ -30,7 +40,7 @@ text {
 }
 
 table, th, td {
-  font-size: 10px;
+  font-size: 12px;
   font-family: "avenir next", Arial, sans-serif;
 }
 
