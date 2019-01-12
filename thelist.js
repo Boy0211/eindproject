@@ -62,7 +62,7 @@ window.onload = function() {
     	selectValue = d3.select('select').property('value')
       updateTable(songsbyList[selectValue-cc].values)
       updatePieChart(songsbyList[selectValue-cc])
-      updateBarChart(process_Data_BarChart(songsbyList[(selectValue-cc)].values))
+      updateBarChart(songsbyList[(selectValue-cc)].values)
       updateBubbleChart(songsbyList[selectValue-cc].values)
     };
   };
@@ -185,7 +185,7 @@ window.onload = function() {
             tip.show(d)
 
             d3.select(this)
-              .style("opacity", 1)
+              .style("opacity", 0.8)
               .style("stroke","white")
               .style("stroke-width",3)
         })
@@ -193,7 +193,7 @@ window.onload = function() {
             tip.hide(d);
 
             d3.select(this)
-              .style("opacity", 0.8)
+              .style("opacity", 1)
               .style("stroke","white")
               .style("stroke-width", "6px")
         });
@@ -204,7 +204,9 @@ window.onload = function() {
 
     }
 
-  function updateBarChart(data) {
+  function updateBarChart(temp_data) {
+
+    data = process_Data_BarChart(temp_data)
 
     var margin = {top: 50, right:50, bottom:50, left:50};
     var width = 800
@@ -239,7 +241,7 @@ window.onload = function() {
         .duration(1000)
         .call(d3.axisLeft(yScale))
 
-    var bars = d3.select(".barchart").select("g").selectAll(".rect")
+    var bars = d3.select(".barchart").select("g").select(".bars").selectAll(".rect")
         .data(data)
 
     bars.exit()
@@ -260,6 +262,16 @@ window.onload = function() {
         .attr('x', function(d, i) {return xScale(d.x);})
         .attr('height', function(d) {return height - yScale(d.y);})
         .attr('y', function(d) {return yScale(d.y);})
+
+
+    d3.select(".bars").selectAll("rect")
+        .on("click", function(d) {
+          console.log(d)
+          selectedYear = d.x
+          dataYearBubbleChart(temp_data, selectedYear)
+        })
+
+    console.log(bars);
   };
 
   function drawBarChart(temp_data) {
@@ -309,7 +321,7 @@ window.onload = function() {
       // .attr("transform", "translate(0," + (-margin.top) + ")")
       .call(d3.axisLeft(yScale))
 
-    svg.append("g").selectAll("rect")
+    svg.append("g").attr("class", "bars").selectAll("rect")
         .data(data)
         .enter()
         .append("rect")
@@ -356,7 +368,6 @@ window.onload = function() {
         right_list = key["values"]
       }
     })
-
     updateBubbleChart(right_list)
   }
 
@@ -418,13 +429,14 @@ window.onload = function() {
             return d.r;})
         .style("fill", function(d,i) { return color(i);})
 
-    d3.selectAll(".node")
+    d3.select(".bubble").selectAll("circle")
+        .attr("id", "aapje")
         .on("mouseover", function(d, i) {
             if( i != 0) {
               tip.show(d)
               console.log(d);
               d3.select(this)
-                .style("opacity", 1)
+                .style("opacity", 0.8)
                 .style("stroke","white")
                 .style("stroke-width", 3)
             }
@@ -433,7 +445,7 @@ window.onload = function() {
             tip.hide(d);
 
             d3.select(this)
-              .style("opacity", 0.8)
+              .style("opacity", 1)
               .style("stroke","white")
               .style("stroke-width", 1.5)
         });
