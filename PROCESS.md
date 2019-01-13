@@ -33,4 +33,8 @@ Doelstellingen van vandaag:
 * ~~Het toevoegen van labels aan de piechart~~
 * ~~Het toevoegen van een tooltip~~
 
-Alle doelstellingen zijn gehaald. Bovendien is de bubblechart nu ook interactief door te klikken op de barchart. 
+Alle doelstellingen zijn gehaald. Bovendien is de bubblechart nu ook interactief door te klikken op de barchart.
+
+# Day 5, 12 januari 2018
+
+De bubble chart bleek niet zo interactief als gehoopt. De bubbels reageren nog niet wanneer de barchart is aangepast. 
