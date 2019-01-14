@@ -336,7 +336,6 @@ window.onload = function() {
         .attr('height', function(d){
             return height - yScale(d.y);
         })
-        .attr('fill', 'grey')
         .on("click", function(d) {
           console.log(d)
           selectedYear = d.x

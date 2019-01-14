@@ -37,4 +37,11 @@ Alle doelstellingen zijn gehaald. Bovendien is de bubblechart nu ook interactief
 
 # Day 5, 12 januari 2018
 
-De bubble chart bleek niet zo interactief als gehoopt. De bubbels reageren nog niet wanneer de barchart is aangepast. 
+De bubble chart bleek niet zo interactief als gehoopt. De bubbels reageren nog niet wanneer de barchart is aangepast.
+
+# Day 6, 13 januari 2018
+
+Doelstellingen:
+
+* Het maken van de html pagina van per artiest
+* Het maken van de eerste grafiek op deze pagina

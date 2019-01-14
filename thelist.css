@@ -2,9 +2,22 @@ body {
   padding-top: 75px;
 }
 
+.navbar-fixed-top {
+  background-color: grey;
+}
+
+.nav.navbar-nav li a {
+    color: white;
+}
+
 rect:hover {
-  fill: black;
+  fill: darkred;
   }
+
+rect {
+  fill: red;
+  opacity: 0.8;
+}
 
 .uitleg {
   padding-left: 15px;
@@ -29,14 +42,6 @@ rect:hover {
 text {
   font-size: 10px;
   font-family: "avenir next", Arial, sans-serif;
-}
-
-.navbar-fixed-top {
-  background-color: grey;
-}
-
-.nav.navbar-nav li a {
-    color: white;
 }
 
 table, th, td {
