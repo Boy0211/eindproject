@@ -9,3 +9,14 @@ body {
 .nav.navbar-nav li a {
     color: white;
 }
+
+.line {
+  fill: none;
+  stroke: #6F257F;
+  stroke-width: 5px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}

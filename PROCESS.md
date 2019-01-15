@@ -39,9 +39,22 @@ Alle doelstellingen zijn gehaald. Bovendien is de bubblechart nu ook interactief
 
 De bubble chart bleek niet zo interactief als gehoopt. De bubbels reageren nog niet wanneer de barchart is aangepast.
 
-# Day 6, 13 januari 2018
+# Day 6, 14 januari 2018
 
 Doelstellingen:
 
-* Het maken van de html pagina van per artiest
-* Het maken van de eerste grafiek op deze pagina
+* ~~Het maken van de html pagina van per artiest~~
+* ~~Het maken van de eerste grafiek op deze pagina~~
+
+Vandaag heb ik besloten te starten aan de tweede pagina. Naar mijn idee heb ik al aan alle minimum eisen van het project voldaan op de eerste pagina.
+
+# Day 7, 15 januari 2018
+
+Gisteren is het mij al gelukt 2 lijngrafieken te plaatsen op de 2de pagina. Vandaag wil ik daar nog een barchart aan toevoegen. Deze lijkt erg op de barchart van mijn eerste pagina dus dit zal niet al te moeilijk zijn. Bovendien wil ik bij Tim controleren hoever mijn huidige project is en of dit overeenkomt met mijn idee dat ik aan alle eisen heb voldaan.
+
+Doelstellingen:
+
+* Controleren of ik aan alle eisen heb voldaan
+* Barchart maken op pagina 2
+* De twee linegraphs optimaliseren voor de 2de pagina
+* Mijn js voor de eerste pagina opruimen en voorzien van comments

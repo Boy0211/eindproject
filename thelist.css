@@ -1,21 +1,62 @@
-body {
-  padding-top: 75px;
+#thelist {
+  background-color: #222629;
+  font-family: "avenir next", Arial, sans-serif;
+}
+
+.uitleg p {
+  font-size: 12px;
+  font-family: "avenir next", Arial, sans-serif;
+  color: white;
+  font-style: italic;
+}
+
+.uitleg h2 {
+  font-family: "avenir next", Arial, sans-serif;
+  color: white;
+  font-style: normal;
+  text-align: center;
 }
 
 .navbar-fixed-top {
-  background-color: grey;
+  /* background-color: #282828; */
 }
 
 .nav.navbar-nav li a {
     color: white;
+    font-weight: bold;
+}
+
+.divtable {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.divtable th {
+  background-color: black;
+  color: white;
+}
+
+.divtable td {
+  background-color: #6F2232;
+  color: white;
+}
+
+
+table, th, td {
+  font-size: 12px;
+  font-family: "avenir next", Arial, sans-serif;
+}
+
+#barchart {
+  color: white;
 }
 
 rect:hover {
-  fill: darkred;
+  opacity: 1.0;
   }
 
 rect {
-  fill: red;
+  fill: #950740;
   opacity: 0.8;
 }
 
@@ -23,11 +64,12 @@ rect {
   padding-left: 15px;
 }
 
-.piechart-text {
+#piechart-text {
   position: absolute;
   text-anchor: middle;
   font-size: 28px;
   font-family: "avenir next", Arial, sans-serif;
+  color: white;
 }
 
 #bubblechart {
@@ -39,15 +81,6 @@ rect {
   padding-top: 15px;
 }
 
-text {
-  font-size: 10px;
-  font-family: "avenir next", Arial, sans-serif;
-}
-
-table, th, td {
-  font-size: 12px;
-  font-family: "avenir next", Arial, sans-serif;
-}
 
 .barchart, text {
   font-size: 10px;

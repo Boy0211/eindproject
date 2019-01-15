@@ -3,6 +3,8 @@ window.onload = function() {
   var cc = 1999
   var year = 1999 // later vervangen voor een dropdown menu
       // yearcsv = year + ".csv"
+  var secondColorset = ["#A1C3D1", "#B39BC8", "#F0EBF4", "#F172A1", "#E64938"]
+  var colorset = ["#59253A","#4E4E50","#6F2232","#950740","#C3073F"]
 
   d3.tsv("../Data/merged_list.tsv").then(function(data) {
 
@@ -76,7 +78,7 @@ window.onload = function() {
     var height = 500
 
     columns = ["Notering", "Titel", "Artiest", "Jaar"]
-    data = lijst.slice(0, 10)
+    data = lijst.slice(0, 8)
     tabulate(data, columns)
   };
 
@@ -92,7 +94,7 @@ window.onload = function() {
         .attr("height", height)
 
     columns = ["Notering", "Titel", "Artiest", "Jaar"]
-    data = lijst.slice(0, 10)
+    data = lijst.slice(0, 8)
     tabulate(data, columns)
 
   };
@@ -102,7 +104,7 @@ window.onload = function() {
     var width = 400
     var height = 400
     var radius = Math.min(width, height) / 2;
-    var color = d3.scaleOrdinal(d3.schemeAccent);
+    var color = d3.scaleOrdinal(colorset);
 
     data = getBiggestArtists(lijst["values"])
     var arc = d3.arc()
@@ -121,9 +123,6 @@ window.onload = function() {
 
           .attr("fill", function(d, i) { return color(i); })
           .attr("d", arc)
-          .attr("stroke", "white")
-          .attr("stroke-width", "6px")
-
   }
 
   function drawPieChart(lijst) {
@@ -148,8 +147,8 @@ window.onload = function() {
     data = getBiggestArtists(lijst)
     console.log(data);
 
-    var color = d3.scaleOrdinal(d3.schemeAccent);
-    // var color = d3.scaleOrdinal(["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f"])
+    // var color = d3.scaleOrdinal(["#2E1114", "#501B1D", "#64485C", "#83677B", "#ADADAD"]);
+    var color = d3.scaleOrdinal(colorset)
 
     var tip = d3.tip()
             .attr('class', 'd3-tip')
@@ -179,14 +178,13 @@ window.onload = function() {
       .enter().append("path")
         .attr("fill", function(d, i) { return color(i); })
         .attr("d", arc)
-        .attr("stroke", "white")
+        .attr("stroke", "#222629")
         .attr("stroke-width", "6px")
         .on("mouseover", function(d) {
             tip.show(d)
 
             d3.select(this)
               .style("opacity", 0.8)
-              .style("stroke","white")
               .style("stroke-width",3)
         })
         .on('mouseout', function(d){
@@ -194,13 +192,13 @@ window.onload = function() {
 
             d3.select(this)
               .style("opacity", 1)
-              .style("stroke","white")
               .style("stroke-width", "6px")
         });
 
     svg.append("text")
-       .attr("class", "piechart-text")
-       .text("TOP10 Artiesten");
+       .attr("id", "piechart-text")
+       .text("TOP10 Artiesten")
+       .style("fill", "white")
 
     }
 
@@ -342,6 +340,11 @@ window.onload = function() {
           dataYearBubbleChart(temp_data, selectedYear)
         })
 
+    svg.append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 - (margin.top / 2))
+        .text("Titels per het jaar van uitbrenger:");
+
   }; //sluiten draw bar chart
 
   function dataYearBubbleChart(listByYears, year) {
@@ -377,7 +380,7 @@ window.onload = function() {
 
 
     var diameter = 450
-    var color = d3.scaleOrdinal(d3.schemeAccent);
+    var color = d3.scaleOrdinal(colorset);
 
     var bubble = d3.pack(data)
         .size([diameter, diameter])
@@ -413,7 +416,7 @@ window.onload = function() {
             return d.r;})
         .style("fill", function(d,i) {
           if( i == 0) {
-            return "#fff"
+            return "#222629"
           }
           return color(i);})
 
@@ -436,7 +439,7 @@ window.onload = function() {
               console.log(d);
               d3.select(this)
                 .style("opacity", 0.8)
-                .style("stroke","white")
+                .style("stroke","#222629")
                 .style("stroke-width", 3)
             }
         })
@@ -445,7 +448,7 @@ window.onload = function() {
 
             d3.select(this)
               .style("opacity", 1)
-              .style("stroke","white")
+              .style("stroke","#222629")
               .style("stroke-width", 1.5)
         });
   };
@@ -456,7 +459,7 @@ window.onload = function() {
     data = createDataforBubblechart(temp_data)
 
     var diameter = 450
-    var color = d3.scaleOrdinal(d3.schemeAccent);
+    var color = d3.scaleOrdinal(colorset);
 
     var bubble = d3.pack(data)
         .size([diameter, diameter])
@@ -494,7 +497,7 @@ window.onload = function() {
               return d.r;})
           .style("fill", function(d,i) {
             if( i == 0) {
-              return "#fff"
+              return "#222629"
             }
             return color(i);})
           .on("mouseover", function(d,i) {
@@ -503,7 +506,7 @@ window.onload = function() {
                 console.log(d);
                 d3.select(this)
                   .style("opacity", 1)
-                  .style("stroke","white")
+                  .style("stroke","#222629")
                   .style("stroke-width", 3)
               }
           })
@@ -512,9 +515,14 @@ window.onload = function() {
 
               d3.select(this)
                 .style("opacity", 0.8)
-                .style("stroke","white")
+                .style("stroke","#222629")
                 .style("stroke-width", 1.5)
           });
+
+    d3.select("#bubblechart").append("text")
+        .attr("x", (diameter / 2))
+        .attr("y", 0 - 0.1)
+        .text("Aantal titels per artiest");
 
 
     // node.append("text")
