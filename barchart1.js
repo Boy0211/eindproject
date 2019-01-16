@@ -1,17 +1,26 @@
-// const margin = {top: 50, right:50, bottom:50, left:50}
-// const width = 730
-// const height = 470
-// const barPadding = 2.5
+// maak de constante variabelen die door het hele script gebruikt worden
+const margin = {top: 50, right:50, bottom:50, left:50}
+const width = 730
+const height = 470
+const barPadding = 2.5
 
+// creeër een xScale
+var xScale = d3.scaleBand()
+    .range([0, (width - margin.right - margin.left)])
+    .padding(0.1)
+
+// creeër een yScale
+var yScale = d3.scaleLinear()
+    .range([(height - margin.top - margin.bottom), 0])
+
+
+// functie om de initiële barchart te tekenen
 function drawBarChart(temp_data) {
 
-  data = process_Data_BarChart(temp_data)
+  // process de data zo, dat die gebruikt kan worden voor de barchart
+  data = process_Data_BarChart(temp_data);
 
-  var margin = {top: 50, right:50, bottom:50, left:50};
-  var width = 730
-  var height = 470
-  var barPadding = 2.5
-
+  // creeër het svg element op de goede plek in de html
   var svg = d3.select("#barchart")
       .append("svg")
       .attr("class", "barchart")
@@ -20,20 +29,11 @@ function drawBarChart(temp_data) {
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  var xScale = d3.scaleBand()
-      .range([0, (width - margin.right - margin.left)])
-      .padding(0.1)
-      .domain(data.map(function (d) {
-          return d.x;
-      }));
+  // geef de x en y-as de goede domeinen mee
+  xScale.domain(data.map(function (d) { return d.x; }));
+  yScale.domain([0, d3.max(data, function (d) { return d.y; })]);
 
-  var yScale = d3.scaleLinear()
-      .range([(height - margin.top - margin.bottom), 0])
-      .domain([0, d3.max(data, function (d) {
-          return d.y;
-      })]);
-
-  // draw the x-axis
+  // teken de x-as
   svg.append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + (370) + ")")
@@ -44,56 +44,39 @@ function drawBarChart(temp_data) {
       .attr("transform", "rotate(-40)")
       .style("text-anchor", "end");
 
-  // drawing the y-axis
+  // teken de y-as
   svg.append("g")
     .attr("class", "y-axis")
-    // .attr("transform", "translate(0," + (-margin.top) + ")")
-    .call(d3.axisLeft(yScale))
+    .call(d3.axisLeft(yScale));
 
+  // teken alle rectangles
   svg.append("g").attr("class", "bars").selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
       .attr("class", "rect")
-      .attr('x', function(d, i) {
-       return xScale(d.x);
-      })
-      .attr('y', function(d) {
-          return yScale(d.y)
-      })
+      .attr('x', function(d) { return xScale(d.x); })
+      .attr('y', function(d) { return yScale(d.y); })
       .attr('width', (width / data.length) - barPadding)
-      .attr('height', function(d){
-          return height - 100 - yScale(d.y);
-      })
+      .attr('height', function(d) { return height - 100 - yScale(d.y); })
       .on("click", function(d) {
-        console.log(d)
         selectedYear = d.x
-        dataYearBubbleChart(temp_data, selectedYear)
-      })
+        dataYearBubbleChart(temp_data, selectedYear) // wanneer er op de barchart wordt gedrukt, pas de bubblechart aan
+      });
 }; //sluiten draw bar chart
 
+
+// functie voor het updaten van de barchart
 function updateBarChart(temp_data) {
 
-  data = process_Data_BarChart(temp_data)
+  // proces de data zo dat het gebruikt kan worden voor de barchart
+  data = process_Data_BarChart(temp_data);
 
-  var margin = {top: 50, right:50, bottom:50, left:50};
-  var width = 800
-  var height = 400
-  var barPadding = 1.2
+  // pas de domein van de assen aan aan de nieuwe data
+  xScale.domain(data.map(function (d) { return d.x; }));
+  yScale.domain([0, d3.max(data, function (d) { return d.y; })]);
 
-  var xScale = d3.scaleBand()
-      .range([0, width])
-      .padding(0.1)
-      .domain(data.map(function (d) {
-          return d.x;
-      }))
-
-  var yScale = d3.scaleLinear()
-      .range([height, 0])
-      .domain([0, d3.max(data, function (d) {
-          return d.y;
-      })]);
-
+  // selecteer de barchart en pas de x-as aan
   d3.select(".barchart").select("g").select(".x-axis")
       .transition()
       .duration(1000)
@@ -104,43 +87,46 @@ function updateBarChart(temp_data) {
       .attr("transform", "rotate(-40)")
       .style("text-anchor", "end");
 
+  // selecteer de barchart en pas de y-as aan
   d3.select(".barchart").select("g").select(".y-axis")
       .transition()
       .duration(1000)
-      .call(d3.axisLeft(yScale))
+      .call(d3.axisLeft(yScale));
 
+  // selecteer alle bars en geef ze nieuwe data mee
   var bars = d3.select(".barchart").select("g").select(".bars").selectAll(".rect")
-      .data(data)
+      .data(data);
 
+  // verwijder de bars die overbodig zijn
   bars.exit()
-      .remove()
+      .remove();
 
+  // voeg bars toe als er te weinig zijn
   bars.enter().append("rect")
       .transition().duration(1000)
       .attr("class", "rect")
       .attr('width', (width / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
-      .attr('height', function(d) {return height - yScale(d.y);})
-      .attr('y', function(d) {return yScale(d.y);})
+      .attr('height', function(d) {return height - margin.top - margin.bottom - yScale(d.y);})
+      .attr('y', function(d) {return yScale(d.y);});
 
+  // pas de huidige bars aan
   bars
       .transition().duration(1000)
       .attr("class", "rect")
       .attr('width', (width / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
-      .attr('height', function(d) {return height - yScale(d.y);})
-      .attr('y', function(d) {return yScale(d.y);})
+      .attr('height', function(d) {return height - margin.top - margin.bottom - yScale(d.y);})
+      .attr('y', function(d) {return yScale(d.y);});
 
-
+  // geef alle bars de on click functie mee
   d3.select(".bars").selectAll("rect")
       .on("click", function(d) {
-        console.log(d)
         selectedYear = d.x
         dataYearBubbleChart(temp_data, selectedYear)
-      })
+      });
+}; // einde van de update barchart functie
 
-  console.log(bars);
-};
 
 // functie voor het processen van de data voor een barchart
 function process_Data_BarChart(lijst) {
