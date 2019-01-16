@@ -54,7 +54,16 @@ Gisteren is het mij al gelukt 2 lijngrafieken te plaatsen op de 2de pagina. Vand
 
 Doelstellingen:
 
-* Controleren of ik aan alle eisen heb voldaan
+* ~~Controleren of ik aan alle eisen heb voldaan~~
 * Barchart maken op pagina 2
-* De twee linegraphs optimaliseren voor de 2de pagina
+* ~~De twee linegraphs optimaliseren voor de 2de pagina~~
 * Mijn js voor de eerste pagina opruimen en voorzien van comments
+
+# Day 8, 16 januari 2018
+
+Het is mij gisteren niet gelukt om mijn hele code op te ruimen. Dus dat gaat vandaag het meeste van mijn tijd kosten. Op het moment staat mijn code in één javascript bestand en dit moet verdeelt worden over verschillende bestanden. Een voor elke graph.
+
+Doelstellingen:
+
+* Herschrijven code
+* Verdergaan met styling van mijn pagina

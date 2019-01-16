@@ -1,0 +1,87 @@
+/* Styling for the hole page */
+body {
+  position: relative;
+}
+
+text {
+  color: black;
+}
+
+/* styling for the first section */
+#thelist {
+  padding-top:50px;
+  height:100%;
+  color: #fff;
+  background-color: #c3c3c3;
+}
+
+/* styling for the tabel in the left uppercorner */
+#tabel {
+  padding: 20px;
+}
+
+#tabel .divtable {
+  padding: 20px;
+  background-color: #fff;
+  color: black;
+}
+
+/* styling for the piechart in the right uppercorner */
+#piechart {
+  padding: 20px;
+  background-color: inherit;
+}
+
+#piechart .piechart {
+  background-color: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* styling for the buble chart in the left bottom corner */
+#bubblechart {
+  padding: 20px;
+  background-color: inherit;
+}
+
+#bubblechart .bubble {
+  /* weird padding due to the use of diameter in js */
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#barchart {
+  padding: 20px;
+  background-color: inherit;
+}
+/* Goed kijken naar barchart padding */
+/* Je hebt daar wat geks gedaan */
+/*  */
+/*  */
+
+#barchart .barchart {
+  background-color: #fff;
+}
+
+
+
+
+
+#theartist {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #673ab7;
+}
+
+#thesong {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #ff9800;
+}

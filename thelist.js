@@ -49,9 +49,9 @@ window.onload = function() {
     //   		.text(function (d) { return d; });
 
 
-    var select = d3.select('.uitleg')
-        .append('select')
-      	.attr('class','select')
+    var select = d3.select('#inlineFormCustomSelect')
+        // .select('select')
+      	// .attr('class','select')
         .on('change',onchange)
 
     var options = select
@@ -101,7 +101,7 @@ window.onload = function() {
 
   function updatePieChart(lijst) {
 
-    var width = 400
+    var width = 600
     var height = 400
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal(colorset);
@@ -127,7 +127,7 @@ window.onload = function() {
 
   function drawPieChart(lijst) {
 
-    var width = 400
+    var width = 600
     var height = 400
     var radius = Math.min(width, height) / 2;
 
@@ -202,150 +202,144 @@ window.onload = function() {
 
     }
 
-  function updateBarChart(temp_data) {
-
-    data = process_Data_BarChart(temp_data)
-
-    var margin = {top: 50, right:50, bottom:50, left:50};
-    var width = 800
-    var height = 400
-    var barPadding = 1.2
-
-    var xScale = d3.scaleBand()
-        .range([0, width])
-        .padding(0.1)
-        .domain(data.map(function (d) {
-            return d.x;
-        }))
-
-    var yScale = d3.scaleLinear()
-        .range([height, 0])
-        .domain([0, d3.max(data, function (d) {
-            return d.y;
-        })]);
-
-    d3.select(".barchart").select("g").select(".x-axis")
-        .transition()
-        .duration(1000)
-        .call(d3.axisBottom(xScale))
-      .selectAll("text")
-        .attr("x", -8)
-        .attr("y", 6)
-        .attr("transform", "rotate(-40)")
-        .style("text-anchor", "end");
-
-    d3.select(".barchart").select("g").select(".y-axis")
-        .transition()
-        .duration(1000)
-        .call(d3.axisLeft(yScale))
-
-    var bars = d3.select(".barchart").select("g").select(".bars").selectAll(".rect")
-        .data(data)
-
-    bars.exit()
-        .remove()
-
-    bars.enter().append("rect")
-        .transition().duration(1000)
-        .attr("class", "rect")
-        .attr('width', (width / data.length) - barPadding)
-        .attr('x', function(d, i) {return xScale(d.x);})
-        .attr('height', function(d) {return height - yScale(d.y);})
-        .attr('y', function(d) {return yScale(d.y);})
-
-    bars
-        .transition().duration(1000)
-        .attr("class", "rect")
-        .attr('width', (width / data.length) - barPadding)
-        .attr('x', function(d, i) {return xScale(d.x);})
-        .attr('height', function(d) {return height - yScale(d.y);})
-        .attr('y', function(d) {return yScale(d.y);})
-
-
-    d3.select(".bars").selectAll("rect")
-        .on("click", function(d) {
-          console.log(d)
-          selectedYear = d.x
-          dataYearBubbleChart(temp_data, selectedYear)
-        })
-
-    console.log(bars);
-  };
-
-  function drawBarChart(temp_data) {
-
-    data = process_Data_BarChart(temp_data)
-
-    var margin = {top: 50, right:50, bottom:50, left:50};
-    var width = 800
-    var height = 400
-    var barPadding = 1.2
-
-    var svg = d3.select("#barchart")
-        .append("svg")
-        .attr("class", "barchart")
-        .attr("width", (width + margin.left + margin.right))
-        .attr("height", (height + margin.top + margin.bottom))
-      .append("g")
-        .attr("transform", "translate(" + margin.top + "," + margin.left + ")");
-
-    var xScale = d3.scaleBand()
-        .range([0, width])
-        .padding(0.1)
-        .domain(data.map(function (d) {
-            return d.x;
-        }));
-
-    var yScale = d3.scaleLinear()
-        .range([height, 0])
-        .domain([0, d3.max(data, function (d) {
-            return d.y;
-        })]);
-
-    // draw the x-axis
-    svg.append("g")
-        .attr("class", "x-axis")
-        .attr("transform", "translate(0," + (height) + ")")
-        .call(d3.axisBottom(xScale))
-      .selectAll("text")
-        .attr("x", -8)
-        .attr("y", 6)
-        .attr("transform", "rotate(-40)")
-        .style("text-anchor", "end");
-
-    // drawing the y-axis
-    svg.append("g")
-      .attr("class", "y-axis")
-      // .attr("transform", "translate(0," + (-margin.top) + ")")
-      .call(d3.axisLeft(yScale))
-
-    svg.append("g").attr("class", "bars").selectAll("rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("class", "rect")
-        .attr('x', function(d, i) {
-         return xScale(d.x);
-        })
-        .attr('y', function(d) {
-            return yScale(d.y)
-        })
-        .attr('width', (width / data.length) - barPadding)
-        .attr('height', function(d){
-            return height - yScale(d.y);
-        })
-        .on("click", function(d) {
-          console.log(d)
-          selectedYear = d.x
-          dataYearBubbleChart(temp_data, selectedYear)
-        })
-
-    svg.append("text")
-        .attr("x", (width / 2))
-        .attr("y", 0 - (margin.top / 2))
-        .text("Titels per het jaar van uitbrenger:");
-
-  }; //sluiten draw bar chart
+  // function updateBarChart(temp_data) {
+  //
+  //   data = process_Data_BarChart(temp_data)
+  //
+  //   var margin = {top: 50, right:50, bottom:50, left:50};
+  //   var width = 800
+  //   var height = 400
+  //   var barPadding = 1.2
+  //
+  //   var xScale = d3.scaleBand()
+  //       .range([0, width])
+  //       .padding(0.1)
+  //       .domain(data.map(function (d) {
+  //           return d.x;
+  //       }))
+  //
+  //   var yScale = d3.scaleLinear()
+  //       .range([height, 0])
+  //       .domain([0, d3.max(data, function (d) {
+  //           return d.y;
+  //       })]);
+  //
+  //   d3.select(".barchart").select("g").select(".x-axis")
+  //       .transition()
+  //       .duration(1000)
+  //       .call(d3.axisBottom(xScale))
+  //     .selectAll("text")
+  //       .attr("x", -8)
+  //       .attr("y", 6)
+  //       .attr("transform", "rotate(-40)")
+  //       .style("text-anchor", "end");
+  //
+  //   d3.select(".barchart").select("g").select(".y-axis")
+  //       .transition()
+  //       .duration(1000)
+  //       .call(d3.axisLeft(yScale))
+  //
+  //   var bars = d3.select(".barchart").select("g").select(".bars").selectAll(".rect")
+  //       .data(data)
+  //
+  //   bars.exit()
+  //       .remove()
+  //
+  //   bars.enter().append("rect")
+  //       .transition().duration(1000)
+  //       .attr("class", "rect")
+  //       .attr('width', (width / data.length) - barPadding)
+  //       .attr('x', function(d, i) {return xScale(d.x);})
+  //       .attr('height', function(d) {return height - yScale(d.y);})
+  //       .attr('y', function(d) {return yScale(d.y);})
+  //
+  //   bars
+  //       .transition().duration(1000)
+  //       .attr("class", "rect")
+  //       .attr('width', (width / data.length) - barPadding)
+  //       .attr('x', function(d, i) {return xScale(d.x);})
+  //       .attr('height', function(d) {return height - yScale(d.y);})
+  //       .attr('y', function(d) {return yScale(d.y);})
+  //
+  //
+  //   d3.select(".bars").selectAll("rect")
+  //       .on("click", function(d) {
+  //         console.log(d)
+  //         selectedYear = d.x
+  //         dataYearBubbleChart(temp_data, selectedYear)
+  //       })
+  //
+  //   console.log(bars);
+  // };
+  //
+  // function drawBarChart(temp_data) {
+  //
+  //   data = process_Data_BarChart(temp_data)
+  //
+  //   var margin = {top: 50, right:50, bottom:50, left:50};
+  //   var width = 730
+  //   var height = 470
+  //   var barPadding = 2.5
+  //
+  //   var svg = d3.select("#barchart")
+  //       .append("svg")
+  //       .attr("class", "barchart")
+  //       .attr("width", width)
+  //       .attr("height", height)
+  //     .append("g")
+  //       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  //
+  //   var xScale = d3.scaleBand()
+  //       .range([0, (width - margin.right - margin.left)])
+  //       .padding(0.1)
+  //       .domain(data.map(function (d) {
+  //           return d.x;
+  //       }));
+  //
+  //   var yScale = d3.scaleLinear()
+  //       .range([(height - margin.top - margin.bottom), 0])
+  //       .domain([0, d3.max(data, function (d) {
+  //           return d.y;
+  //       })]);
+  //
+  //   // draw the x-axis
+  //   svg.append("g")
+  //       .attr("class", "x-axis")
+  //       .attr("transform", "translate(0," + (370) + ")")
+  //       .call(d3.axisBottom(xScale))
+  //     .selectAll("text")
+  //       .attr("x", -8)
+  //       .attr("y", 6)
+  //       .attr("transform", "rotate(-40)")
+  //       .style("text-anchor", "end");
+  //
+  //   // drawing the y-axis
+  //   svg.append("g")
+  //     .attr("class", "y-axis")
+  //     // .attr("transform", "translate(0," + (-margin.top) + ")")
+  //     .call(d3.axisLeft(yScale))
+  //
+  //   svg.append("g").attr("class", "bars").selectAll("rect")
+  //       .data(data)
+  //       .enter()
+  //       .append("rect")
+  //       .attr("class", "rect")
+  //       .attr('x', function(d, i) {
+  //        return xScale(d.x);
+  //       })
+  //       .attr('y', function(d) {
+  //           return yScale(d.y)
+  //       })
+  //       .attr('width', (width / data.length) - barPadding)
+  //       .attr('height', function(d){
+  //           return height - 100 - yScale(d.y);
+  //       })
+  //       .on("click", function(d) {
+  //         console.log(d)
+  //         selectedYear = d.x
+  //         dataYearBubbleChart(temp_data, selectedYear)
+  //       })
+  // }; //sluiten draw bar chart
 
   function dataYearBubbleChart(listByYears, year) {
 
@@ -459,6 +453,8 @@ window.onload = function() {
     data = createDataforBubblechart(temp_data)
 
     var diameter = 450
+    var paddingBubble = 20
+
     var color = d3.scaleOrdinal(colorset);
 
     var bubble = d3.pack(data)
@@ -467,8 +463,8 @@ window.onload = function() {
 
     var svg = d3.select("#bubblechart")
         .append("svg")
-        .attr("width", diameter)
-        .attr("height", diameter)
+        .attr("width", diameter + paddingBubble)
+        .attr("height", diameter + paddingBubble)
         .attr("class", "bubble");
 
     var tip = d3.tip()
@@ -567,32 +563,32 @@ window.onload = function() {
     return data
   }
 
-  // functie voor het processen van de data voor een barchart
-  function process_Data_BarChart(lijst) {
-
-    // nest de data per jaar dat het is uitgebracht
-    var songsbyYear = d3.nest()
-        .key(function(d) {return d.Jaar; })
-        .entries(lijst)
-
-    // sorteer deze weer op chronologische volgorde
-    songsbyYear.sort(function(a, b) {
-      var x = a['key']; var y = b['key'];
-      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-    })
-
-    // creeër versimpelde versie van de data voor makkelijkere berekeningen
-    var dataForBarChart = []
-    songsbyYear.forEach(function(key, values) {
-      dataForBarChart.push({
-        x : key['key'],
-        y : key['values'].length
-      })
-    })
-
-    // return de data
-    return dataForBarChart
-  };
+  // // functie voor het processen van de data voor een barchart
+  // function process_Data_BarChart(lijst) {
+  //
+  //   // nest de data per jaar dat het is uitgebracht
+  //   var songsbyYear = d3.nest()
+  //       .key(function(d) {return d.Jaar; })
+  //       .entries(lijst)
+  //
+  //   // sorteer deze weer op chronologische volgorde
+  //   songsbyYear.sort(function(a, b) {
+  //     var x = a['key']; var y = b['key'];
+  //     return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+  //   })
+  //
+  //   // creeër versimpelde versie van de data voor makkelijkere berekeningen
+  //   var dataForBarChart = []
+  //   songsbyYear.forEach(function(key, values) {
+  //     dataForBarChart.push({
+  //       x : key['key'],
+  //       y : key['values'].length
+  //     })
+  //   })
+  //
+  //   // return de data
+  //   return dataForBarChart
+  // };
 
   function getBiggestArtists(lijst) {
 
@@ -625,21 +621,22 @@ window.onload = function() {
   }
 
   function tabulate(data, columns) {
-    var table = d3.select(".divtable").append("table").attr("class", "table table-striped table-bordered");
+    var table = d3.select(".divtable").append("table")
+        .attr("class", "table table-striped table-bordered");
     var header = table.append("thead").attr("class", "dark")
     var tbody = table.append("tbody")
 
     d3.select("thead").append('tr')
-    .selectAll('th')
-    .data(columns)
-    .enter()
-    .append('th')
-      .text(function (column) { return column; });
+        .selectAll('th')
+        .data(columns)
+        .enter()
+        .append('th')
+          .text(function (column) { return column; });
 
     var rows = tbody.selectAll('tr')
-    .data(data)
-    .enter()
-    .append('tr');
+        .data(data)
+        .enter()
+        .append('tr');
 
     var cells = rows.selectAll('td')
     .data(function (row) {

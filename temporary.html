@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TOP2000 STATISTIEKEN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Get my own css -->
+  <link rel="stylesheet" href="temporary.css">
+  <!-- Get the bootstrap files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Get my js files -->
+  <script type="text/javascript" src="d3/d3.js" charset="utf-8"></script>
+  <script type="text/javascript" src="d3/d3-tip.js" charset="utf-8"></script>
+  <script type="text/javascript" src="thelist.js" charset="utf-8"></script>
+  <script type="text/javascript" src="barchart1.js" charset="utf-8"></script>
+  <!-- <script type="text/javascript" src="artist.js" charset="utf-8"></script> -->
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Een kijkje in de TOP2000</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#thelist">Per Lijst</a></li>
+              <li><a href="#theartist">Per Artiest</a></li>
+              <li><a href="#thesong">Per Titel</a></li>
+            </ul>
+          </div>
+          <span class="navbar-text">Jaar:</span>
+          <form class="form-control-sm">
+            <div class="form-row align-items-center" id="dataPeriod">
+              <div class="col-auto my-1">
+                <select class="custom-select mr-sm-2 form-control-sm" id="inlineFormCustomSelect" autocomplete="off">
+                  <option selected value="1999">1999</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="thelist" class="container-fluid">
+      <div class="row">
+        <section class="uitleg">
+          <h2>DE LIJST</h2>
+          <p>
+            Elk jaar brengt radio2 tot iedereens genoegen weer een fantastische top2000 uit. Ondanks dat elk jaar de lijst weer een beetje lijkt op die van het jaar ervoor, zijn er weldegelijk verschillen.<br><br> Gebruik het dropdown menu om een
+            lijst te
+            selecteren en laat de grafieken jou een kijkje geven in de top2000!<br><br> Vergeet niet op de bars van de barchart te drukken voor meer informatie!
+          </p>
+        </section>
+      </div>
+      <div class="row">
+        <div class="col-sm-6" id="tabel"></div>
+        <div class="col-sm-6" id="piechart"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5" id="bubblechart"></div>
+        <div class="col-sm-7" id="barchart"></div>
+      </div>
+    </div>
+
+    <div id="theartist" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <section class="uitleg">
+            <h2>Hoe doen de artiesten het over de jaren</h2>
+            <p>
+              Op deze pagina zie je wat de artiesten doen over de jaren
+            </p>
+          </section>
+        </div>
+        <div class="col-sm-6" id="bestsong"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6" id="barchart"></div>
+        <div class="col-sm-6" id="worstsong"></div>
+      </div>
+    </div>
+
+    <div id="thesong" class="container-fluid">
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // Add scrollspy to <body>
+      $('body').scrollspy({
+        target: ".navbar",
+        offset: 50
+      });
+
+      // Add smooth scrolling on all links inside the navbar
+      $("#myNavbar a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+
+</body>
+
+</html>
