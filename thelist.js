@@ -19,6 +19,17 @@ window.onload = function() {
     drawBarChart(songsbyList[(year-cc)].values)
     drawBubbleChart(songsbyList[year-cc].values)
   }); // sluting d3.tsv
+
+  d3.json("../Data/artiesten.json").then(function(data) {
+
+    console.log(data);
+    // drawLineGraphBest(data[12])
+    drawLineGraph("best", data[12])
+    drawLineGraph("worst", data[12])
+    // drawBarChart(data[12])
+
+  }); // sluting d3,json
+
 }; // sluting window onload function
 
 function createDropdown(songsbyList) {

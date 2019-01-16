@@ -18,6 +18,7 @@ text {
 /* styling for the tabel in the left uppercorner */
 #tabel {
   padding: 20px;
+  text-align: center;
 }
 
 #tabel .divtable {
@@ -38,6 +39,7 @@ text {
 #piechart {
   padding: 20px;
   background-color: inherit;
+  text-align: center;
 }
 
 #piechart .piechart {
@@ -49,6 +51,7 @@ text {
 
 /* styling for the buble chart in the left bottom corner */
 #bubblechart {
+  text-align: center;
   padding: 20px;
   background-color: inherit;
 }
@@ -64,6 +67,7 @@ text {
 }
 
 #barchart {
+  text-align: center;
   padding: 20px;
   background-color: inherit;
 }
