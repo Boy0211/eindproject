@@ -1,17 +1,17 @@
 // maak de constante variabelen die door het hele script gebruikt worden
-const margin = {top: 50, right:50, bottom:50, left:50}
-const width = 730
-const height = 470
+const marginBar1 = {top: 50, right:50, bottom:50, left:50}
+const widthBar1 = 730
+const heightBar1 = 470
 const barPadding = 2.5
 
 // creeër een xScale
 var xScale = d3.scaleBand()
-    .range([0, (width - margin.right - margin.left)])
+    .range([0, (widthBar1 - marginBar1.right - marginBar1.left)])
     .padding(0.1)
 
 // creeër een yScale
 var yScale = d3.scaleLinear()
-    .range([(height - margin.top - margin.bottom), 0])
+    .range([(heightBar1 - marginBar1.top - marginBar1.bottom), 0])
 
 
 // functie om de initiële barchart te tekenen
@@ -24,10 +24,10 @@ function drawBarChart(temp_data) {
   var svg = d3.select("#barchart")
       .append("svg")
       .attr("class", "barchart")
-      .attr("width", width)
-      .attr("height", height)
+      .attr("width", widthBar1)
+      .attr("height", heightBar1)
     .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform", "translate(" + marginBar1.left + "," + marginBar1.top + ")");
 
   // geef de x en y-as de goede domeinen mee
   xScale.domain(data.map(function (d) { return d.x; }));
@@ -36,7 +36,7 @@ function drawBarChart(temp_data) {
   // teken de x-as
   svg.append("g")
       .attr("class", "x-axis")
-      .attr("transform", "translate(0," + (370) + ")")
+      .attr("transform", "translate(0," + (heightBar1 - marginBar1.top - marginBar1.bottom) + ")")
       .call(d3.axisBottom(xScale))
     .selectAll("text")
       .attr("x", -8)
@@ -57,8 +57,8 @@ function drawBarChart(temp_data) {
       .attr("class", "rect")
       .attr('x', function(d) { return xScale(d.x); })
       .attr('y', function(d) { return yScale(d.y); })
-      .attr('width', (width / data.length) - barPadding)
-      .attr('height', function(d) { return height - 100 - yScale(d.y); })
+      .attr('width', (widthBar1 / data.length) - barPadding)
+      .attr('height', function(d) { return heightBar1 - 100 - yScale(d.y); })
       .on("click", function(d) {
         selectedYear = d.x
         dataYearBubbleChart(temp_data, selectedYear) // wanneer er op de barchart wordt gedrukt, pas de bubblechart aan
@@ -105,18 +105,18 @@ function updateBarChart(temp_data) {
   bars.enter().append("rect")
       .transition().duration(1000)
       .attr("class", "rect")
-      .attr('width', (width / data.length) - barPadding)
+      .attr('width', (widthBar1 / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
-      .attr('height', function(d) {return height - margin.top - margin.bottom - yScale(d.y);})
+      .attr('height', function(d) {return heightBar1 - marginBar1.top - marginBar1.bottom - yScale(d.y);})
       .attr('y', function(d) {return yScale(d.y);});
 
   // pas de huidige bars aan
   bars
       .transition().duration(1000)
       .attr("class", "rect")
-      .attr('width', (width / data.length) - barPadding)
+      .attr('width', (widthBar1 / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
-      .attr('height', function(d) {return height - margin.top - margin.bottom - yScale(d.y);})
+      .attr('height', function(d) {return heightBar1 - marginBar1.top - marginBar1.bottom - yScale(d.y);})
       .attr('y', function(d) {return yScale(d.y);});
 
   // geef alle bars de on click functie mee

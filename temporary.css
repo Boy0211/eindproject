@@ -26,6 +26,14 @@ text {
   color: black;
 }
 
+#tabel .divtable table {
+  margin: auto;
+  display: block;
+  height: 363px;
+  overflow-y: scroll;
+  width: auto;
+}
+
 /* styling for the piechart in the right uppercorner */
 #piechart {
   padding: 20px;
