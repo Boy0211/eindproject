@@ -4,7 +4,7 @@ const heightPie = 400;
 const radiusPie = Math.min(widthPie, heightPie) / 2;
 
 // colorset, liefst pas ik deze nog aan zodat hij meegegeven wordt vanuit de main
-var colorset = ["#59253A","#4E4E50","#6F2232","#950740","#C3073F"];
+var colorset = ["#3e92cc", "#2a628f", "#13293d", "#16324f", "#18435a"];
 var color = d3.scaleOrdinal(colorset);
 
 // creeër de arc voor de pie
@@ -83,7 +83,7 @@ function drawPieChart(lijst) {
   // voeg tekst aan het midden van de pie toe
   svg.append("text")
      .attr("id", "piechart-text")
-     .text("TOP10 Artiesten")
+     .text("TOP10")
      .style("fill", "black");
 
 }; //einde van het tekenen van de pie

@@ -65,3 +65,40 @@ function dataYearBubbleChart(listByYears, year) {
   // update de bubblechart
   updateBubbleChart(right_list);
 };
+
+// functie voor het processen van de data voor een barchart
+function process_Data_BarChart(lijst) {
+
+  // nest de data per jaar dat het is uitgebracht
+  var songsbyYear = d3.nest()
+      .key(function(d) {return d.Jaar; })
+      .entries(lijst)
+
+  // sorteer deze weer op chronologische volgorde
+  songsbyYear.sort(function(a, b) {
+    var x = a['key']; var y = b['key'];
+    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+  })
+
+  // creeër versimpelde versie van de data voor makkelijkere berekeningen
+  var dataForBarChart = []
+  songsbyYear.forEach(function(key, values) {
+    dataForBarChart.push({
+      x : key['key'],
+      y : key['values'].length
+    })
+  })
+
+  // return de data
+  return dataForBarChart
+};
+
+// deze functie geeft of de eerste uit een array terug of de laatste.
+function getFirstOrLast(which, data) {
+
+  if (which == "first") {
+    return 0
+  } else {
+    return (data.length - 1)
+  }
+};

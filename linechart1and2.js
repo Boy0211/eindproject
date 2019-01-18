@@ -1,8 +1,8 @@
 
 // hier worden de constante variabelen voor de breedte en de hoogte vastgesteld
 const widthLine = 550;
-const heightLine = 250;
-const marginLine = {top: 50, bottom: 50, right: 50, left:50};
+const heightLine = 200;
+const marginLine = {top: 50, bottom: 50, right: 20, left:50};
 
 
 // functie voor het tekenen van beide graphs. Door aan te vullen of je de
@@ -66,12 +66,44 @@ function drawLineGraph(graph, artist) {
 };
 
 
-// deze functie geeft of de eerste uit een array terug of de laatste.
-function getFirstOrLast(which, data) {
+function updateLineGraph(graph, artist) {
 
-  if (which == "first") {
-    return 0
+  if (graph == "best") {
+    var which = "first"
+    var selection = "#bestsong"
+    var selectionclass = "linechartBestSong"
   } else {
-    return (data.length - 1)
-  }
+    var which = "last"
+    var selection = "#worstsong"
+    var selectionclass = "linechartWorstSong"
+  };
+
+  var svg = d3.select(selection).select("svg g")
+
+  var xScale = d3.scaleTime()
+      .range([0, widthLine])
+      .domain(d3.extent(artist["TOP2000JAAR"], function(d) {return d.Lijst}));
+
+  // bepaal de y-schaal
+  var yScale = d3.scaleLinear()
+      .range([heightLine, 0])
+      .domain([0, 2000]);
+
+  var line = d3.line()
+      .x(function (d) {
+        return xScale(d.Lijst); })
+      .y(function (d) {
+        return yScale(d.Data[getFirstOrLast(which, d.Data)].Notering) });
+
+  svg.select(".x-axis")
+      .transition()
+      .duration(1000)
+      .call(d3.axisBottom(xScale))
+      .attr("transform", "translate(0," + (heightLine) + ")");
+
+  svg.select(".line")
+      .datum(artist["TOP2000JAAR"])
+      .transition()
+      .duration(1000)
+      .attr("d", line(artist["TOP2000JAAR"]));
 };

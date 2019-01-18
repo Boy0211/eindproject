@@ -22,7 +22,8 @@
   <script type="text/javascript" src="piechart.js" charset="utf-8"></script>
   <script type="text/javascript" src="tabel.js" charset="utf-8"></script>
   <script type="text/javascript" src="helpers.js" charset="utf-8"></script>
-  <script type="text/javascript" src="artist.js" charset="utf-8"></script>
+  <script type="text/javascript" src="linechart1and2.js" charset="utf-8"></script>
+  <script type="text/javascript" src="barchart2.js" charset="utf-8"></script>
 
 </head>
 
@@ -45,36 +46,42 @@
               <li><a href="#theartist">Per Artiest</a></li>
               <li><a href="#thesong">Per Titel</a></li>
             </ul>
-          </div>
-          <span class="navbar-text">Jaar:</span>
-          <form class="form-control-sm">
-            <div class="form-row align-items-center" id="dataPeriod">
-              <div class="col-auto my-1">
-                <select class="custom-select mr-sm-2 form-control-sm" id="inlineFormCustomSelect" autocomplete="off">
-                  <option selected value="1999">1999</option>
-                  <option value="2000">2000</option>
-                  <option value="2001">2001</option>
-                  <option value="2002">2002</option>
-                  <option value="2003">2003</option>
-                  <option value="2004">2004</option>
-                  <option value="2005">2005</option>
-                  <option value="2006">2006</option>
-                  <option value="2007">2007</option>
-                  <option value="2008">2008</option>
-                  <option value="2009">2009</option>
-                  <option value="2010">2010</option>
-                  <option value="2011">2011</option>
-                  <option value="2012">2012</option>
-                  <option value="2013">2013</option>
-                  <option value="2014">2014</option>
-                  <option value="2015">2015</option>
-                  <option value="2016">2016</option>
-                  <option value="2017">2017</option>
-                  <option value="2018">2018</option>
-                </select>
+            <span class="navbar-text">Jaar:</span>
+            <form class="navbar-text">
+              <div class="form-row align-items-center" id="dataPeriod">
+                <div class="col-auto my-1">
+                  <select class="custom-select mr-sm-2 form-control-sm" id="inlineFormCustomSelect" autocomplete="off">
+                    <option selected value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                  </select>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+            <span class="navbar-text">Artiest:</span>
+            <form autocomplete="off" class="navbar-text">
+              <div class="autocomplete" style="width:200px;">
+                <input id="myInput" type="text" name="myArtist" placeholder="Artist">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
@@ -84,12 +91,14 @@
     <div id="thelist" class="container-fluid">
       <div class="row">
         <section class="uitleg">
-          <h2>DE LIJST</h2>
-          <p>
-            Elk jaar brengt radio2 tot iedereens genoegen weer een fantastische top2000 uit. Ondanks dat elk jaar de lijst weer een beetje lijkt op die van het jaar ervoor, zijn er weldegelijk verschillen.<br><br> Gebruik het dropdown menu om een
-            lijst te
-            selecteren en laat de grafieken jou een kijkje geven in de top2000!<br><br> Vergeet niet op de bars van de barchart te drukken voor meer informatie!
-          </p>
+          <div id=titel>
+            <h2>DE LIJST</h2>
+            <p>
+              Elk jaar brengt radio2 tot iedereens genoegen weer een fantastische top2000 uit. Ondanks dat elk jaar de lijst weer een beetje lijkt op die van het jaar ervoor, zijn er weldegelijk verschillen.<br><br> Gebruik het dropdown menu om een
+              lijst te
+              selecteren en laat de grafieken jou een kijkje geven in de top2000!<br><br> Vergeet niet op de bars van de barchart te drukken voor meer informatie!
+            </p>
+          </div>
         </section>
       </div>
       <div class="row">
@@ -123,7 +132,7 @@
         <div class="col-sm-6" id="bestsong"></div>
       </div>
       <div class="row">
-        <div class="col-sm-6" id="barchart"></div>
+        <div class="col-sm-6" id="barchart2"></div>
         <div class="col-sm-6" id="worstsong"></div>
       </div>
     </div>

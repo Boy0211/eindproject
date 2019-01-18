@@ -3,7 +3,7 @@ const diameterBubble = 450;
 const paddingBubble = 20;
 
 // colorset, liefst pas ik deze nog aan zodat hij meegegeven wordt vanuit de main
-var colorset = ["#59253A","#4E4E50","#6F2232","#950740","#C3073F"];
+var colorset = ["#3e92cc", "#2a628f", "#13293d", "#16324f", "#18435a"];
 var color = d3.scaleOrdinal(colorset);
 
 // var bubble waarin het maken van de bubbles is opgeslagen
@@ -54,7 +54,7 @@ function drawBubbleChart(lijst) {
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d,i) {
           if( i == 0) {
-            return "#222629"
+            return "#fff"
           }
           return color(i);})
         .on("mouseover", function(d,i) {
@@ -63,7 +63,7 @@ function drawBubbleChart(lijst) {
               console.log(d);
               d3.select(this)
                 .style("opacity", 1)
-                .style("stroke","#222629")
+                .style("stroke","#fff")
                 .style("stroke-width", 3)
             }
         ;})
@@ -72,7 +72,7 @@ function drawBubbleChart(lijst) {
               tip.hide(d)
               d3.select(this)
                 .style("opacity", 0.8)
-                .style("stroke","#222629")
+                .style("stroke","#fff")
                 .style("stroke-width", 1.5)
             }
         ;});
@@ -153,7 +153,7 @@ function updateBubbleChart(lijst) {
           return d.r;})
       .style("fill", function(d,i) {
         if( i == 0) {
-          return "#222629"
+          return "#fff"
         }
         return color(i);})
 
@@ -173,7 +173,7 @@ function updateBubbleChart(lijst) {
             tip.show(d)
             d3.select(this)
               .style("opacity", 0.8)
-              .style("stroke","#222629")
+              .style("stroke","#fff")
               .style("stroke-width", 3)
           }
       })
@@ -181,7 +181,7 @@ function updateBubbleChart(lijst) {
           tip.hide(d);
           d3.select(this)
             .style("opacity", 1)
-            .style("stroke","#222629")
+            .style("stroke","#fff")
             .style("stroke-width", 1.5)
       });
 };

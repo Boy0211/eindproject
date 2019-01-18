@@ -67,3 +67,13 @@ Doelstellingen:
 
 * Herschrijven code
 * Verdergaan met styling van mijn pagina
+
+# Day 9, 17 januari 2018
+
+Helaas was het niet gelukt om de doelstellingen van gisteren te behalen dus heb ik vandaag besloten de doelstellingen van 16 en 15 januari af te maken zodat ik op de 18e weer verder kan met nieuwe ideeën.
+
+Uiteindelijk heeft dit voor een hoop opruimwerk gezorgd, maar is het wel gelukt.
+
+# Day 10, 18 januari 2018
+
+Alle functionaliteiten van mijn pagina zijn gelukt. Voor vandaag staat op de planning om mijn proposal nog eens door te nemen om zo te controleren of ik aan mijn minimum eisen voldoe en wat ik nog meer had uitgeschreven als extra ideeën
