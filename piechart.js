@@ -10,7 +10,7 @@ var color = d3.scaleOrdinal(colorset);
 // creeër de arc voor de pie
 var arc = d3.arc()
     .outerRadius(radiusPie * 0.8)
-    .innerRadius(radiusPie * 0.55);
+    .innerRadius(radiusPie * 0.40);
 
 // creeër de arc voor de labels
 var outerArc = d3.arc()
@@ -65,13 +65,13 @@ function drawPieChart(lijst) {
     .enter().append("path")
       .attr("fill", function(d, i) { return color(i); })
       .attr("d", arc)
-      .attr("stroke", "#222629")
+      .attr("stroke", "#fff")
       .attr("stroke-width", "6px")
       .on("mouseover", function(d) {
           tip.show(d)
           d3.select(this)
             .style("opacity", 0.8)
-            .style("stroke-width",3)
+            .style("stroke-width", -20)
       })
       .on('mouseout', function(d){
           tip.hide(d);

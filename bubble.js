@@ -60,7 +60,6 @@ function drawBubbleChart(lijst) {
         .on("mouseover", function(d,i) {
             if( i != 0) {
               tip.show(d)
-              console.log(d);
               d3.select(this)
                 .style("opacity", 1)
                 .style("stroke","#fff")
@@ -75,7 +74,10 @@ function drawBubbleChart(lijst) {
                 .style("stroke","#fff")
                 .style("stroke-width", 1.5)
             }
-        ;});
+        ;})
+        .on("click", function(d) {
+            checkforartist(d.data.Artiest);
+        });
 
 
   // node.append("text")

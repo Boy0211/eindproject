@@ -9,7 +9,7 @@ window.onload = function() {
 
   d3.tsv("../Data/merged_list.tsv").then(function(data) {
 
-    var songsbyList = d3.nest()
+    songsbyList = d3.nest()
         .key(function(d) {return d.Lijst; })
         .entries(data)
 
@@ -22,7 +22,7 @@ window.onload = function() {
 
   d3.json("../Data/artiesten.json").then(function(data) {
 
-    console.log(data);
+    data2 = data
     createautofill(data)
     // drawLineGraphBest(data[12])
     drawLineGraph("best", data[12])
@@ -61,9 +61,9 @@ function createDropdown(songsbyList) {
   };
 };
 
-function checkforartist(data, artist) {
+function checkforartist(artist) {
 
-  data.forEach(function(d) {
+  data2.forEach(function(d) {
     if (d.Artiest == artist) {
       console.log(d);
       updateLineGraph("best", d)
@@ -82,10 +82,10 @@ function createautofill(data) {
   });
   console.log(arrayArtists);
 
-  autocomplete(data, document.getElementById("myInput"), arrayArtists);
+  autocomplete(document.getElementById("myInput"), arrayArtists);
 };
 
-function autocomplete(data, inp, arr) {
+function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
@@ -117,7 +117,7 @@ function autocomplete(data, inp, arr) {
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
-              checkforartist(data, inp.value)
+              checkforartist(inp.value)
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();

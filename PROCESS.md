@@ -76,4 +76,4 @@ Uiteindelijk heeft dit voor een hoop opruimwerk gezorgd, maar is het wel gelukt.
 
 # Day 10, 18 januari 2018
 
-Alle functionaliteiten van mijn pagina zijn gelukt. Voor vandaag staat op de planning om mijn proposal nog eens door te nemen om zo te controleren of ik aan mijn minimum eisen voldoe en wat ik nog meer had uitgeschreven als extra ideeën
+Alle functionaliteiten van mijn pagina zijn gelukt. Voor vandaag staat op de planning om mijn proposal nog eens door te nemen om zo te controleren of ik aan mijn minimum eisen voldoe en wat ik nog meer had uitgeschreven als extra ideeën.

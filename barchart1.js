@@ -19,6 +19,7 @@ function drawBarChart(temp_data) {
 
   // process de data zo, dat die gebruikt kan worden voor de barchart
   data = process_Data_BarChart(temp_data);
+  var max = d3.max(data, function(d) {return d.y;});
 
   // creeër het svg element op de goede plek in de html
   var svg = d3.select("#barchart")
@@ -59,6 +60,7 @@ function drawBarChart(temp_data) {
       .attr('y', function(d) { return yScale(d.y); })
       .attr('width', (widthBar1 / data.length) - barPadding)
       .attr('height', function(d) { return heightBar1 - 100 - yScale(d.y); })
+      .attr('opacity', function(d) {return ((d.y * 0.6) + (0.4 * max)) / max})
       .on("click", function(d) {
         selectedYear = d.x
         dataYearBubbleChart(temp_data, selectedYear) // wanneer er op de barchart wordt gedrukt, pas de bubblechart aan
@@ -71,6 +73,7 @@ function updateBarChart(temp_data) {
 
   // proces de data zo dat het gebruikt kan worden voor de barchart
   data = process_Data_BarChart(temp_data);
+  var max = d3.max(data, function(d) {return d.y;});
 
   // pas de domein van de assen aan aan de nieuwe data
   xScale.domain(data.map(function (d) { return d.x; }));
@@ -108,7 +111,8 @@ function updateBarChart(temp_data) {
       .attr('width', (widthBar1 / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
       .attr('height', function(d) {return heightBar1 - marginBar1.top - marginBar1.bottom - yScale(d.y);})
-      .attr('y', function(d) {return yScale(d.y);});
+      .attr('y', function(d) {return yScale(d.y);})
+      .attr('opacity', function(d) {return ((d.y * 0.6) + (0.4 * max)) / max});
 
   // pas de huidige bars aan
   bars
@@ -117,7 +121,8 @@ function updateBarChart(temp_data) {
       .attr('width', (widthBar1 / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
       .attr('height', function(d) {return heightBar1 - marginBar1.top - marginBar1.bottom - yScale(d.y);})
-      .attr('y', function(d) {return yScale(d.y);});
+      .attr('y', function(d) {return yScale(d.y);})
+      .attr('opacity', function(d) {return ((d.y * 0.6) + (0.4 * max)) / max});
 
   // geef alle bars de on click functie mee
   d3.select(".bars").selectAll("rect")
