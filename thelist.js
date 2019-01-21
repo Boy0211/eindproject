@@ -25,8 +25,7 @@ window.onload = function() {
     data2 = data
     createautofill(data)
     // drawLineGraphBest(data[12])
-    drawLineGraph("best", data[12])
-    drawLineGraph("worst", data[12])
+    getDataforLineGraphs(data[12])
     drawBarChart2(data[12])
 
   }); // sluting d3,json
@@ -65,9 +64,9 @@ function checkforartist(artist) {
 
   data2.forEach(function(d) {
     if (d.Artiest == artist) {
-      console.log(d);
-      updateLineGraph("best", d)
-      updateLineGraph("worst", d)
+      getDataforLineGraphs(d)
+      // updateLineGraph("best", d)
+      // updateLineGraph("worst", d)
       updateBarChart2(d)
     }
   });
@@ -80,7 +79,6 @@ function createautofill(data) {
   data.forEach(function(key) {
     arrayArtists.push(key['Artiest'])
   });
-  console.log(arrayArtists);
 
   autocomplete(document.getElementById("myInput"), arrayArtists);
 };

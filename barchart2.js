@@ -120,17 +120,13 @@ function updateBarChart2(artist) {
 
   // voeg bars toe als er te weinig zijn
   bars.enter().append("rect")
-      .transition().duration(1000)
       .attr("class", "rect2")
       .attr('x', 0)
       .attr('y', function(d) { return yScale2(d.Lijst); })
       .attr('height', barHeight)
-      .attr('width', function(d) { return xScale2(d.Data.length); })
-
-  // pas de huidige bars aan
-  bars
-      .transition().duration(1000)
-      .attr("class", "rect2")
+      .attr('width', function(d) { return xScale2(0); })
+    .merge(bars).transition()
+      .duration(1000)
       .attr('x', 0)
       .attr('y', function(d) { return yScale2(d.Lijst); })
       .attr('height', barHeight)
@@ -143,30 +139,51 @@ function updateBarChart2(artist) {
   texts.exit()
       .remove();
 
-  texts
-      .transition().duration(1000)
-      //x position is 3 pixels to the right of the bar
-      .attr("x", function (d) {
-          return xScale2(d.Data.length) - 20;
-      })
-      .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
-      .text(function (d) {
-          return d.Data.length;
-      });
-
-  texts.enter().append("text")
+  texts.enter()
+      .append("text")
       .attr("class", "mytexts")
-      .transition().duration(1000)
-      //x position is 3 pixels to the right of the bar
+      .attr('x', 0)
+      .attr('y', function(d) { return yScale2(d.Lijst) + 13.5; })
+      .attr('height', barHeight)
+      .attr('width', function(d) { return xScale2(0); })
+      .text(function (d) { return d.Data.length; })
+    .merge(texts).transition()
+      .duration(1000)
       .attr("x", function (d) {
-          console.log(xScale2(d.Data.length));
           return xScale2(d.Data.length) - 20;
       })
       .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
       .text(function (d) {
           return d.Data.length;
       })
-      .style("fill", "white");
+      .style("fill", "white")
+
+
+
+
+  // texts
+  //     .transition().duration(1000)
+  //     //x position is 3 pixels to the right of the bar
+  //     .attr("x", function (d) {
+  //         return xScale2(d.Data.length) - 20;
+  //     })
+  //     .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
+  //     .text(function (d) {
+  //         return d.Data.length;
+  //     });
+  //
+  // texts.enter().append("text")
+  //     .attr("class", "mytexts")
+  //     .transition().duration(1000)
+  //     //x position is 3 pixels to the right of the bar
+  //     .attr("x", function (d) {
+  //         return xScale2(d.Data.length) - 20;
+  //     })
+  //     .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
+  //     .text(function (d) {
+  //         return d.Data.length;
+  //     })
+  //     .style("fill", "white");
 
 
 
