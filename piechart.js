@@ -1,5 +1,5 @@
 // geef constante variabelen mee voor het script
-const widthPie = 600;
+const widthPie = 700;
 const heightPie = 400;
 const radiusPie = Math.min(widthPie, heightPie) / 2;
 
@@ -17,6 +17,8 @@ var outerArc = d3.arc()
     .innerRadius(radiusPie * 0.9)
     .outerRadius(radiusPie * 0.9);
 
+var key = function(d) { return d.data.key; };
+
 // creeër de d3 pie
 var pie = d3.pie()
     .sort(null)
@@ -29,6 +31,9 @@ var tip = d3.tip()
         .html(function(d) {
           return "<span><strong>Artiest: </strong>" +d.data.key + "<br><strong>Aantal titels: </strong>" + d.data.values.length + "</span>"
         });
+
+function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle)/2; };
+
 
 // functie voor het tekenen van een piechart
 function drawPieChart(lijst) {
@@ -70,7 +75,7 @@ function drawPieChart(lijst) {
       .on("mouseover", function(d) {
           tip.show(d)
           d3.select(this)
-            .style("opacity", 0.8)
+            // .style("opacity", 0.8)
             .style("stroke-width", -20)
       })
       .on('mouseout', function(d){
@@ -80,11 +85,55 @@ function drawPieChart(lijst) {
             .style("stroke-width", "6px")
       });
 
-  // voeg tekst aan het midden van de pie toe
-  svg.append("text")
-     .attr("id", "piechart-text")
-     .text("TOP10")
-     .style("fill", "black");
+  var text = svg.select(".labels").selectAll("text")
+      .data(pie(data), key)
+
+  // het volgende stuk waarmee de labels zijn geplaatst is overgenomen en bewerkt aan de hand van het volgende voorbeeld:
+  // http://bl.ocks.org/dbuezas/9306799
+  text.enter()
+      .append("text")
+      .attr("dy", ".35em")
+      .text(key)
+      .transition()
+      .duration(1000)
+  		.attrTween("transform", function(d) {
+  			this._current = this._current || d;
+  			var interpolate = d3.interpolate(this._current, d);
+  			this._current = interpolate(0);
+  			return function(t) {
+  				var d2 = interpolate(t);
+  				var pos = outerArc.centroid(d2);
+  				pos[0] = radiusPie * (midAngle(d2) < Math.PI ? 1 : -1);
+  				return "translate("+ pos +")";
+  			};
+  		})
+  		.styleTween("text-anchor", function(d){
+  			this._current = this._current || d;
+  			var interpolate = d3.interpolate(this._current, d);
+  			this._current = interpolate(0);
+  			return function(t) {
+  				var d2 = interpolate(t);
+  				return midAngle(d2) < Math.PI ? "start":"end";
+  			};
+  		});
+
+  var polyline = svg.select(".lines").selectAll("polyline")
+      .data(pie(data), key)
+
+  polyline.enter()
+      .append("polyline")
+      .transition().duration(1000)
+      .attrTween("points", function(d){
+	        this._current = this._current || d;
+	        var interpolate = d3.interpolate(this._current, d);
+	        this._current = interpolate(0);
+	        return function(t) {
+      				var d2 = interpolate(t);
+      				var pos = outerArc.centroid(d2);
+      				pos[0] = radiusPie * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+      				return [arc.centroid(d2), outerArc.centroid(d2), pos];
+			    };
+		  });
 
 }; //einde van het tekenen van de pie
 
@@ -102,6 +151,103 @@ function updatePieChart(lijst) {
       .duration(1000)
       .attr("fill", function(d, i) { return color(i); })
       .attr("d", arc);
+
+  var text = d3.select(".piechart").select(".labels").selectAll("text")
+      .data(pie(data), key)
+
+  text.enter()
+      .append("text")
+      .attr("dy", ".35em")
+      .text(key)
+      .transition()
+      .duration(1000)
+      .attrTween("transform", function(d) {
+  			this._current = this._current || d;
+  			var interpolate = d3.interpolate(this._current, d);
+  			this._current = interpolate(0);
+  			return function(t) {
+  				var d2 = interpolate(t);
+  				var pos = outerArc.centroid(d2);
+  				pos[0] = radiusPie * (midAngle(d2) < Math.PI ? 1 : -1);
+  				return "translate("+ pos +")";
+  			};
+  		})
+  		.styleTween("text-anchor", function(d){
+  			this._current = this._current || d;
+  			var interpolate = d3.interpolate(this._current, d);
+  			this._current = interpolate(0);
+  			return function(t) {
+  				var d2 = interpolate(t);
+  				return midAngle(d2) < Math.PI ? "start":"end";
+  			};
+  		});
+
+  text
+      .transition()
+      .duration(1000)
+      .text(key)
+      .attrTween("transform", function(d) {
+  			this._current = this._current || d;
+  			var interpolate = d3.interpolate(this._current, d);
+  			this._current = interpolate(0);
+  			return function(t) {
+  				var d2 = interpolate(t);
+  				var pos = outerArc.centroid(d2);
+  				pos[0] = radiusPie * (midAngle(d2) < Math.PI ? 1 : -1);
+  				return "translate("+ pos +")";
+  			};
+  		})
+  		.styleTween("text-anchor", function(d){
+  			this._current = this._current || d;
+  			var interpolate = d3.interpolate(this._current, d);
+  			this._current = interpolate(0);
+  			return function(t) {
+  				var d2 = interpolate(t);
+  				return midAngle(d2) < Math.PI ? "start":"end";
+  			};
+  		});
+
+  text.exit()
+      .remove()
+
+
+  var polyline = d3.select(".piechart").select(".lines").selectAll("polyline")
+      .data(pie(data), key)
+
+  polyline.enter()
+      .append("polyline")
+      .transition().duration(1000)
+      .attrTween("points", function(d){
+          this._current = this._current || d;
+          var interpolate = d3.interpolate(this._current, d);
+          this._current = interpolate(0);
+          return function(t) {
+              var d2 = interpolate(t);
+              var pos = outerArc.centroid(d2);
+              pos[0] = radiusPie * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+              return [arc.centroid(d2), outerArc.centroid(d2), pos];
+          };
+      });
+
+  polyline
+      .transition().duration(1000)
+      .attrTween("points", function(d){
+          this._current = this._current || d;
+          var interpolate = d3.interpolate(this._current, d);
+          this._current = interpolate(0);
+          return function(t) {
+              var d2 = interpolate(t);
+              var pos = outerArc.centroid(d2);
+              pos[0] = radiusPie * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+              return [arc.centroid(d2), outerArc.centroid(d2), pos];
+          };
+      });
+
+  polyline.exit()
+      .remove()
+
+
+
 };
 
 

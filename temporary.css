@@ -16,6 +16,12 @@ text {
   background-color: lightgrey;
 }
 
+#thelist h2 {
+  color: white;
+  text-shadow: 3px 2px darkgrey;
+  font-family: "avenir next", Arial, sans-serif;
+}
+
 #titel {
   margin: 20px;
   margin-top: 50px;
@@ -27,6 +33,8 @@ text {
 /* styling for the tabel in the left uppercorner */
 #tabel {
   padding: 20px;
+  padding-left: 30px;
+  padding-right: 0px;
   text-align: center;
 }
 
@@ -40,9 +48,14 @@ text {
 #tabel .divtable table {
   margin: auto;
   display: block;
-  height: 363px;
+  height: 361px;
   overflow-y: scroll;
   width: auto;
+  table-layout: fixed;
+}
+
+#tabel .divtable table thead tr th {
+  width: 25%;
 }
 
 /* styling for the piechart in the right uppercorner */
@@ -60,17 +73,26 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+#piechart .piechart polyline {
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+}
+
 /* styling for the buble chart in the left bottom corner */
 #bubblechart {
   text-align: center;
-  padding: 20px;
+  padding: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
   background-color: inherit;
 }
 
-#bubblechart .bubble {
+#bubblechart #bubbleblock {
   /* weird padding due to the use of diameter in js */
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 5px;
+  padding-left: 30px;
   background-color: #fff;
   display: block;
   margin-left: auto;
@@ -81,7 +103,13 @@ text {
 #barchart {
   text-align: center;
   padding: 20px;
+  padding-top: 0px;
+  padding-left: 0px;
   background-color: inherit;
+}
+
+#barchart .help-tip {
+  right: 265px;;
 }
 
 #barchart .barchart {
@@ -91,17 +119,37 @@ text {
 
 #barchart .barchart g .bars rect {
   fill: rgb(42, 98, 143);
-  /* fill: blue; */
 }
 
+#barchart .barchart g .bars rect:hover {
+  opacity: 1.0;
+}
 
+#barchart .barchart g .x-axis {
+  color: darkgrey;
+}
 
+#barchart .barchart g .x-axis .tick text {
+  color: black;
+  font-size: 12px;
+  font-family: "avenir next", Arial, sans-serif;
+}
+
+#barchart .barchart g .y-axis {
+  color: darkgrey;
+}
+
+#barchart .barchart g .y-axis .tick text {
+  color: black;
+  font-size: 14px;
+  font-family: "avenir next", Arial, sans-serif;
+}
 
 
 #theartist {
   padding-top:50px;
   height:100%;
-  color: #fff;
+  color: black;
   background-color: #122f48;
 }
 
@@ -254,8 +302,8 @@ line-height: 1.5;
 font-weight: 400;
 font-family:"avenir next", Arial, sans-serif;
 padding: 6px;
-background: rgba(0, 0, 0, 0.6);
-color: #FFA500;
+background: rgba(0, 0, 0, 0.75);
+color: white;
 border-radius: 1px;
 pointer-events: none;
 }
@@ -313,4 +361,89 @@ text{
 
 .details{
   color:white;
+}
+
+/* CSS for the help-tip */
+
+.help-tip{
+    position: absolute;
+    top: 26px;
+    right: 135px;
+    text-align: center;
+    background-color: darkgrey;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    right:10px;
+    top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
 }

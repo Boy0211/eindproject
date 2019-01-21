@@ -1,6 +1,6 @@
 // maak de constante variabelen die door het hele script gebruikt worden
 const marginBar1 = {top: 50, right:50, bottom:50, left:50}
-const widthBar1 = 730
+const widthBar1 = 725
 const heightBar1 = 470
 const barPadding = 2.5
 
@@ -34,11 +34,15 @@ function drawBarChart(temp_data) {
   xScale.domain(data.map(function (d) { return d.x; }));
   yScale.domain([0, d3.max(data, function (d) { return d.y; })]);
 
+  // custom x-axis
+  var xAxis = d3.axisBottom(xScale)
+      .tickValues(xScale.domain().filter(function(d,i){ return !(i%2)}));
+
   // teken de x-as
   svg.append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + (heightBar1 - marginBar1.top - marginBar1.bottom) + ")")
-      .call(d3.axisBottom(xScale))
+      .call(xAxis)
     .selectAll("text")
       .attr("x", -8)
       .attr("y", 6)
@@ -79,11 +83,15 @@ function updateBarChart(temp_data) {
   xScale.domain(data.map(function (d) { return d.x; }));
   yScale.domain([0, d3.max(data, function (d) { return d.y; })]);
 
+  // custom x-axis
+  var xAxis = d3.axisBottom(xScale)
+      .tickValues(xScale.domain().filter(function(d,i){ return !(i%2)}));
+
   // selecteer de barchart en pas de x-as aan
   d3.select(".barchart").select("g").select(".x-axis")
       .transition()
       .duration(1000)
-      .call(d3.axisBottom(xScale))
+      .call(xAxis)
     .selectAll("text")
       .attr("x", -8)
       .attr("y", 6)
@@ -104,20 +112,15 @@ function updateBarChart(temp_data) {
   bars.exit()
       .remove();
 
-  // voeg bars toe als er te weinig zijn
   bars.enter().append("rect")
-      .transition().duration(1000)
       .attr("class", "rect")
-      .attr('width', (widthBar1 / data.length) - barPadding)
-      .attr('x', function(d, i) {return xScale(d.x);})
-      .attr('height', function(d) {return heightBar1 - marginBar1.top - marginBar1.bottom - yScale(d.y);})
-      .attr('y', function(d) {return yScale(d.y);})
-      .attr('opacity', function(d) {return ((d.y * 0.6) + (0.4 * max)) / max});
-
-  // pas de huidige bars aan
-  bars
-      .transition().duration(1000)
-      .attr("class", "rect")
+      .attr("width", (widthBar1 / data.length) - barPadding)
+      .attr('x', function(d) {return xScale(d.x);})
+      .attr("height", 0)
+      .attr("y", function(d) {return yScale(0);})
+      .attr('opacity', function(d) {return ((d.y * 0.6) + (0.4 * max)) / max})
+    .merge(bars).transition()
+      .duration(1000)
       .attr('width', (widthBar1 / data.length) - barPadding)
       .attr('x', function(d, i) {return xScale(d.x);})
       .attr('height', function(d) {return heightBar1 - marginBar1.top - marginBar1.bottom - yScale(d.y);})

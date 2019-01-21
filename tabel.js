@@ -59,7 +59,8 @@ function tabulate(data, columns) {
       .data(columns)
       .enter()
       .append('th')
-        .text(function (column) { return column; });
+        .text(function (column) {return column; })
+
 
   // voeg het aantal rijen toe, gelijkend aan de lengte van de data
   var rows = tbody.selectAll('tr')

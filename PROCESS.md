@@ -77,3 +77,9 @@ Uiteindelijk heeft dit voor een hoop opruimwerk gezorgd, maar is het wel gelukt.
 # Day 10, 18 januari 2018
 
 Alle functionaliteiten van mijn pagina zijn gelukt. Voor vandaag staat op de planning om mijn proposal nog eens door te nemen om zo te controleren of ik aan mijn minimum eisen voldoe en wat ik nog meer had uitgeschreven als extra ideeën.
+
+# Day 11, 21 januari 2018
+
+Vandaag ben ik bezig geweest met het stylen van mijn pagina. De uiteindelijke pagina bezig al haar mogelijkheden maar is in styling nog niet compleet. Vandaag heb ik besloten een extra blok aan text weg te halen en deze te vervangen voor helper pop ups. Dit laat de website er erg vloeiend uitzien vind ik zelf.
+
+Implementatie van cijfers in de bubblechart ging erg moeizaam. Tevens vond ik tijdens de Implementatie een bug welke ik eerst heb verholpen. Gevolg was wel dat ik al mijn werk van daarvoor kon weggooien.

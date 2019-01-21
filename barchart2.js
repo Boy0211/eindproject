@@ -1,17 +1,17 @@
 // maak de constante variabelen die door het hele script gebruikt worden
-const marginBar2 = {top: 50, right:50, bottom:50, left:50}
+const marginBar2 = {top: 20, right:50, bottom:35, left:50}
 const widthBar2 = 650
 const heightBar2 = 450
-const barHeight = "15px"
+const barHeight = "16px"
 
 // creeër een xScale
 var yScale2 = d3.scaleBand()
-    .range([0, (heightBar2 - marginBar2.right - marginBar2.left)])
+    .range([0, (heightBar2 - marginBar2.top - marginBar2.bottom)])
     .padding(0.1)
 
 // creeër een yScale
 var xScale2 = d3.scaleLinear()
-    .range([0, (widthBar2 - marginBar2.top - marginBar2.bottom)])
+    .range([0, (widthBar2 - marginBar2.left - marginBar2.right)])
 
 // functie om de initiële barchart te tekenen
 function drawBarChart2(temp_data) {
@@ -59,6 +59,26 @@ function drawBarChart2(temp_data) {
       .attr('y', function(d) { return yScale2(d.Lijst); })
       .attr('height', barHeight)
       .attr('width', function(d) { return xScale2(d.Data.length); });
+
+  var texts = svg.append("g")
+      .attr("class", "text")
+    .selectAll("text")
+      .data(data)
+      .enter()
+      .append("text");
+
+  //add a value label to the right of each bar
+  texts.attr("class", "mytexts")
+      // .attr("class", "label")
+      //x position is 3 pixels to the right of the bar
+      .attr("x", function (d) {
+          return xScale2(d.Data.length) - 20;
+      })
+      .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
+      .text(function (d) {
+          return d.Data.length;
+      })
+      .style("fill", "white");
 }; //sluiten draw bar chart
 
 
@@ -99,10 +119,6 @@ function updateBarChart2(artist) {
       .remove();
 
   // voeg bars toe als er te weinig zijn
-
-  console.log(widthBar2 - marginBar2.left - marginBar2.right);
-  console.log(data.length);
-
   bars.enter().append("rect")
       .transition().duration(1000)
       .attr("class", "rect2")
@@ -119,5 +135,40 @@ function updateBarChart2(artist) {
       .attr('y', function(d) { return yScale2(d.Lijst); })
       .attr('height', barHeight)
       .attr('width', function(d) { return xScale2(d.Data.length); })
+
+  //add a value label to the right of each bar
+  var texts = d3.select(".barchart2").select(".text").selectAll(".mytexts")
+      .data(data);
+
+  texts.exit()
+      .remove();
+
+  texts
+      .transition().duration(1000)
+      //x position is 3 pixels to the right of the bar
+      .attr("x", function (d) {
+          return xScale2(d.Data.length) - 20;
+      })
+      .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
+      .text(function (d) {
+          return d.Data.length;
+      });
+
+  texts.enter().append("text")
+      .attr("class", "mytexts")
+      .transition().duration(1000)
+      //x position is 3 pixels to the right of the bar
+      .attr("x", function (d) {
+          console.log(xScale2(d.Data.length));
+          return xScale2(d.Data.length) - 20;
+      })
+      .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
+      .text(function (d) {
+          return d.Data.length;
+      })
+      .style("fill", "white");
+
+
+
 
 }; // einde van de update barchart functie

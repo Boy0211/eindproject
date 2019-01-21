@@ -11,7 +11,6 @@ var bubble = d3.pack()
     .size([diameterBubble, diameterBubble])
     .padding(1.5);
 
-
 // functie voor het maken van de bubblechart
 function drawBubbleChart(lijst) {
 
@@ -22,9 +21,12 @@ function drawBubbleChart(lijst) {
   // svg variabele voor het selecteren van de juiste html element
   var svg = d3.select("#bubblechart")
       .append("svg")
-      .attr("width", diameterBubble + paddingBubble)
+      .attr("width", diameterBubble + (paddingBubble * 3))
       .attr("height", diameterBubble + paddingBubble)
-      .attr("class", "bubble");
+      .attr("id", "bubbleblock")
+    .append("g")
+      .attr("class", "bubblechart");
+
 
   // variabele waarin de tip is opgeslagen
   var tip = d3.tip()
@@ -117,7 +119,7 @@ function updateBubbleChart(lijst) {
   data = createDataforBubblechart(temp_data);
 
   // selecteer het svg element van de barchart
-  var svg = d3.select("#bubblechart").select(".bubble")
+  var svg = d3.select("#bubblechart").select(".bubblechart")
 
   // variabele waarin de tip is opgeslagen
   var tip = d3.tip()
@@ -144,40 +146,31 @@ function updateBubbleChart(lijst) {
       .transition()
       .duration(1000)
 
-  // pas de huidige nodes aan
-  node
+  // voeg nodes toe indien nodig
+  node.enter().append("circle")
+      .attr("class", "node")
+      .style("fill", "#fff")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .merge(node)
       .transition()
       .duration(1000)
-      .attr("transform", function(d) {
-          return "translate(" + d.x + "," + d.y + ")";
-      })
-      .attr("r", function(d) {
-          return d.r;})
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .attr("r", function(d) { return d.r; })
       .style("fill", function(d,i) {
         if( i == 0) {
           return "#fff"
         }
         return color(i);})
 
-  // voeg nodes toe indien nodig
-  node.enter().append("circle")
-      .transition()
-      .duration(1000)
-      .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-      .attr("r", function(d) { return d.r; })
-      .style("fill", function(d,i) { return color(i);})
-
-  // select alle bubbles en laat ze weer reageren op de d3-tip
-  d3.select(".bubble").selectAll("circle")
+  d3.select("#bubblechart").selectAll("circle")
       .on("mouseover", function(d, i) {
-          if( i != 0) {
-            tip.show(d)
-            d3.select(this)
-              .style("opacity", 0.8)
-              .style("stroke","#fff")
-              .style("stroke-width", 3)
-          }
+        if( i != 0) {
+          tip.show(d)
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","#fff")
+            .style("stroke-width", 3)
+        }
       })
       .on('mouseout', function(d){
           tip.hide(d);
@@ -185,5 +178,11 @@ function updateBubbleChart(lijst) {
             .style("opacity", 1)
             .style("stroke","#fff")
             .style("stroke-width", 1.5)
+      })
+      .on("click", function(d) {
+          checkforartist(d.data.Artiest);
       });
+
+
+
 };
