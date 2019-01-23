@@ -65,7 +65,7 @@ function drawBarChart2(temp_data) {
       .attr('opacity', function(d) {return ((d.Data.length * 0.6) + (0.4 * max)) / max})
 
   var texts = svg.append("g")
-      .attr("class", "text")
+      .attr("id", "labelsbarchart2")
     .selectAll("text")
       .data(data)
       .enter()
@@ -76,13 +76,12 @@ function drawBarChart2(temp_data) {
       // .attr("class", "label")
       //x position is 3 pixels to the right of the bar
       .attr("x", function (d) {
-          return xScale2(d.Data.length) - 20;
+          return xScale2(d.Data.length) - 2;
       })
       .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
       .text(function (d) {
           return d.Data.length;
       })
-      .style("fill", "white");
 }; //sluiten draw bar chart
 
 
@@ -140,7 +139,7 @@ function updateBarChart2(artist) {
       .attr('opacity', function(d) {return ((d.Data.length * 0.6) + (0.4 * max)) / max})
 
   //add a value label to the right of each bar
-  var texts = d3.select(".barchart2").select(".text").selectAll(".mytexts")
+  var texts = d3.select(".barchart2").select("#labelsbarchart2").selectAll(".mytexts")
       .data(data);
 
   texts.exit()
@@ -157,12 +156,11 @@ function updateBarChart2(artist) {
     .merge(texts).transition()
       .duration(1000)
       .attr("x", function (d) {
-          return xScale2(d.Data.length) - 20;
+          return xScale2(d.Data.length) - 2;
       })
       .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
       .text(function (d) {
           return d.Data.length;
       })
-      .style("fill", "white")
 
 }; // einde van de update barchart functie

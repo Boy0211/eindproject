@@ -55,13 +55,16 @@ function drawLineGraph(graph, data) {
   // schrijf de x-as in het svg element
   svg.append("g")
       .attr("class", "x-axis")
-      .call(d3.axisBottom(xScale))
+      .call(d3.axisBottom(xScale)
+        .tickFormat(d3.format(".0f")))
       .attr("transform", "translate(0," + (heightLine) + ")");
 
   // schrijf de y-as in het svg element
   svg.append("g")
       .attr("class", "y-axis")
-      .call(d3.axisLeft(yScale));
+      .call(d3.axisLeft(yScale)
+        .ticks(5)
+        .tickFormat(d3.format(".0f")));
 
   //  schrijf de lijn in het svg element
   svg.append("g").append("path")
@@ -97,13 +100,17 @@ function updateLineGraph(graph, data) {
   svg.select(".y-axis")
       .transition()
       .duration(1000)
-      .call(d3.axisLeft(yScale))
+      .call(d3.axisLeft(yScale)
+        .ticks(5)
+        .tickFormat(d3.format(",.0f")));
 
   svg.select(".x-axis")
       .transition()
       .duration(1000)
-      .call(d3.axisBottom(xScale))
-      .attr("transform", "translate(0," + (heightLine) + ")");
+      .attr("transform", "translate(0," + (heightLine) + ")")
+      .call(d3.axisBottom(xScale)
+        .tickFormat(d3.format(".0f")))
+
 
   svg.select(".line")
       .datum(data)

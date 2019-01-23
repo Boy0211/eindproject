@@ -71,8 +71,22 @@ function tabulateTitels(data, columns) {
       })
   .enter()
   .append('td')
-    .text(function (d) { return d.value; });
+  .attr("id", function(d) { return d.column })
+  .text(function (d) {
+    if(d.column == "Jaar") {
+      return d.value;
+    } else {
+      return ""
+    } })
 
+
+  rows.selectAll("#Naam").append("a")
+    .attr("target", "_blank")
+    .attr("href", function(d) {
+      console.log(d.value);
+      return "https://www.youtube.com/results?search_query=" + d.value
+    })
+    .text(function (d) { return d.value})
   // return de tabel
   return table;
 };

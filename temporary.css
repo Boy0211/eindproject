@@ -276,6 +276,11 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+#barchart2 .barchart2 #labelsbarchart2 text {
+  fill: white !important;
+  text-anchor: end;
+}
+
 
 
 
