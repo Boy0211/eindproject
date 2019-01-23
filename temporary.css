@@ -16,6 +16,19 @@ text {
   background-color: lightgrey;
 }
 
+#thelist h1 {
+  color: white;
+  text-shadow: 3px 2px darkgrey;
+  font-family: "avenir next", Arial, sans-serif;
+  text-align: center;
+}
+
+#thelist #helptip1 {
+  right: 450px;
+  top: 79px;
+  z-index: 4;
+}
+
 #thelist h2 {
   color: white;
   text-shadow: 3px 2px darkgrey;
@@ -151,29 +164,53 @@ text {
   height:100%;
   color: black;
   background-color: #122f48;
+  padding-bottom: 20px;
 }
 
-#theartist .col-sm-6 .container-fluid {
-  padding-bottom: 20px;
-  padding-top: 0px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: inherit;
+#theartist h1 {
+  color: white;
+  text-shadow: 2px 1px grey;
+  font-family: "avenir next", Arial, sans-serif;
   text-align: center;
 }
 
-#theartist .col-sm-6 .container-fluid .uitleg {
-  background-color: #fff;
-  height: 150px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+#tabelTitels {
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 0px;
+  text-align: center;
 }
 
+#tabelTitels .divtable {
+  padding: 20px;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  width: 580px;
+}
+
+#tabelTitels .divtable table {
+  margin: auto;
+  display: block;
+  height: 195px;
+  overflow-y: scroll;
+  width: auto;
+  table-layout: fixed;
+}
+
+#tabelTitels .divtable table thead tr th {
+  width: 95%;
+}
+
+#theartist h3 {
+  color: white;
+  text-shadow: 2px 1px grey;
+  font-family: "avenir next", Arial, sans-serif;
+  text-align: center;
+}
 
 #bestsong {
-  padding: 10px;
+  padding: 5px;
   background-color: inherit;
   text-align: center;
 }
@@ -187,7 +224,7 @@ text {
 }
 
 #meansong {
-  padding: 10px;
+  padding: 5px;
   background-color: inherit;
   text-align: center;
 }
@@ -201,7 +238,7 @@ text {
 }
 
 #worstsong {
-  padding: 10px;
+  padding: 5px;
   background-color: inherit;
   text-align: center;
 }
@@ -226,7 +263,7 @@ text {
 }
 
 #barchart2 {
-  padding: 20px;
+  padding: 5px;
   background-color: inherit;
   text-align: center;
 }

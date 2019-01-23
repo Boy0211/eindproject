@@ -93,12 +93,25 @@ function process_Data_BarChart(lijst) {
   return dataForBarChart
 };
 
-// deze functie geeft of de eerste uit een array terug of de laatste.
-function getFirstOrLast(which, data) {
+function artistbyTitel(lijst) {
 
-  if (which == "first") {
-    return 0
-  } else {
-    return (data.length - 1)
-  }
+  var nestedsongsAll = []
+  lijst.forEach(function(artiest) {
+    var nestedsongs = d3.nest()
+        .key(function(d) {return d.Titel; })
+        .entries(artiest.values);
+
+    var titelnames = []
+    nestedsongs.forEach(function(titel) {
+      titelnames.push({
+        Naam: titel.key,
+        Jaar: titel.values[0].Jaar});
+    })
+    nestedsongsAll.push({
+      Artiest: artiest.key,
+      Titels: titelnames
+    })
+  })
+
+  return nestedsongsAll;
 };

@@ -1,7 +1,7 @@
 // maak de constante variabelen die door het hele script gebruikt worden
 const marginBar2 = {top: 20, right:50, bottom:35, left:50}
-const widthBar2 = 650
-const heightBar2 = 450
+const widthBar2 = 580
+const heightBar2 = 417
 const barHeight = "16px"
 
 // creeër een xScale
@@ -31,6 +31,9 @@ function drawBarChart2(temp_data) {
   yScale2.domain(["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018" ]);
   xScale2.domain([0, d3.max(data, function (d) { return d.Data.length; })]);
 
+
+  var max = d3.max(data, function(d) {return d.Data.length;});
+
   // teken de x-as
   svg.append("g")
       .attr("class", "x-axis")
@@ -58,7 +61,8 @@ function drawBarChart2(temp_data) {
       .attr('x', 0)
       .attr('y', function(d) { return yScale2(d.Lijst); })
       .attr('height', barHeight)
-      .attr('width', function(d) { return xScale2(d.Data.length); });
+      .attr('width', function(d) { return xScale2(d.Data.length); })
+      .attr('opacity', function(d) {return ((d.Data.length * 0.6) + (0.4 * max)) / max})
 
   var texts = svg.append("g")
       .attr("class", "text")
@@ -110,6 +114,8 @@ function updateBarChart2(artist) {
       .duration(1000)
       .call(d3.axisLeft(yScale2));
 
+  var max = d3.max(data, function(d) {return d.Data.length;});
+
   // selecteer alle bars en geef ze nieuwe data mee
   var bars = d3.select(".barchart2").select("g").select(".bars2").selectAll(".rect2")
       .data(data);
@@ -131,6 +137,7 @@ function updateBarChart2(artist) {
       .attr('y', function(d) { return yScale2(d.Lijst); })
       .attr('height', barHeight)
       .attr('width', function(d) { return xScale2(d.Data.length); })
+      .attr('opacity', function(d) {return ((d.Data.length * 0.6) + (0.4 * max)) / max})
 
   //add a value label to the right of each bar
   var texts = d3.select(".barchart2").select(".text").selectAll(".mytexts")
@@ -157,35 +164,5 @@ function updateBarChart2(artist) {
           return d.Data.length;
       })
       .style("fill", "white")
-
-
-
-
-  // texts
-  //     .transition().duration(1000)
-  //     //x position is 3 pixels to the right of the bar
-  //     .attr("x", function (d) {
-  //         return xScale2(d.Data.length) - 20;
-  //     })
-  //     .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
-  //     .text(function (d) {
-  //         return d.Data.length;
-  //     });
-  //
-  // texts.enter().append("text")
-  //     .attr("class", "mytexts")
-  //     .transition().duration(1000)
-  //     //x position is 3 pixels to the right of the bar
-  //     .attr("x", function (d) {
-  //         return xScale2(d.Data.length) - 20;
-  //     })
-  //     .attr("y", function(d) { return yScale2(d.Lijst) + 13.5; })
-  //     .text(function (d) {
-  //         return d.Data.length;
-  //     })
-  //     .style("fill", "white");
-
-
-
 
 }; // einde van de update barchart functie

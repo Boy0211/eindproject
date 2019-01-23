@@ -16,6 +16,7 @@
   <!-- Get my js files -->
   <script type="text/javascript" src="d3/d3.js" charset="utf-8"></script>
   <script type="text/javascript" src="d3/d3-tip.js" charset="utf-8"></script>
+
   <script type="text/javascript" src="barchart1.js" charset="utf-8"></script>
   <script type="text/javascript" src="thelist.js" charset="utf-8"></script>
   <script type="text/javascript" src="bubble.js" charset="utf-8"></script>
@@ -24,6 +25,7 @@
   <script type="text/javascript" src="helpers.js" charset="utf-8"></script>
   <script type="text/javascript" src="linechart1and2.js" charset="utf-8"></script>
   <script type="text/javascript" src="barchart2.js" charset="utf-8"></script>
+  <script type="text/javascript" src="tabelTitels.js" charset="utf-8"></script>
 
 </head>
 
@@ -44,7 +46,6 @@
             <ul class="nav navbar-nav">
               <li><a href="#thelist">Per Lijst</a></li>
               <li><a href="#theartist">Per Artiest</a></li>
-              <li><a href="#thesong">Per Titel</a></li>
             </ul>
             <span class="navbar-text">Jaar:</span>
             <form class="navbar-text">
@@ -89,18 +90,10 @@
 
   <main>
     <div id="thelist" class="container-fluid">
-      <!-- <div class="row">
-        <section class="uitleg">
-          <div id=titel>
-            <h2>DE LIJST</h2>
-            <p>
-              Elk jaar brengt radio2 tot iedereens genoegen weer een fantastische top2000 uit. Ondanks dat elk jaar de lijst weer een beetje lijkt op die van het jaar ervoor, zijn er weldegelijk verschillen.<br><br> Gebruik het dropdown menu om een
-              lijst te
-              selecteren en laat de grafieken jou een kijkje geven in de top2000!<br><br> Vergeet niet op de bars van de barchart te drukken voor meer informatie!
-            </p>
-          </div>
-        </section>
-      </div> -->
+      <h1>De Lijst over de Jaren:</h1>
+      <div id=helptip1 class="help-tip">
+        <p>Je kan een jaar selecteren door gebruik te maken van het dropdown menu in de navigatiebar.</p>
+      </div>
       <div class="row">
         <div class="col-sm-5" id="tabel">
           <h2>Top10 Songs</h2>
@@ -126,28 +119,26 @@
     </div>
 
     <div id="theartist" class="container-fluid">
+      <h1>Hoe doen de artiesten het?</h1>
       <div class="col-sm-6">
-        <div class="row">
-          <div class="container-fluid">
-            <section class="uitleg">
-              <h2>Hoe doen de artiesten het over de jaren</h2>
-              <p>
-                Op deze pagina zie je wat de artiesten doen over de jaren
-              </p>
-            </section>
-          </div>
+        <div id="tabelTitels" class="row">
+          <h3>De Titels:</h3>
         </div>
-        <div class="row" id="barchart2"></div>
+        <div class="row" id="barchart2">
+          <h3>Aantal Titels per Lijst:</h3>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <div class="row" id="bestsong"></div>
-        <div class="row" id="meansong"></div>
-        <div class="row" id="worstsong"></div>
+      <div id="linecharts" class="col-sm-6">
+        <div class="row" id="bestsong">
+          <h3>Hoogste Notering:</h3>
+        </div>
+        <div class="row" id="meansong">
+          <h3>Gemiddelde Notering:</h3>
+        </div>
+        <div class="row" id="worstsong">
+          <h3>Laagste Notering:</h3>
+        </div>
       </div>
-    </div>
-
-
-    <div id="thesong" class="container-fluid">
     </div>
   </main>
 

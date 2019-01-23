@@ -83,3 +83,13 @@ Alle functionaliteiten van mijn pagina zijn gelukt. Voor vandaag staat op de pla
 Vandaag ben ik bezig geweest met het stylen van mijn pagina. De uiteindelijke pagina bezig al haar mogelijkheden maar is in styling nog niet compleet. Vandaag heb ik besloten een extra blok aan text weg te halen en deze te vervangen voor helper pop ups. Dit laat de website er erg vloeiend uitzien vind ik zelf.
 
 Implementatie van cijfers in de bubblechart ging erg moeizaam. Tevens vond ik tijdens de Implementatie een bug welke ik eerst heb verholpen. Gevolg was wel dat ik al mijn werk van daarvoor kon weggooien.
+
+# Day 12, 22 januari 2019
+
+De implementatie van cijfers in de bubbles bleken zinloos. Nu is er extra uitleg naast de titel waardoor de bubblechart zinvoller is geworden. Het lukt me niet om de window te laten zaken wanneer er op een bubble gedrukt wordt. Door tijdsdruk heb ik dit laten gaan.
+
+# Day 13, 23 januari 2019
+
+Vandaag ga ik de styling van de 2de section van de pagina proberen af te maken. DIt heeft te maken met de opacity van de bars, de linecharts en ticks daarvan.
+
+Ook ga ik de homepagina en de bronnenpragina proberen af te maken.

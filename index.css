@@ -1,0 +1,11 @@
+#home {
+  padding-top: 50px;
+  background-color: lightgrey;
+}
+
+#myCarousel {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 64%;
+}

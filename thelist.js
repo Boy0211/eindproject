@@ -9,6 +9,7 @@ window.onload = function() {
 
   d3.tsv("../Data/merged_list.tsv").then(function(data) {
 
+    allLists = data
     songsbyList = d3.nest()
         .key(function(d) {return d.Lijst; })
         .entries(data)
@@ -22,11 +23,22 @@ window.onload = function() {
 
   d3.json("../Data/artiesten.json").then(function(data) {
 
+    var temp = listByArtist(allLists)
+    tableData = artistbyTitel(temp)
     data2 = data
     createautofill(data)
-    // drawLineGraphBest(data[12])
-    getDataforLineGraphs(data[12])
+
+    var allData = processDataLineCharts(data[12])
+
+    drawLineGraph("bestsong", allData.hoogsteNotering)
+    drawLineGraph("meansong", allData.gemiddeldeNotering)
+    drawLineGraph("worstsong", allData.laagsteNotering)
+
+
+
+    createTableTitels(tableData[2])
     drawBarChart2(data[12])
+
 
   }); // sluting d3,json
 
@@ -65,11 +77,17 @@ function checkforartist(artist) {
   data2.forEach(function(d) {
     if (d.Artiest == artist) {
       getDataforLineGraphs(d)
-      // updateLineGraph("best", d)
-      // updateLineGraph("worst", d)
       updateBarChart2(d)
     }
   });
+  tableData.forEach(function(d) {
+    if (d.Artiest == artist) {
+      updateTableTitels(d)
+    }
+  });
+
+  d3.select("#myInput")
+    .attr("placeholder", artist)
 
 };
 

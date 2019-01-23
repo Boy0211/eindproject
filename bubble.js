@@ -182,7 +182,4 @@ function updateBubbleChart(lijst) {
       .on("click", function(d) {
           checkforartist(d.data.Artiest);
       });
-
-
-
 };
