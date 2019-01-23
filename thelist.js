@@ -7,7 +7,7 @@ window.onload = function() {
   var secondColorset = ["#A1C3D1", "#B39BC8", "#F0EBF4", "#F172A1", "#E64938"]
   var colorset = ["#59253A","#4E4E50","#6F2232","#950740","#C3073F"]
 
-  d3.tsv("../Data/merged_list.tsv").then(function(data) {
+  d3.tsv("./Data/merged_list.tsv").then(function(data) {
 
     allLists = data
     songsbyList = d3.nest()

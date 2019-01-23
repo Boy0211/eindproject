@@ -2,6 +2,7 @@
 body {
   position: relative;
   color: #454e59;
+  font-family: "avenir next", Arial, sans-serif !important;
 }
 
 text {
@@ -223,6 +224,16 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+#bestsong .linechartbestsong g .x-axis {
+  font-size: 13.5px;
+  color: darkgrey;
+}
+
+#bestsong .linechartbestsong g .y-axis {
+  font-size: 12px;
+  color: darkgrey;
+}
+
 #meansong {
   padding: 5px;
   background-color: inherit;
@@ -237,6 +248,16 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+#meansong .linechartmeansong g .x-axis {
+  font-size: 13.5px;
+  color: darkgrey;
+}
+
+#meansong .linechartmeansong g .y-axis {
+  font-size: 12px;
+  color: darkgrey;
+}
+
 #worstsong {
   padding: 5px;
   background-color: inherit;
@@ -249,6 +270,16 @@ text {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+#worstsong .linechartworstsong g .x-axis {
+  font-size: 13.5px;
+  color: darkgrey;
+}
+
+#worstsong .linechartworstsong g .y-axis {
+  font-size: 12px;
+  color: darkgrey;
 }
 
 .line {
