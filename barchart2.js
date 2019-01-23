@@ -39,11 +39,6 @@ function drawBarChart2(temp_data) {
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + (heightBar2 - marginBar2.top - marginBar2.bottom) + ")")
       .call(d3.axisBottom(xScale2))
-    .selectAll("text")
-      .attr("x", -8)
-      .attr("y", 6)
-      .attr("transform", "rotate(-40)")
-      .style("text-anchor", "end");
 
   // teken de y-as
   svg.append("g")
@@ -101,11 +96,6 @@ function updateBarChart2(artist) {
       .transition()
       .duration(1000)
       .call(d3.axisBottom(xScale2))
-    .selectAll("text")
-      .attr("x", -8)
-      .attr("y", 6)
-      .attr("transform", "rotate(-40)")
-      .style("text-anchor", "end");
 
   // selecteer de barchart en pas de y-as aan
   d3.select(".barchart2").select("g").select(".y-axis")

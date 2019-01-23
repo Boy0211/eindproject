@@ -5,7 +5,26 @@
 
 #myCarousel {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 64%;
+  width: 98%;
+}
+
+#story h2 {
+  font-weight: bold;
+  color: white;
+  font-size: 34px;
+}
+
+#button {
+  float: right;
+}
+
+footer {
+  background-color: #101010;
+  width: 100%;
+}
+
+footer p {
+  padding: 2px;
+  text-align: center;
+  color: darkgrey;
 }

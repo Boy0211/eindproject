@@ -46,7 +46,7 @@ text {
 
 /* styling for the tabel in the left uppercorner */
 #tabel {
-  padding: 20px;
+  padding: 0px;
   padding-left: 30px;
   padding-right: 0px;
   text-align: center;
@@ -74,7 +74,7 @@ text {
 
 /* styling for the piechart in the right uppercorner */
 #piechart {
-  padding: 20px;
+  padding: 0px;
   background-color: inherit;
   text-align: center;
 }
@@ -164,13 +164,20 @@ text {
   padding-top:50px;
   height:100%;
   color: black;
-  background-color: #122f48;
+  background-color: dimgray;
   padding-bottom: 20px;
 }
 
 #theartist h1 {
   color: white;
-  text-shadow: 2px 1px grey;
+  text-shadow: 0.5px 1px #a9a9a9;
+  font-family: "avenir next", Arial, sans-serif;
+  text-align: center;
+}
+
+#theartist h3 {
+  color: white;
+  text-shadow: 0.5px 1px #a9a9a9;
   font-family: "avenir next", Arial, sans-serif;
   text-align: center;
 }
@@ -203,11 +210,14 @@ text {
   width: 95%;
 }
 
-#theartist h3 {
-  color: white;
-  text-shadow: 2px 1px grey;
-  font-family: "avenir next", Arial, sans-serif;
-  text-align: center;
+#linecharts .x-axis {
+  font-size: 13.5px;
+  color: darkgrey;
+}
+
+#linecharts .y-axis {
+  font-size: 13.5px;
+  color: darkgrey;
 }
 
 #bestsong {
@@ -224,16 +234,6 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-#bestsong .linechartbestsong g .x-axis {
-  font-size: 13.5px;
-  color: darkgrey;
-}
-
-#bestsong .linechartbestsong g .y-axis {
-  font-size: 12px;
-  color: darkgrey;
-}
-
 #meansong {
   padding: 5px;
   background-color: inherit;
@@ -246,16 +246,6 @@ text {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-}
-
-#meansong .linechartmeansong g .x-axis {
-  font-size: 13.5px;
-  color: darkgrey;
-}
-
-#meansong .linechartmeansong g .y-axis {
-  font-size: 12px;
-  color: darkgrey;
 }
 
 #worstsong {
@@ -272,25 +262,19 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-#worstsong .linechartworstsong g .x-axis {
-  font-size: 13.5px;
-  color: darkgrey;
-}
-
-#worstsong .linechartworstsong g .y-axis {
-  font-size: 12px;
-  color: darkgrey;
-}
-
-.line {
+#linecharts .line {
   fill: none;
-  stroke: #6F257F;
-  stroke-width: 5px;
+  stroke: rgb(42, 98, 143);
+  stroke-width: 3px;
 }
 
-.overlay {
+#linecharts .overlay {
   fill: none;
   pointer-events: all;
+}
+
+#linecharts .dots circle {
+  fill: rgb(42, 98, 143);
 }
 
 #barchart2 {
@@ -307,20 +291,32 @@ text {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+#barchart2 .barchart2 rect {
+  fill: rgb(42, 98, 143);
+}
+
 #barchart2 .barchart2 #labelsbarchart2 text {
   fill: white !important;
   text-anchor: end;
 }
 
+#barchart2 .barchart2 .x-axis {
+  font-size: 15px;
+  color: darkgrey;
+}
 
+#barchart2 .barchart2 .y-axis {
+  font-size: 13px;
+  color: darkgrey;
+}
 
-
-
-#thesong {
-  padding-top:50px;
-  height:500px;
-  color: #fff;
-  background-color: #ff9800;
+footer {
+  background-color: #101010;
+}
+footer p {
+  padding: 2px;
+  text-align: center;
+  color: lightgrey;
 }
 
 

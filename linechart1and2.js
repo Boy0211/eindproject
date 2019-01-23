@@ -18,6 +18,13 @@ function getDataforLineGraphs(artist) {
 
 };
 
+var tipline = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<span><strong>Titel: </strong>" + d.titel + "<br><strong>Notering: </strong>" + d.y + "</span>"
+        });
+
 function drawLineGraph(graph, data) {
 
   // hier wordt bepaalt welke graph getekend gaat worden en de betreffende
@@ -52,6 +59,9 @@ function drawLineGraph(graph, data) {
         return yScale(d.y); })
       .curve(d3.curveMonotoneX);
 
+  // voeg de tip toe aan het svg element
+  svg.call(tipline);
+
   // schrijf de x-as in het svg element
   svg.append("g")
       .attr("class", "x-axis")
@@ -71,6 +81,28 @@ function drawLineGraph(graph, data) {
       .datum(data)
       .attr("class", "line")
       .attr("d", line(data));
+
+  svg.append("g")
+      .attr("class", "dots")
+    .selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("r", 4)
+      .attr("cx", function(d) { return xScale(d.x); })
+      .attr("cy", function(d) { return yScale(d.y); })
+      .on("mouseover", function(d) {
+          tipline.show(d)
+          d3.select(this)
+            // .style("opacity", 0.8)
+            .style("stroke-width", -20)
+      })
+      .on('mouseout', function(d){
+          tipline.hide(d);
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke-width", "6px")
+      });
 };
 
 
@@ -117,6 +149,39 @@ function updateLineGraph(graph, data) {
       .transition()
       .duration(1000)
       .attr("d", line(data));
+
+  var dots = svg.select(".dots").selectAll("circle")
+      .data(data)
+
+  dots.exit()
+      .remove()
+
+  dots.enter()
+      .append("circle")
+      .attr("r", 4)
+      .attr("cx", function(d) { return xScale(d.x); })
+      .attr("cy", function(d) { return yScale(d.y); })
+      .attr("opacity", 0)
+    .merge(dots)
+      .transition()
+      .duration(1000)
+      .attr("cx", function(d) { return xScale(d.x); })
+      .attr("cy", function(d) { return yScale(d.y); })
+      .attr("opacity", 1)
+
+  svg.select(".dots").selectAll("circle")
+      .on("mouseover", function(d) {
+          tipline.show(d)
+          d3.select(this)
+            // .style("opacity", 0.8)
+            .style("stroke-width", -20)
+      })
+      .on('mouseout', function(d){
+          tipline.hide(d);
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke-width", "6px")
+      });
 };
 
 function processDataLineCharts(artist) {
@@ -126,14 +191,18 @@ function processDataLineCharts(artist) {
   var gemiddeldeNotering = []
   artist["TOP2000JAAR"].forEach(function(d) {
 
+      console.log(d);
+
       hoogsteNotering.push({
         x : d.Lijst,
-        y : d.Data[0].Notering
+        y : d.Data[0].Notering,
+        titel : d.Data[0].Titel,
       })
 
       laagsteNotering.push({
         x : d.Lijst,
-        y : d.Data[d.Data.length - 1].Notering
+        y : d.Data[d.Data.length - 1].Notering,
+        titel : d.Data[d.Data.length - 1].Titel,
       })
 
       var sum = 0
@@ -143,7 +212,8 @@ function processDataLineCharts(artist) {
 
       gemiddeldeNotering.push({
         x : d.Lijst,
-        y : sum / d.Data.length
+        y : sum / d.Data.length,
+        titel : d.Data.length + " titels"
       })
   })
 
