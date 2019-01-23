@@ -21,7 +21,7 @@ window.onload = function() {
     drawBubbleChart(songsbyList[year-cc].values)
   }); // sluting d3.tsv
 
-  d3.json("../Data/artiesten.json").then(function(data) {
+  d3.json("./Data/artiesten.json").then(function(data) {
 
     var temp = listByArtist(allLists)
     tableData = artistbyTitel(temp)
