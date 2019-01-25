@@ -2,7 +2,10 @@
 const widthTable = 200
 const heightTable = 400
 
-// functie voor het maken van een tabel
+/**
+ * [Een functie voor het tekenen van de tabel.]
+ * @param {[array]} lijst [een array van de noteringen van een bepaald jaar]
+ */
 function createTable(lijst) {
 
   // maak een variabele waarin de tabel is opgeslagen
@@ -23,7 +26,10 @@ function createTable(lijst) {
 };
 
 
-// functie voor het updaten van de tabel
+/**
+ * [Een functie voor het updaten van de tabel.]
+ * @param {[array]} lijst [een array van de noteringen van een bepaald jaar]
+ */
 function updateTable(lijst) {
 
   // selecteer de tabel
@@ -40,7 +46,11 @@ function updateTable(lijst) {
   tabulate(data, columns)
 };
 
-// functie voor het maken van de tabellen
+/**
+ * [Een functie voor het uittekenen van de tabel, wordt opgeroepen in make and update tabel.]
+ * @param {[array]} data [een array van de noteringen van een bepaald jaar]
+ * @param {[array]} columns [de kolom namen van de tabel]
+ */
 function tabulate(data, columns) {
 
   // variabele voor het selecteren van de juiste divtable
