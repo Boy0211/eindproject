@@ -20,7 +20,7 @@ De grafieken pagina bestaat in totaal uit de volgende visualisaties:
 
 Naast deze vizualisaties is er ook nog een search balk met de mogelijkheid een artiest op te zoeken en een dropdown met de mogelijkheid een top2000-lijst op te zoeken.
 
-![Afbeelding van mijn website](/Images/example_website.jpeg)
+![Afbeelding van mijn website](/Images/example_website.jpg)
 
 # Technisch design
 
@@ -32,7 +32,7 @@ Met deze functionele data worden de grafieken gemaakt. Ik heb een standaard form
 
 Vervolgens kan **elke** grafiek geupdate worden. Wel allemaal op een andere manier. Daarnaast zijn de grafieken waarbij een tooltip extra waarde had, voorzien van een tooltip. Hieronder een kort overzicht van de functionaliteiten.
 
-| Grafiek       | Hoe wordt hij geüpdate?  | Tooltip |
+| Grafiek       | Hoe wordt hij geüpdatet? | Tooltip |
 |---------------|--------------------------|---------|
 | Tabel         | Dropdown                 | Nee     |
 | Piechart      | Dropdown                 | Ja      |
