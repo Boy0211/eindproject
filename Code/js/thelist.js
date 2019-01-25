@@ -94,6 +94,11 @@ function checkforartist(artist) {
   // selecteer de button welke de window naar het artiesten gedeelte verplaatst
   document.getElementById("buttonArtist").click()
 
+  // pas de titel van de 2de pagina aan
+  d3.select("#theartist")
+      .select("h1")
+      .text(artist)
+
   // wacht een periode voordat de functies zich aanpassen zodat de window al verplaatst is
   // naar het artiesten gedeelte.
   setTimeout(function() {

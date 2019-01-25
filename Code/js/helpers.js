@@ -1,4 +1,8 @@
-// deze functie sorteert de lijst per artist
+/**
+ * [functie nests en sorteert de lijst per artiest]
+ * @param {[array]} lijst [een array met daarin de songs per lijst]
+ * @return {[array]} [lijst van alle artiesten met hun songs]
+ */
 function listByArtist(lijst) {
 
   // nest de data per artiest
@@ -16,7 +20,11 @@ function listByArtist(lijst) {
   return songsbyArtist;
 };
 
-// process data for bubble chart
+/**
+ * [functie nests en sorteert de lijst per artiest]
+ * @param {[array]} data [een array met daarin de songs per lijst]
+ * @return {[array]} [lijst van alle artiesten met hun songs, als toevoeging een children dict]
+ */
 function createDataforBubblechart(data) {
 
   // maak een lege lijst
@@ -37,7 +45,12 @@ function createDataforBubblechart(data) {
   return data
 };
 
-// functie voor het sorteren van data van een jaar per artiest
+/**
+ * [functie nests en sorteert de lijst per artiest uit een jaar]
+ * @param {[array]} listByYears [een array met daarin de songs per year]
+ * @param {[int]} year [een integer welke aangeeft op welke jaar geselecteerd moet worden ]
+ * @return {[array]} [lijst van alle artiesten uit dat jaar met hun songs]
+ */
 function dataYearBubbleChart(listByYears, year) {
 
   // nest de data per jaar dat het is uitgebracht
@@ -66,7 +79,11 @@ function dataYearBubbleChart(listByYears, year) {
   updateBubbleChart(right_list);
 };
 
-// functie voor het processen van de data voor een barchart
+/**
+ * [functie nests en sorteert de lijst per jaar]
+ * @param {[array]} lijst [een array met daarin de songs per lijst]
+ * @return {[array]} [lijst van alle jaren met het aantal songs]
+ */
 function process_Data_BarChart(lijst) {
 
   // nest de data per jaar dat het is uitgebracht
@@ -93,6 +110,11 @@ function process_Data_BarChart(lijst) {
   return dataForBarChart
 };
 
+/**
+ * [functie nests en sorteert de lijst per artiest per song]
+ * @param {[array]} lijst [een array met daarin de songs per lijst]
+ * @return {[array]} [lijst van alle artiesten met hun songs bedoeld voor de tweede barchart]
+ */
 function artistbyTitel(lijst) {
 
   var nestedsongsAll = []

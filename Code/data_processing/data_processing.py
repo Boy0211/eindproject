@@ -3,11 +3,15 @@ import pandas as pd
 FILE_IN = "../Data/Gecombineerde_data_1999-2018.csv"
 FILE_OUT = "../Data/Gecombineerde_data_1999-2018_aangepast.tsv"
 
+
+# import the files needed
 def import_csv(filename):
     df = pd.read_csv(filename, sep=';')
     # print(df)
     return df
 
+
+# process data in the way you like
 def process_data(df):
 
     for year in range(1999, 2019):
@@ -19,6 +23,7 @@ def process_data(df):
     return df
 
 
+# created data files for different years
 def create_different_years(df):
 
     list = []

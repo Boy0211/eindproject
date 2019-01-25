@@ -20,7 +20,6 @@ Overzicht van de lijst per jaar:
 [interactive door het aanvinken van een lijst (bijv 2003)]
 * Een pie chart met top10 artiesten met aantal liedjes
 * Barchart met aantal liedjes per decade
-* Stuk tekst met een gebeurtenis dat jaar dat van invloed kan zijn op de lijst
 
 Overzicht van artiest over de jaren:
 * Linegraph met bestplace per jaar
@@ -32,6 +31,7 @@ Optional:
 * Landkaart met daarin de herkomst van de liedjes
 * Artiestenpagina beschikbaar maken voor alle artiesten en niet alleen top10
 * Overzicht van song over de jaren
+* Stuk tekst met een gebeurtenis dat jaar dat van invloed kan zijn op de lijst
 
 Sketch:
 ![afbeelding van pagina lijst per jaar](/Images/sketch1.jpeg)
