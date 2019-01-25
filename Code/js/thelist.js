@@ -1,82 +1,101 @@
-const cc = 1999
+// variabele die wordt afgetrokken van een geselecteerd jaar om een optie
+// van een lijst te selecteren
+const differenceListandYear = 1999
 
+// wanneer de window geladen wordt doe het volgende:
 window.onload = function() {
 
-  var year = 1999 // later vervangen voor een dropdown menu
-      // yearcsv = year + ".csv"
-  var secondColorset = ["#A1C3D1", "#B39BC8", "#F0EBF4", "#F172A1", "#E64938"]
-  var colorset = ["#59253A","#4E4E50","#6F2232","#950740","#C3073F"]
+  // de openings variabele. De pagina opent met de lijst van 1999
+  var year = 1999
 
+  // het openen van de merged_list voor het maken van het eerste gedeelte van de pagina
   d3.tsv("./Data/merged_list.tsv").then(function(data) {
 
+    // het maken van een globale variabele van de data
     allLists = data
+
+    // nest de data per lijst
     songsbyList = d3.nest()
         .key(function(d) {return d.Lijst; })
         .entries(data)
 
+    // het maken van een dropdown menu voor de update van alle grafieken.
     createDropdown(songsbyList)
-    drawPieChart(songsbyList[(year-cc)].values)
-    createTable(songsbyList[year-cc].values)
-    drawBarChart(songsbyList[(year-cc)].values)
-    drawBubbleChart(songsbyList[year-cc].values)
+
+    // Met de volgende functies worden de grafieken gemaakt
+    drawPieChart(songsbyList[(year-differenceListandYear)].values)
+    createTable(songsbyList[year-differenceListandYear].values)
+    drawBarChart(songsbyList[(year-differenceListandYear)].values)
+    drawBubbleChart(songsbyList[year-differenceListandYear].values)
+
   }); // sluting d3.tsv
 
+  // het openen van een json per artiest
   d3.json("./Data/artiesten.json").then(function(data) {
 
+    // door gebruik te maken van een globale variabele wordt de tabledata gemaakt
     var temp = listByArtist(allLists)
     tableData = artistbyTitel(temp)
+
+    // het opslaan van de data in een globale variabele
     data2 = data
+
+    // het maken van de autofill voor de zoekopties
     createautofill(data)
 
-    var allData = processDataLineCharts(data[12])
+    // process de data voor de linecharts
+    var allData = processDataLineCharts(data[12]) // data[12] is de artiest Abba als start
 
+    // het tekenen van de drie linegraphs
     drawLineGraph("bestsong", allData.hoogsteNotering)
     drawLineGraph("meansong", allData.gemiddeldeNotering)
     drawLineGraph("worstsong", allData.laagsteNotering)
 
+    // het maken van de tabel
+    createTableTitels(tableData[2]) //tableData[2] is wederom Abba
 
-
-    createTableTitels(tableData[2])
-    drawBarChart2(data[12])
-
+    // het maken van de barchart
+    drawBarChart2(data[12]) //data[12] is Abba
 
   }); // sluting d3,json
 
 }; // sluting window onload function
 
+/**
+ * [Dropdown selectie functie voor het updaten vand de grafieken]
+ * @param {[array]} songsbyList [een array met daarin de songs per lijst]
+ */
 function createDropdown(songsbyList) {
 
-  var lists = []
-  songsbyList.forEach(function(key, values) {
-    lists.push(key['key'])
-  });
-
-
+  // selecteer de dropdown
   var select = d3.select('#inlineFormCustomSelect')
-      // .select('select')
-    	// .attr('class','select')
-      .on('change',onchange)
+      .on('change',onchange);
 
-  var options = select
-    .selectAll('option')
-  	.data(lists).enter()
-  	.append('option')
-  		.text(function (d) { return d; });
-
+  // wanneer er een jaar wordt geselecteerd bij de dropdown
   function onchange() {
 
-  	selectValue = d3.select('select').property('value')
-    updateTable(songsbyList[selectValue-cc].values)
-    updatePieChart(songsbyList[selectValue-cc])
-    updateBarChart(songsbyList[(selectValue-cc)].values)
-    updateBubbleChart(songsbyList[selectValue-cc].values)
-  };
-};
+    // sla de geselecteerde value op in een variabele
+  	var selectValue = d3.select('select').property('value')
 
+    // update alle functies met betrekking tot de dropdown.
+    updateTable(songsbyList[selectValue-differenceListandYear].values)
+    updatePieChart(songsbyList[selectValue-differenceListandYear])
+    updateBarChart(songsbyList[(selectValue-differenceListandYear)].values)
+    updateBubbleChart(songsbyList[selectValue-differenceListandYear].values)
+  };
+}; // sluiting dropdown
+
+/**
+ * [functie voor het updaten van het tweede segment (over de artiest) van de pagina]
+ * @param {[array]} artist [een array met daarin de songs per lijst]
+ */
 function checkforartist(artist) {
 
+  // selecteer de button welke de window naar het artiesten gedeelte verplaatst
   document.getElementById("buttonArtist").click()
 
+  // wacht een periode voordat de functies zich aanpassen zodat de window al verplaatst is
+  // naar het artiesten gedeelte.
   setTimeout(function() {
       data2.forEach(function(d) {
         if (d.Artiest == artist) {
@@ -90,11 +109,16 @@ function checkforartist(artist) {
         }
       });
 
+      // pas de placeholder van de zoekbalk aan zodat je ziet om welke artiest het gaat
       d3.select("#myInput")
         .attr("placeholder", artist)
   }, 500)
 };
 
+/**
+ * [functie voor het aanvullen van de searchbalk, hier wordt de goede data geselecteerd]
+ * @param {[array]} data [een array met daarin de songs per lijst]
+ */
 function createautofill(data) {
 
   arrayArtists = [];
@@ -105,7 +129,16 @@ function createautofill(data) {
   autocomplete(document.getElementById("myInput"), arrayArtists);
 };
 
+/**
+ * [Dropdown selectie functie voor het updaten vand de grafieken]
+ * @param {[string]} inp [input in de searchbalk]
+ * @param {[array]} arr [een array met daarin de songs per lijst]
+ */
 function autocomplete(inp, arr) {
+
+  //  De searchbalk is overgenomen en aangepast aan de hand van het voorbeeld
+  //  van weschools.
+
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
@@ -201,4 +234,4 @@ function autocomplete(inp, arr) {
   document.addEventListener("click", function (e) {
     closeAllLists(e.target);
   });
-}
+};
