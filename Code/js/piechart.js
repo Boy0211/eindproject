@@ -17,6 +17,7 @@ var outerArc = d3.arc()
     .innerRadius(radiusPie * 0.9)
     .outerRadius(radiusPie * 0.9);
 
+// het verkrijgen van de key uit de data
 var key = function(d) { return d.data.key; };
 
 // creeër de d3 pie
@@ -32,10 +33,13 @@ var tip = d3.tip()
           return "<span><strong>Artiest: </strong>" +d.data.key + "<br><strong>Aantal titels: </strong>" + d.data.values.length + "</span>"
         });
 
+// function voor het bepalen van de midangle
 function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle)/2; };
 
-
-// functie voor het tekenen van een piechart
+/**
+ * [Een functie voor het maken van de piechart.]
+ * @param {[array]} lijst [een array met de top 10 artiesten en hun titels]
+ */
 function drawPieChart(lijst) {
 
   // maak een svg element voor de piechart
@@ -137,8 +141,10 @@ function drawPieChart(lijst) {
 
 }; //einde van het tekenen van de pie
 
-
-// functie voor het updaten van de piechart
+/**
+ * [Een functie voor het updaten van de piechart.]
+ * @param {[array]} lijst [een array van alle jaren met hun hoeveelheid liedjes]
+ */
 function updatePieChart(lijst) {
 
   // get the data of meegegeven lijst
@@ -152,9 +158,14 @@ function updatePieChart(lijst) {
       .attr("fill", function(d, i) { return color(i); })
       .attr("d", arc);
 
+  // variabele voor het selecteren en het binden van de data
   var text = d3.select(".piechart").select(".labels").selectAll("text")
       .data(pie(data), key)
 
+  // ook voor dit gedeelte geldt dat het is overgenomen en bewerkt aan de hand van
+  // de hierboven beschreven link.
+
+  // enter en append als er te weinig text is
   text.enter()
       .append("text")
       .attr("dy", ".35em")
@@ -182,6 +193,7 @@ function updatePieChart(lijst) {
   			};
   		});
 
+  // pas de bestaande text aan
   text
       .transition()
       .duration(1000)
@@ -207,13 +219,15 @@ function updatePieChart(lijst) {
   			};
   		});
 
+  // exit remove de text die teveel is
   text.exit()
       .remove()
 
-
+  // variabele voor het selecteren en binden van de data
   var polyline = d3.select(".piechart").select(".lines").selectAll("polyline")
       .data(pie(data), key)
 
+  // enter append indien er te weinig polylines zijn
   polyline.enter()
       .append("polyline")
       .transition().duration(1000)
@@ -229,6 +243,7 @@ function updatePieChart(lijst) {
           };
       });
 
+  // pas de bestaande polylines aan
   polyline
       .transition().duration(1000)
       .attrTween("points", function(d){
@@ -243,15 +258,17 @@ function updatePieChart(lijst) {
           };
       });
 
+  // verwijder polylines die teveel zijn
   polyline.exit()
       .remove()
+}; // einde van de update functie
 
 
-
-};
-
-
-// Functie voor het pakken van de 10 grootste artiesten
+/**
+ * [Een functie voor het updaten van de barchart.]
+ * @param {[array]} lijst [een array met alle lijsten onder elkaar]
+ * @return {[array]} [lijst gesorteerd op artiest]
+ */
 function getBiggestArtists(lijst) {
 
   // nest de data gebasseerd op de artiest
