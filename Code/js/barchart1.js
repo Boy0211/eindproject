@@ -14,7 +14,10 @@ var yScale = d3.scaleLinear()
     .range([(heightBar1 - marginBar1.top - marginBar1.bottom), 0])
 
 
-// functie om de initiële barchart te tekenen
+/**
+ * [Een functie voor het updaten van de barchart.]
+ * @param {[array]} temp_data [een array van alle jaren met hun hoeveelheid liedjes]
+ */
 function drawBarChart(temp_data) {
 
   // process de data zo, dat die gebruikt kan worden voor de barchart
@@ -72,7 +75,10 @@ function drawBarChart(temp_data) {
 }; //sluiten draw bar chart
 
 
-// functie voor het updaten van de barchart
+/**
+ * [Een functie voor het updaten van de barchart.]
+ * @param {[array]} temp_data [een array van alle jaren met hun hoeveelheid liedjes]
+ */
 function updateBarChart(temp_data) {
 
   // proces de data zo dat het gebruikt kan worden voor de barchart
@@ -135,8 +141,11 @@ function updateBarChart(temp_data) {
       });
 }; // einde van de update barchart functie
 
-
-// functie voor het processen van de data voor een barchart
+/**
+ * [Een functie voor het updaten van de barchart.]
+ * @param {[array]} lijst [een niet gesorteerde lijst van alle lijsten achter elkaar]
+ * @return {[array]} [een gesorteerde lijst]
+ */
 function process_Data_BarChart(lijst) {
 
   // nest de data per jaar dat het is uitgebracht

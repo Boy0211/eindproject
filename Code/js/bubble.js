@@ -19,7 +19,10 @@ var bubbletip = d3.tip()
           return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
         });
 
-// functie voor het maken van de bubblechart
+/**
+ * [Een functie voor het tekenen van de bubblechart.]
+ * @param {[array]} lijst [een array van alle artiesten met hun liedjes]
+ */
 function drawBubbleChart(lijst) {
 
   // processen van de data zodat het gebruikt kan worden voor een bubblechart
@@ -79,7 +82,10 @@ function drawBubbleChart(lijst) {
         .on("click", function(d) { checkforartist(d.data.Artiest); });
 };
 
-// functie voor het updaten van de bubblechart
+/**
+ * [Een functie voor het updaten van de bubblechart.]
+ * @param {[array]} lijst [een array van alle artiesten met hun liedjes]
+ */
 function updateBubbleChart(lijst) {
 
   // process de data zo dat het nuttig is voor de bubblechart
