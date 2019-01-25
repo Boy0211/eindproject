@@ -64,6 +64,7 @@ function createDropdown(songsbyList) {
   		.text(function (d) { return d; });
 
   function onchange() {
+
   	selectValue = d3.select('select').property('value')
     updateTable(songsbyList[selectValue-cc].values)
     updatePieChart(songsbyList[selectValue-cc])
@@ -74,21 +75,24 @@ function createDropdown(songsbyList) {
 
 function checkforartist(artist) {
 
-  data2.forEach(function(d) {
-    if (d.Artiest == artist) {
-      getDataforLineGraphs(d)
-      updateBarChart2(d)
-    }
-  });
-  tableData.forEach(function(d) {
-    if (d.Artiest == artist) {
-      updateTableTitels(d)
-    }
-  });
+  document.getElementById("buttonArtist").click()
 
-  d3.select("#myInput")
-    .attr("placeholder", artist)
+  setTimeout(function() {
+      data2.forEach(function(d) {
+        if (d.Artiest == artist) {
+          getDataforLineGraphs(d)
+          updateBarChart2(d)
+        }
+      });
+      tableData.forEach(function(d) {
+        if (d.Artiest == artist) {
+          updateTableTitels(d)
+        }
+      });
 
+      d3.select("#myInput")
+        .attr("placeholder", artist)
+  }, 500)
 };
 
 function createautofill(data) {

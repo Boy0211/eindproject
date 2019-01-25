@@ -315,6 +315,7 @@ footer {
 }
 footer p {
   padding: 2px;
+  padding-bottom: 0px;
   text-align: center;
   color: lightgrey;
 }
