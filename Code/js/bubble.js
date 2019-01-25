@@ -14,7 +14,7 @@ var bubble = d3.pack()
 // variabele waarin de tip is opgeslagen
 var bubbletip = d3.tip()
         .attr('class', 'd3-tip')
-        .offset([-10, 0])
+        .offset([-10, 30])
         .html(function(d) {
           return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
         });
