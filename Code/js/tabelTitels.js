@@ -2,7 +2,10 @@
 const widthTable2 = 200
 const heightTable2 = 400
 
-// functie voor het maken van een tabel
+/**
+ * [Een functie voor het tekenen van de tabel.]
+ * @param {[array]} data [een array van de liedjes per artiest]
+ */
 function createTableTitels(data) {
 
   // maak een variabele waarin de tabel is opgeslagen
@@ -20,7 +23,10 @@ function createTableTitels(data) {
 };
 
 
-// functie voor het updaten van de tabel
+/**
+ * [Een functie voor het updaten van de tabel.]
+ * @param {[array]} data [een array van de liedjes per artiest]
+ */
 function updateTableTitels(data) {
 
   // selecteer de tabel
@@ -29,12 +35,17 @@ function updateTableTitels(data) {
 
   // maak de columns
   var columns = ["Naam", "Jaar"];
-  console.log(data.Titels);
+
   // update de tabel
-  tabulateTitels(data.Titels, columns)
+  tabulateTitels(data.Titels, columns);
 };
 
-// functie voor het maken van de tabellen
+/**
+ * [Een functie voor het uittekenen van de tabel, wordt gebruikt door draw en update functie.]
+ * @param {[array]} data [een array van de liedjes per artiest]
+ * @param {[array]} columns [een array met de namen van de kolommen]
+ * @return {[object]} [de return is de getekende tabel]
+ */
 function tabulateTitels(data, columns) {
 
   // variabele voor het selecteren van de juiste divtable
@@ -53,7 +64,7 @@ function tabulateTitels(data, columns) {
       .data(columns)
       .enter()
       .append('th')
-        .text(function (column) {return column; })
+        .text(function (column) {return column; });
 
 
   // voeg het aantal rijen toe, gelijkend aan de lengte van de data
@@ -77,16 +88,17 @@ function tabulateTitels(data, columns) {
       return d.value;
     } else {
       return ""
-    } })
+    } });
 
-
+  // selecteer alle vakjes met daarin de namen van de songs
+  // vervang deze met een link naar de youtube pagina
   rows.selectAll("#Naam").append("a")
     .attr("target", "_blank")
     .attr("href", function(d) {
       console.log(d.value);
       return "https://www.youtube.com/results?search_query=" + d.value
     })
-    .text(function (d) { return d.value})
+    .text(function (d) { return d.value});
   // return de tabel
   return table;
 };
