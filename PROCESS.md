@@ -93,3 +93,8 @@ De implementatie van cijfers in de bubbles bleken zinloos. Nu is er extra uitleg
 Vandaag ga ik de styling van de 2de section van de pagina proberen af te maken. DIt heeft te maken met de opacity van de bars, de linecharts en ticks daarvan.
 
 Ook ga ik de homepagina en de bronnenpragina proberen af te maken.
+
+# Day 14, 24 januari 2019
+
+Het is helaas tijd om al mijn code na te lopen op semicoloms, comments, docstrings en fouten.
+Hier heb ik vandaag een beginnetje aangemaakt.
