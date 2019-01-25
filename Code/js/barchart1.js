@@ -18,7 +18,7 @@ var yScale = d3.scaleLinear()
 function drawBarChart(temp_data) {
 
   // process de data zo, dat die gebruikt kan worden voor de barchart
-  data = process_Data_BarChart(temp_data);
+  var data = process_Data_BarChart(temp_data);
   var max = d3.max(data, function(d) {return d.y;});
 
   // creeër het svg element op de goede plek in de html
@@ -76,7 +76,7 @@ function drawBarChart(temp_data) {
 function updateBarChart(temp_data) {
 
   // proces de data zo dat het gebruikt kan worden voor de barchart
-  data = process_Data_BarChart(temp_data);
+  var data = process_Data_BarChart(temp_data);
   var max = d3.max(data, function(d) {return d.y;});
 
   // pas de domein van de assen aan aan de nieuwe data
