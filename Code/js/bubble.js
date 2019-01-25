@@ -11,12 +11,20 @@ var bubble = d3.pack()
     .size([diameterBubble, diameterBubble])
     .padding(1.5);
 
+// variabele waarin de tip is opgeslagen
+var bubbletip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
+        });
+
 // functie voor het maken van de bubblechart
 function drawBubbleChart(lijst) {
 
   // processen van de data zodat het gebruikt kan worden voor een bubblechart
-  temp_data = listByArtist(lijst);
-  data = createDataforBubblechart(temp_data);
+  var temp_data = listByArtist(lijst);
+  var data = createDataforBubblechart(temp_data);
 
   // svg variabele voor het selecteren van de juiste html element
   var svg = d3.select("#bubblechart")
@@ -27,17 +35,8 @@ function drawBubbleChart(lijst) {
     .append("g")
       .attr("class", "bubblechart");
 
-
-  // variabele waarin de tip is opgeslagen
-  var tip = d3.tip()
-          .attr('class', 'd3-tip')
-          .offset([-10, 0])
-          .html(function(d) {
-            return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
-          });
-
   // voeg de tip toe aan het svg element
-  svg.call(tip);
+  svg.call(bubbletip);
 
   // creeër de nodes en voeg de data toe
   var nodes = d3.hierarchy(data)
@@ -61,7 +60,7 @@ function drawBubbleChart(lijst) {
           return color(i);})
         .on("mouseover", function(d,i) {
             if( i != 0) {
-              tip.show(d)
+              bubbletip.show(d)
               d3.select(this)
                 .style("opacity", 1)
                 .style("stroke","#fff")
@@ -70,67 +69,28 @@ function drawBubbleChart(lijst) {
         ;})
         .on('mouseout', function(d,i) {
             if( i != 0) {
-              tip.hide(d)
+              bubbletip.hide(d)
               d3.select(this)
                 .style("opacity", 0.8)
                 .style("stroke","#fff")
                 .style("stroke-width", 1.5)
             }
         ;})
-        .on("click", function(d) {
-            checkforartist(d.data.Artiest);
-        });
-
-
-  // node.append("text")
-  //         .attr("dy", ".2em")
-  //         .style("text-anchor", "middle")
-  //         .text(function(d) {
-  //             return d.data["Artiest"].substring(0, d.r / 5);
-  //         })
-  //         .attr("font-family", "sans-serif")
-  //         .attr("font-size", function(d){
-  //             return d.r/10;
-  //         })
-  //         .attr("fill", "white");
-  //
-  // node.append("text")
-  //     .attr("dy", "1.3em")
-  //     .style("text-anchor", "middle")
-  //     .text(function(d) {
-  //         return d.data["AantalTitels"];
-  //     })
-  //     .attr("font-family",  "Gill Sans", "Gill Sans MT")
-  //     .attr("font-size", function(d){
-  //         return d.r/2;
-  //     })
-  //     .attr("fill", "white");
-
-  // d3.select(self.frameElement)
-  //     .style("height", diameterBubble + "px");
-
+        .on("click", function(d) { checkforartist(d.data.Artiest); });
 };
 
 // functie voor het updaten van de bubblechart
 function updateBubbleChart(lijst) {
 
   // process de data zo dat het nuttig is voor de bubblechart
-  temp_data = listByArtist(lijst);
-  data = createDataforBubblechart(temp_data);
+  var temp_data = listByArtist(lijst);
+  var data = createDataforBubblechart(temp_data);
 
   // selecteer het svg element van de barchart
   var svg = d3.select("#bubblechart").select(".bubblechart")
 
-  // variabele waarin de tip is opgeslagen
-  var tip = d3.tip()
-          .attr('class', 'd3-tip')
-          .offset([-10, 0])
-          .html(function(d) {
-            return "<span><strong>Artiest: </strong>" +d.data["Artiest"] + "<br><strong>Aantal titels: </strong>" + d.data["AantalTitels"] + "</span>"
-          });
-
   // roep de tip op
-  svg.call(tip);
+  svg.call(bubbletip);
 
   // voeg de data toe aan de nodes
   var nodes = d3.hierarchy(data)
@@ -151,7 +111,7 @@ function updateBubbleChart(lijst) {
       .attr("class", "node")
       .style("fill", "#fff")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-      .merge(node)
+    .merge(node)
       .transition()
       .duration(1000)
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
@@ -165,7 +125,7 @@ function updateBubbleChart(lijst) {
   d3.select("#bubblechart").selectAll("circle")
       .on("mouseover", function(d, i) {
         if( i != 0) {
-          tip.show(d)
+          bubbletip.show(d)
           d3.select(this)
             .style("opacity", 1)
             .style("stroke","#fff")
@@ -173,13 +133,11 @@ function updateBubbleChart(lijst) {
         }
       })
       .on('mouseout', function(d){
-          tip.hide(d);
+          bubbletip.hide(d);
           d3.select(this)
             .style("opacity", 1)
             .style("stroke","#fff")
             .style("stroke-width", 1.5)
       })
-      .on("click", function(d) {
-          checkforartist(d.data.Artiest);
-      });
+      .on("click", function(d) { checkforartist(d.data.Artiest); });
 };
