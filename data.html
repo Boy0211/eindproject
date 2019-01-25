@@ -2,34 +2,43 @@
 <html>
 
 <head>
+
+  <!-- de titel en de meta van de html -->
   <title>TOP2000 STATISTIEKEN</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Get my own css -->
   <link rel="stylesheet" href="Code/css/data.css">
+
   <!-- Get the bootstrap files -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!-- Get my js files -->
+  <!-- Get the d3 files-->
   <script type="text/javascript" src="d3/d3.js" charset="utf-8"></script>
   <script type="text/javascript" src="d3/d3-tip.js" charset="utf-8"></script>
 
-  <script type="text/javascript" src="Code/js/barchart1.js" charset="utf-8"></script>
+  <!-- Get the main js file in which other functions are called -->
   <script type="text/javascript" src="Code/js/thelist.js" charset="utf-8"></script>
+
+  <!-- Get the other files in which all the graphs are made -->
+  <script type="text/javascript" src="Code/js/barchart1.js" charset="utf-8"></script>
   <script type="text/javascript" src="Code/js/bubble.js" charset="utf-8"></script>
   <script type="text/javascript" src="Code/js/piechart.js" charset="utf-8"></script>
   <script type="text/javascript" src="Code/js/tabel.js" charset="utf-8"></script>
   <script type="text/javascript" src="Code/js/helpers.js" charset="utf-8"></script>
-  <script type="text/javascript" src="Code/js/linechart1and2.js" charset="utf-8"></script>
+  <script type="text/javascript" src="Code/js/linecharts.js" charset="utf-8"></script>
   <script type="text/javascript" src="Code/js/barchart2.js" charset="utf-8"></script>
   <script type="text/javascript" src="Code/js/tabelTitels.js" charset="utf-8"></script>
-
 </head>
 
+<!-- Body die is ingedeeld in een header, een main en een footer -->
+
 <body>
+
+  <!-- De header met daarin de navbar van bootstrap aangevuld met een dropdown en searchbalk -->
   <header>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -47,6 +56,8 @@
               <li><a href="#thelist">Per Lijst</a></li>
               <li><a href="#theartist">Per Artiest</a></li>
             </ul>
+
+            <!-- Dropdown menu met de verschillende opties -->
             <span class="navbar-text">Jaar:</span>
             <form class="navbar-text">
               <div class="form-row align-items-center" id="dataPeriod">
@@ -76,6 +87,8 @@
                 </div>
               </div>
             </form>
+
+            <!-- een searchbalk om artiesten op te zoeken -->
             <span class="navbar-text">Artiest:</span>
             <form autocomplete="off" class="navbar-text">
               <div class="autocomplete" style="width:200px;">
@@ -88,38 +101,65 @@
     </nav>
   </header>
 
+  <!-- Main segment met daarin alle divs voor de elementen van de pagina -->
   <main>
+
+    <!-- div-element voor het eerste deel van de pagina -->
     <div id="thelist" class="container-fluid">
       <h1>De Lijst over de Jaren:</h1>
+
+      <!-- div-element voor de help-tip welke naast de titel staat -->
       <div id=helptip1 class="help-tip">
         <p>Je kan een jaar selecteren door gebruik te maken van het dropdown menu in de navigatiebar.</p>
       </div>
+
+      <!-- Het maken van de eerste rij waar de tabel en de piechart in staan -->
       <div class="row">
+
+        <!-- div element voor de tabel van 5 kolommen breed (bootstrap) -->
         <div class="col-sm-5" id="tabel">
           <h2>Top10 Songs</h2>
         </div>
+
+        <!-- div element voor de piechart -->
         <div class="col-sm-7" id="piechart">
           <h2>Top10 Artiesten</h2>
         </div>
       </div>
+      <!-- sluiten van de eerste rij -->
+
+      <!-- div element voor de tweede rij -->
       <div class="row">
+
+        <!-- div element voor de bubblechart -->
         <div class="col-sm-5" id="bubblechart">
           <h2>Titels per Artiest</h2>
+
+          <!-- element voor de help-tip naast de titel van de bubblechart -->
           <div class="help-tip">
             <p>Maak de Bubble Chart overzichtelijker door op een jaar in de barchart te klikken. Wanneer je meer informatie over de artiest wilt kan je gewoon op de bubbel klikken!</p>
           </div>
         </div>
+
+        <!-- div-element voor de barchart -->
         <div class="col-sm-7" id="barchart">
           <h2>Titels per Jaar</h2>
+
+          <!-- div element voor de help tip naast de titel van de barchart -->
           <div class="help-tip">
             <p>De Bar Chart geeft aan in welke jaren de titels uit de Top2000 zijn uitgebracht. Wil je weten welke artiesten er in dat jaar actief waren, druk gewoon op de bar en de rest gebeurt vanzelf!</p>
           </div>
         </div>
       </div>
+      <!-- sluiting van de 2de rij -->
     </div>
+    <!-- sluiting van het eerste segment van de pagina -->
 
+    <!-- Het tweede segment van main met daarin de informatie per artiest -->
     <div id="theartist" class="container-fluid">
       <h1>Hoe doen de artiesten het?</h1>
+
+      <!-- kolom met daarin de tabel en de barchart -->
       <div class="col-sm-6">
         <div id="tabelTitels" class="row">
           <h3>De Titels:</h3>
@@ -128,6 +168,8 @@
           <h3>Aantal Titels per Lijst:</h3>
         </div>
       </div>
+
+      <!-- kolom met daarin de linecharts -->
       <div id="linecharts" class="col-sm-6">
         <div class="row" id="bestsong">
           <h3>Hoogste Notering:</h3>
@@ -140,14 +182,18 @@
         </div>
       </div>
     </div>
+    <!-- sluting van het tweede segment van de main pagina -->
   </main>
 
+  <!-- footer met daarin wat extra informatie -->
   <footer>
     <p>Gemaakt door Sam Kuilboer // 12442690 // Als eindproject voor de Minor Programmeeren</p>
     <p>The pictures on this page belong to NPO Radio2</p>
     <p>The graphs on this page are my property and are protected by copyright</p>
   </footer>
 
+  <!-- Het volgende stukje code is overgenomen van we-schools en is voor het scrollen over de pagina -->
+  <!-- wanneer er op een knop in de navbar wordt gedrukt. -->
   <script>
     $(document).ready(function() {
       // Add scrollspy to <body>
