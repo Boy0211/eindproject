@@ -117,7 +117,7 @@ function checkforartist(artist) {
       // pas de placeholder van de zoekbalk aan zodat je ziet om welke artiest het gaat
       d3.select("#myInput")
         .attr("placeholder", artist)
-  }, 500)
+  }, 750)
 };
 
 /**
